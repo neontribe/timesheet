@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains timesheet.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function timesheet_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the timesheet module.
+    case 'help.page.timesheet':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Neontribe timesheet') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function timesheet_theme() {
+  return [
+    'timesheet' => [
+      'render element' => 'children',
+    ],
+  ];
+}

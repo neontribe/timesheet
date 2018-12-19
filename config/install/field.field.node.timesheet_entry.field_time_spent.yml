@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time_spent
+    - node.type.timesheet_entry
+  module:
+    - duration_field
+id: node.timesheet_entry.field_time_spent
+field_name: field_time_spent
+entity_type: node
+bundle: timesheet_entry
+label: 'Time Spent'
+description: 'Note the time you spent on this task.'
+required: true
+translatable: false
+default_value:
+  -
+    value: PT15M
+default_value_callback: ''
+settings:
+  granularity:
+    hour: true
+    minute: true
+    year: false
+    month: false
+    day: false
+    second: false
+field_type: duration
+

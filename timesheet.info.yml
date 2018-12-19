@@ -1,0 +1,7 @@
+name: 'Timesheet'
+type: module
+description: 'Neontribe timesheet'
+core: 8.x
+package: 'Neontribe'
+dependencies:
+  - duration_field

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_billing_type
+    - node.type.timesheet_entry
+    - taxonomy.vocabulary.billing_type
+id: node.timesheet_entry.field_billing_type
+field_name: field_billing_type
+entity_type: node
+bundle: timesheet_entry
+label: 'Billing Type'
+description: 'Choose from the list which billing type this work should associated with.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      billing_type: billing_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

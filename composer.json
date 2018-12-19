@@ -1,0 +1,16 @@
+{
+  "name": "drupal/timesheet",
+  "type": "drupal-module",
+  "description": "Neontribe timesheet",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/timesheet",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/timesheet",
+    "source": "http://cgit.drupalcode.org/timesheet"
+  },
+  "require": {
+      "drupal/duration_field": "^1.6"
+  }
+}
