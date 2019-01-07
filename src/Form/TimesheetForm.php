@@ -7,6 +7,7 @@
 namespace Drupal\timesheet\Form;
 
 use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -36,7 +37,7 @@ class TimesheetForm extends FormBase {
       '#type' => 'entity_autocomplete',
       '#target_type' => 'user',
       '#title' => $this->t('User'),
-      # '#default_value' => \Drupal::currentUser(),
+      '#default_value' => User::load(\Drupal::currentUser()->id()),
     ];  
 
     $form['timesheets_timespent'] = [
