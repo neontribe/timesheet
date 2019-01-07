@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - timesheet
+    - user
+  theme:
+    - bartik
+id: timesheet_bartik
+theme: bartik
+region: content
+weight: -7
+provider: null
+plugin: logtime_block
+settings:
+  id: logtime_block
+  label: 'Log Time'
+  provider: timesheet
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+

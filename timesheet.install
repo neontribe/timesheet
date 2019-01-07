@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file The install hooks for the timesheet module
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+function timesheet_install() {
+  $term = Term::create([
+    'name' => 'Admin and meetings', 
+    'vid' => 'billing_type',
+  ])->save();
+
+  $term = Term::create([
+    'name' => 'Development', 
+    'vid' => 'billing_type',
+  ])->save();
+
+  $term = Term::create([
+    'name' => 'Support', 
+    'vid' => 'billing_type',
+  ])->save();
+
+  $term = Term::create([
+    'name' => 'Default Project', 
+    'vid' => 'project',
+  ])->save();
+}
+
+// vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

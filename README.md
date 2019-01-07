@@ -10,12 +10,16 @@ Module to add time sheeting to drupal 8
 ### These commands will be handled by composer once we are package installing
 
     docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/duration_field
-    docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/bootstrap
 
 ### These commands are native to our install
 
+    docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/bootstrap
     docker exec -ti timeshite ../vendor/bin/drupal theme:install bootstrap
     docker exec -ti timeshite drush config-set system.theme default bootstrap
+
+    docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/ldap
+    docker exec -ti timeshite drush en -y ldap ldap_authentication ldap_user ldap_query ldap_servers
+
 
 ## importing from kimai
 
@@ -25,3 +29,12 @@ Module to add time sheeting to drupal 8
 
 
     composer require drupal/migrate_source_csv
+ 
+## Dev stuff
+
+    docker run -ti -p 8888:8888 --rm --name timeshite \
+        -v $(pwd)/modules:/opt/drupal/web/modules \
+        -v $(pwd)/drupal.sqlite:/opt/drupal/web/sites/default/files/.ht.sqlite \
+        -e UID=$(id -u) -e GID=$(id -g) \
+        tobybatch/timeshite
+
