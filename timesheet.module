@@ -26,10 +26,14 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-function timesheet_theme() {
-  return [
-    'timesheet' => [
-      'render element' => 'children',
-    ],
-  ];
-}
+//function timesheet_theme() {
+//    $theme['node__timesheet_entry'] = [
+//        'render element' => 'children',
+//        'template' => 'node--timesheet-entry',
+//        'variables' => [
+//            'content' => NULL
+//        ],
+//    ];
+//
+//    return $theme;
+//}
