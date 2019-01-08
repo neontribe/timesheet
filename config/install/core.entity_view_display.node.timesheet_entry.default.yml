@@ -12,6 +12,8 @@ dependencies:
     - duration_field
     - text
     - user
+_core:
+  default_config_hash: GOfV6PUEbw2Ehq463MKEDR2FiusTSjjbZnD6CUp2CJo
 id: node.timesheet_entry.default
 targetEntityType: node
 bundle: timesheet_entry
@@ -20,29 +22,29 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 5
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_billing_type:
-    weight: 1
-    label: above
+    weight: 2
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_project:
-    weight: 2
-    label: above
+    weight: 3
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_time_spent:
-    weight: 4
-    label: above
+    weight: 5
+    label: inline
     settings:
       text_length: full
       separator: space
@@ -50,8 +52,8 @@ content:
     type: duration_human_display
     region: content
   field_user:
-    weight: 3
-    label: above
+    weight: 4
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
