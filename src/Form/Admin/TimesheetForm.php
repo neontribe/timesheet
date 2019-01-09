@@ -6,6 +6,8 @@
  */  
 namespace Drupal\timesheet\Form\Admin;
 
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
@@ -72,10 +74,6 @@ class TimesheetForm extends ConfigFormBase {
         $this->parseUploadedCsv($file);
       }
     }
-
-    # $this->config('timesheet.adminsettings')
-      # ->set('timesheet_upload_records', $form_state->getValue('timesheet_upload_records'))
-      # ->save();
   }
 
   private function parseUploadedCsv(File $file) {
@@ -85,7 +83,7 @@ class TimesheetForm extends ConfigFormBase {
     $importable = [];
 
     $config = $this->config('timesheet.adminsettings');
-    $hashes = $config->get('hashes');
+    $hashes = $config->get('hashes', []);
 
     foreach ($rows as $row) {
       $cols = str_getcsv($row, ",", '"'); //parse the items in rows 
@@ -94,24 +92,64 @@ class TimesheetForm extends ConfigFormBase {
         $duplicates[$hash] = $cols;
       }
       else {
+        if (count($cols) < 7) {
+          drupal_set_message('Invalid row: ' . $row);
+          continue;
+        }
         $importable[$hash] = $cols;
-        $node = Node::create([
-          'type'        => 'timesheet_entry',
-          'title'       => $cols[2],
-        ]);
-        $node->set('body', $cols[5]);
-        $node->set('field_time_spent', gmdate('\P\TH\Hi\M', 685));
-          # 'field_billing_type' => null,
-          # 'field_project' => null,
-          # 'field_user' => null,
-        $node->save();
+        $user = $this->findUser($cols[0]);
+        $title = $cols[1];
+        $date = $cols[2];
+        $time = $this->formatTime($cols[3]);
+        $desc = $cols[4];
+        $activity = $this->findTerm($cols[5], 'billing_type');
+        $project = $this->findTerm($cols[6], 'project');
+        // $node = Node::create([
+          // 'type'        => 'timesheet_entry',
+          // 'title'       => $cols[2],
+          // 'body'        => $cols[5],
+        // ]);
+        // $node->set('field_time_spent', gmdate('\P\TH\Hi\M', $cols[3]));
+        // $node->set('field_user', $user);
+        // $node->set('field_billing_type', $billing);
+        // $node->set('field_project', $project);
+        // $node->save();
       }
-
-      return $duplicates;
     }
+
+    return $duplicates;
     # drupal_set_message($data);
   }
 
+  private function findUser($user) {
+  }
+
+  private function formatTime($seconds) {
+    return gmdate('\P\TH\Hi\M', $seconds/60);
+  }
+
+  private function findTerm($name, $vocab) {
+    $term = false;
+
+    $terms = taxonomy_term_load_multiple_by_name($name, $vocab);
+    if (count($terms)) {
+      // There should only ever be one
+      $term = $terms[0];
+    }
+    else {
+      // Create the term
+      $term = Term::create([
+        'name' => $name,
+        'vid' => $vocab,
+      ])->save();
+    }
+    #$term = \Drupal::entityTypeManager()
+      #->getStorage('taxonomy_term')
+      #->loadByProperties([
+        #'name' => $term_name,
+    #]);
+    return $term;
+  }
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

@@ -100,40 +100,6 @@ class TimesheetForm extends FormBase {
     $node->save();
   }
 
-  private function parseUploadedCsv(File $file) {
-    $rows = file($file->getFileUri());
-    
-    $duplicates = [];
-    $importable = [];
-
-    $config = $this->config('timesheet.adminsettings');
-    $hashes = $config->get('hashes');
-
-    foreach ($rows as $row) {
-      $cols = str_getcsv($row, ",", '"'); //parse the items in rows 
-      $hash = md5(implode('|', $cols));
-      if (in_array($hash, $hashes)) {
-        $duplicates[$hash] = $cols;
-      }
-      else {
-        $importable[$hash] = $cols;
-        $node = Node::create([
-          'type'        => 'timesheet_entry',
-          'title'       => $cols[2],
-        ]);
-        $node->set('body', $cols[5]);
-        $node->set('field_time_spent', gmdate('\P\TH\Hi\M', 685));
-          # 'field_billing_type' => null,
-          # 'field_project' => null,
-          # 'field_user' => null,
-        $node->save();
-      }
-
-      return $duplicates;
-    }
-    # drupal_set_message($data);
-  }
-
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

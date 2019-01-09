@@ -4,16 +4,18 @@ dependencies:
   config:
     - field.field.node.timesheet_entry.body
     - field.field.node.timesheet_entry.field_billing_type
+    - field.field.node.timesheet_entry.field_date
     - field.field.node.timesheet_entry.field_project
     - field.field.node.timesheet_entry.field_time_spent
     - field.field.node.timesheet_entry.field_user
     - node.type.timesheet_entry
   module:
+    - datetime
     - duration_field
     - text
     - user
 _core:
-  default_config_hash: GOfV6PUEbw2Ehq463MKEDR2FiusTSjjbZnD6CUp2CJo
+  default_config_hash: XGS8GqZnI3M6jd35nqW7h1_U-DzD1USovvkbtTu32KY
 id: node.timesheet_entry.default
 targetEntityType: node
 bundle: timesheet_entry
@@ -34,6 +36,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_date:
+    weight: 5
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_project:
     weight: 3
     label: inline
@@ -43,7 +54,7 @@ content:
     type: entity_reference_label
     region: content
   field_time_spent:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       text_length: full

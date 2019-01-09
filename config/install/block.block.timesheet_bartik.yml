@@ -9,7 +9,7 @@ dependencies:
     - bartik
 id: timesheet_bartik
 theme: bartik
-region: content
+region: sidebar_first
 weight: -7
 provider: null
 plugin: logtime_block
@@ -19,11 +19,6 @@ settings:
   provider: timesheet
   label_display: visible
 visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
   user_role:
     id: user_role
     roles:
