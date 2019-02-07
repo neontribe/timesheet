@@ -1,0 +1,4 @@
+timesheet:
+    version: 1.x
+    js:
+        js/timesheet.js: {}

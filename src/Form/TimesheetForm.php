@@ -40,12 +40,7 @@ class TimesheetForm extends FormBase {
     $form['timesheets_date'] = [
       '#type' => 'date',
       '#title' => $this->t('Date of activity'),
-      '#default_value' => array(
-        'year' => 2020,
-        'month' => 2,
-        'day' => 15,
-      ),
-      # '#default_value' => DrupalDateTime::createFromTimestamp(time()),
+      '#default_value' => date('Y-m-d'),
     ];  
 
     $form['timesheets_timespent'] = [
@@ -71,6 +66,9 @@ class TimesheetForm extends FormBase {
       '#name' => 'timesheet_submit_button',
       '#value' => $this->t('Save'),
     ];
+
+
+    $form['#attached']['library'][] = 'timesheet/timesheet';
 
     return $form;
   }  
