@@ -10,6 +10,7 @@ use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 class TimesheetForm extends FormBase {
   /**  
@@ -23,10 +24,6 @@ class TimesheetForm extends FormBase {
    * {@inheritdoc}  
    */  
   public function buildForm(array $form, FormStateInterface $form_state) {  
-    $form['timesheets_title'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Title'),
-    ];
 
     $form['timesheets_description'] = [
       '#type' => 'textarea',
@@ -40,28 +37,33 @@ class TimesheetForm extends FormBase {
       '#default_value' => User::load(\Drupal::currentUser()->id()),
     ];  
 
+    $form['timesheets_date'] = [
+      '#type' => 'date',
+      '#title' => $this->t('Date of activity'),
+      '#default_value' => array(
+        'year' => 2020,
+        'month' => 2,
+        'day' => 15,
+      ),
+      # '#default_value' => DrupalDateTime::createFromTimestamp(time()),
+    ];  
+
     $form['timesheets_timespent'] = [
       '#type' => 'duration',
       '#title' => $this->t('Time spent'),
       '#granularity' => 'h:i',
     ];  
 
-    $form['timesheets_billing'] = [
-      '#type' => 'entity_autocomplete',
-      '#target_type' => 'taxonomy_term',
-      '#selection_settings' => array(
-        'target_bundles' => array('billing_type'),
-      ),
-      '#title' => $this->t('Billing type'),
+    $form['timesheets_project'] = [
+      '#type' => 'textfield',
+      '#autocomplete_route_name' => 'timesheet.autocomplete_project',
+      '#title' => $this->t('Project'),
     ];  
 
-    $form['timesheets_project'] = [
-      '#type' => 'entity_autocomplete',
-      '#target_type' => 'taxonomy_term',
-      '#selection_settings' => array(
-        'target_bundles' => array('project'),
-      ),
-      '#title' => $this->t('Project'),
+    $form['timesheets_activity_type'] = [
+      '#type' => 'textfield',
+      '#autocomplete_route_name' => 'timesheet.autocomplete_activity',
+      '#title' => $this->t('Activity Type'),
     ];  
 
     $form['timesheets_import']['timesheet_upload_button'] = [
@@ -81,18 +83,21 @@ class TimesheetForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
 
-    $title = $values['timesheets_title'];
     $description = $values['timesheets_description'];
+    $date = $values['timesheets_date'];
     $user = $values['timesheets_user'];
     $timespent = $values['timesheets_timespent'];
     $billing = $values['timesheets_billing'];
     $project = $values['timesheets_project'];
+
+    $title = sprintf("%s/%s %s", $project, $billing, $date);
 
     $node = Node::create([
       'type'  => 'timesheet_entry',
       'title' => $title,
       'body'  => $description,
     ]);
+    $node->set('field_date', $date);
     $node->set('field_user', $user);
     $node->set('field_time_spent', $timespent);
     $node->set('field_billing_type', $billing);

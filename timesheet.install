@@ -6,6 +6,7 @@
 use Drupal\taxonomy\Entity\Term;
 
 function timesheet_install() {
+  /*
   $term = Term::create([
     'name' => 'Admin and meetings', 
     'vid' => 'billing_type',
@@ -25,6 +26,7 @@ function timesheet_install() {
     'name' => 'Default Project', 
     'vid' => 'project',
   ])->save();
+   */
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

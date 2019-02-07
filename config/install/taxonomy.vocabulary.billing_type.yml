@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Billing type'
-vid: billing_type
-description: 'List of billing categories'
-hierarchy: 0
-weight: 0
-

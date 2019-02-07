@@ -6,4 +6,20 @@ timesheet.admin_settings_form:
   requirements:  
     _permission: 'access administration pages'  
   options:  
-    _admin_route: TRUE  
+    _admin_route: 
+
+timesheet.autocomplete_project:
+  path: '/timesheet/handleAutocompleteProject'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\DefaultController::handleAutocompleteProject'
+    _format: json
+  requirements:
+    _permission: 'authenticated'
+
+timesheet.autocomplete_activity:
+  path: '/timesheet/handleAutocompleteActivity'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\DefaultController::handleAutocompleteActivity'
+    _format: json
+  requirements:
+    _permission: 'authenticated'
