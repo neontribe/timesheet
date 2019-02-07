@@ -2,8 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - field.field.node.timesheet_entry.body
-    - field.field.node.timesheet_entry.field_billing_type
+    - field.field.node.timesheet_entry.field_activity_type
     - field.field.node.timesheet_entry.field_date
     - field.field.node.timesheet_entry.field_project
     - field.field.node.timesheet_entry.field_time_spent
@@ -13,69 +14,64 @@ dependencies:
     - datetime
     - duration_field
     - text
-_core:
-  default_config_hash: Z258QH5iSUnDtTKueRhI2FasmYXrh7fVXLAHmJ5_ajY
-id: node.timesheet_entry.default
+    - user
+id: node.timesheet_entry.teaser
 targetEntityType: node
 bundle: timesheet_entry
-mode: default
+mode: teaser
 content:
   body:
-    type: text_textarea_with_summary
-    weight: 1
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
-  field_billing_type:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_date:
+    label: hidden
+    type: text_default
     weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: datetime_default
+    region: content
+  field_activity_type:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 5
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: Y-m-d
+    third_party_settings: {  }
+    type: datetime_custom
     region: content
   field_project:
-    weight: 6
+    weight: 1
+    label: inline
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      link: true
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: entity_reference_label
     region: content
   field_time_spent:
-    weight: 4
+    weight: 6
+    label: inline
     settings:
-      duration: ''
+      text_length: full
+      separator: space
     third_party_settings: {  }
-    type: duration_widget
+    type: duration_human_display
     region: content
   field_user:
-    weight: 2
-    settings: {  }
+    weight: 4
+    label: inline
+    settings:
+      link: true
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_label
     region: content
-  title:
-    type: string_textfield
+  links:
     weight: 0
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-hidden:
-  created: true
-  path: true
-  promote: true
-  status: true
-  sticky: true
-  uid: true
-
+hidden: {  }

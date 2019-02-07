@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
     - timesheet
     - user
   theme:
-    - bartik
-id: timesheet_bartik
-theme: bartik
-region: sidebar_first
-weight: -7
+    - bootstrap
+id: logtime
+theme: bootstrap
+region: sidebar_second
+weight: 0
 provider: null
 plugin: logtime_block
 settings:

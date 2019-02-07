@@ -1,0 +1,76 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.timesheet_entry.body
+    - field.field.node.timesheet_entry.field_activity_type
+    - field.field.node.timesheet_entry.field_date
+    - field.field.node.timesheet_entry.field_project
+    - field.field.node.timesheet_entry.field_time_spent
+    - field.field.node.timesheet_entry.field_user
+    - node.type.timesheet_entry
+  module:
+    - datetime
+    - duration_field
+    - text
+    - user
+id: node.timesheet_entry.default
+targetEntityType: node
+bundle: timesheet_entry
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_activity_type:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 5
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: Y-m-d
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_project:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_time_spent:
+    weight: 6
+    label: inline
+    settings:
+      text_length: full
+      separator: space
+    third_party_settings: {  }
+    type: duration_human_display
+    region: content
+  field_user:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

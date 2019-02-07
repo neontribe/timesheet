@@ -1,9 +1,12 @@
+uuid: 98bfa1cd-5266-4da1-a151-220e275f4c61
 langcode: en
 status: true
 dependencies:
   module:
     - duration_field
     - node
+_core:
+  default_config_hash: 8MiGFTiVZJgw5Xbry5KfRw2Ib1TMK5Cxg0sKCjFBSOM
 id: node.field_time_spent
 field_name: field_time_spent
 entity_type: node

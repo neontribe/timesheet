@@ -1,20 +1,20 @@
+uuid: 6913646f-9614-425c-b97c-6790b61811f4
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
-id: node.field_date
-field_name: field_date
+    - taxonomy
+id: node.field_activity_type
+field_name: field_activity_type
 entity_type: node
-type: datetime
+type: entity_reference
 settings:
-  datetime_type: date
-module: datetime
+  target_type: taxonomy_term
+module: core
 locked: false
 cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false
-

@@ -1,0 +1,11 @@
+uuid: a5921f01-23bc-46c6-a510-8b13ac52c263
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: E5l2PbJC4n9nJqC-Ew9raUyDmV-nPC78BxNamKZ0Hnk
+name: Project
+vid: project
+description: 'A project to group work under'
+hierarchy: 1
+weight: 0

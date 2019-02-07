@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_project
     - node.type.timesheet_entry
-    - taxonomy.vocabulary.project
 id: node.timesheet_entry.field_project
 field_name: field_project
 entity_type: node
@@ -16,14 +15,11 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: views
   handler_settings:
-    target_bundles:
-      project: project
-    sort:
-      field: name
-      direction: asc
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: timesheet_terms
+      display_name: entity_reference_1
+      arguments:
+        - field_project
 field_type: entity_reference
-

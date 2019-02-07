@@ -1,11 +1,14 @@
+uuid: 232ac10b-57b8-4a33-9068-c4365a059bd0
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - taxonomy
-id: node.field_billing_type
-field_name: field_billing_type
+_core:
+  default_config_hash: zlcyxjPKPTfc56PRtoaSS9JJVVil7-7GK_5q4ucqYCw
+id: node.field_project
+field_name: field_project
 entity_type: node
 type: entity_reference
 settings:

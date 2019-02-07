@@ -1,15 +1,18 @@
+uuid: 370a883b-fbbb-481e-a08a-f4da0c79efd2
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_project
-field_name: field_project
+    - user
+_core:
+  default_config_hash: IGiFONbvCPrFPqYMdpE93S3tjtw0uFP0v5d8oNHOHGw
+id: node.field_user
+field_name: field_user
 entity_type: node
 type: entity_reference
 settings:
-  target_type: taxonomy_term
+  target_type: user
 module: core
 locked: false
 cardinality: 1
