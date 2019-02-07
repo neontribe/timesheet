@@ -7,6 +7,7 @@
 namespace Drupal\timesheet\Form;
 
 use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -85,10 +86,10 @@ class TimesheetForm extends FormBase {
     $date = $values['timesheets_date'];
     $user = $values['timesheets_user'];
     $timespent = $values['timesheets_timespent'];
-    $billing = $values['timesheets_billing'];
+    $activity_type = $values['timesheets_activity_type'];
     $project = $values['timesheets_project'];
 
-    $title = sprintf("%s/%s %s", $project, $billing, $date);
+    $title = sprintf("%s %s", $activity_type, $date);
 
     $node = Node::create([
       'type'  => 'timesheet_entry',
@@ -98,11 +99,23 @@ class TimesheetForm extends FormBase {
     $node->set('field_date', $date);
     $node->set('field_user', $user);
     $node->set('field_time_spent', $timespent);
-    $node->set('field_billing_type', $billing);
-    $node->set('field_project', $project);
+    $node->set('field_activity_type', $this->getTermFromBrackets($activity_type));
+    $node->set('field_project', $this->getTermFromBrackets($project));
     $node->save();
   }
 
+  private function getTermFromBrackets($text) {
+    $stack = explode("[", $text);
+    $trailing = array_pop($stack);
+    
+    if (!$trailing) {
+      return False;
+    }
+
+    $tid = trim($trailing, "[] ");
+    $term = Term::load($tid);
+    return $term;
+  }
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:
