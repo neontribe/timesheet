@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.timesheet_entry.body
     - field.field.node.timesheet_entry.field_activity_type
     - field.field.node.timesheet_entry.field_date
     - field.field.node.timesheet_entry.field_project
@@ -12,21 +11,11 @@ dependencies:
   module:
     - datetime
     - duration_field
-    - text
 id: node.timesheet_entry.default
 targetEntityType: node
 bundle: timesheet_entry
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 1
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   field_activity_type:
     weight: 26
     settings:

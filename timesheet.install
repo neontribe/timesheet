@@ -21,12 +21,43 @@ function timesheet_install() {
     'name' => 'Support', 
     'vid' => 'billing_type',
   ])->save();
+   */
 
   $term = Term::create([
     'name' => 'Default Project', 
     'vid' => 'project',
-  ])->save();
-   */
+  ]);
+  $term->save();
+  $pid = $term->id();
+
+  $teir1 = [ 'Sprint 1', 'Sprint 2', 'Sprint 3' ];
+  $teir2 = [ 'Admin and meetings', 'Development', 'Support' ];
+
+  echo $pid;
+
+  foreach ($teir1 as $name) {
+
+    $term = Term::create([
+      'name' => $name,
+      'parent' => [ $pid ],
+      'vid' => 'project',
+    ]);
+    $term->save();
+
+    $_pid = $term->id();
+    echo "  $_pid";
+
+    foreach ($teir2 as $_name) {
+      $term = Term::create([
+        'name' => $_name,
+        'parent' => $_pid,
+        'vid' => 'project',
+      ]);
+      $term->save();
+      echo $term->id();
+    }
+
+  }
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+    timeshite:
+        build: .
+        ports:
+            - 8888:8888
+        volumes:
+            - ./modules:/opt/drupal/web/modules/custom
+              # - ./drupal.sqlite:/opt/drupal/web/sites/default/files/.ht.sqlite
+        restart: always
