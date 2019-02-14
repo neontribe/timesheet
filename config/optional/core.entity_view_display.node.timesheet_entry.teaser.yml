@@ -5,6 +5,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.timesheet_entry.field_activity_type
     - field.field.node.timesheet_entry.field_date
+    - field.field.node.timesheet_entry.field_duration_minutes_
     - field.field.node.timesheet_entry.field_project
     - field.field.node.timesheet_entry.field_time_spent
     - field.field.node.timesheet_entry.field_user
@@ -18,14 +19,6 @@ targetEntityType: node
 bundle: timesheet_entry
 mode: teaser
 content:
-  field_activity_type:
-    weight: 2
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_date:
     weight: 5
     label: inline
@@ -34,14 +27,6 @@ content:
       date_format: Y-m-d
     third_party_settings: {  }
     type: datetime_custom
-    region: content
-  field_project:
-    weight: 1
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_time_spent:
     weight: 6
@@ -65,4 +50,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_activity_type: true
+  field_duration_minutes_: true
+  field_project: true

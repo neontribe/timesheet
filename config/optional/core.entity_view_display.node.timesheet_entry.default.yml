@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.node.timesheet_entry.field_activity_type
     - field.field.node.timesheet_entry.field_date
+    - field.field.node.timesheet_entry.field_duration_minutes_
     - field.field.node.timesheet_entry.field_project
     - field.field.node.timesheet_entry.field_time_spent
     - field.field.node.timesheet_entry.field_user
     - node.type.timesheet_entry
   module:
+    - computed_field
     - datetime
     - duration_field
     - user
@@ -18,8 +20,8 @@ bundle: timesheet_entry
 mode: default
 content:
   field_activity_type:
-    weight: 2
-    label: inline
+    weight: 8
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -34,9 +36,20 @@ content:
     third_party_settings: {  }
     type: datetime_custom
     region: content
+  field_duration_minutes_:
+    weight: 7
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: computed_integer
+    region: content
   field_project:
-    weight: 1
-    label: inline
+    weight: 9
+    label: above
     settings:
       link: true
     third_party_settings: {  }

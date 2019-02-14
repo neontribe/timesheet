@@ -4,22 +4,25 @@ dependencies:
   config:
     - field.storage.node.field_project
     - node.type.timesheet_entry
+    - taxonomy.vocabulary.project
 id: node.timesheet_entry.field_project
 field_name: field_project
 entity_type: node
 bundle: timesheet_entry
 label: Project
-description: 'Which project should this work be attached to.'
-required: false
+description: 'A discreet unit of work for a customer.'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: views
+  handler: 'default:taxonomy_term'
   handler_settings:
-    view:
-      view_name: timesheet_terms
-      display_name: entity_reference_1
-      arguments:
-        - field_project
+    target_bundles:
+      project: project
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: 9b01aa79-e1a4-4dfa-ae93-233e54f592a3
+langcode: en
+status: true
+dependencies: {  }
+name: Customers
+vid: customers
+description: 'Customer, organisations that we will bill for activity.'
+hierarchy: 0
+weight: 0

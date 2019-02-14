@@ -1,24 +1,26 @@
-uuid: 23e14b00-51fd-478a-a0ec-b5215fb034b8
+uuid: 70e98a2b-967d-44fa-865b-d16b025eb4a4
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
     - field.storage.node.field_activity_type
     - field.storage.node.field_date
+    - field.storage.node.field_duration_minutes_
     - field.storage.node.field_project
     - field.storage.node.field_time_spent
     - field.storage.node.field_user
+    - field.storage.taxonomy_term.field_customer
     - node.type.timesheet_entry
+    - system.menu.main
+    - taxonomy.vocabulary.customers
+    - taxonomy.vocabulary.project
   module:
-    - csv_serialization
+    - computed_field
     - datetime
     - duration_field
     - node
-    - rest
-    - serialization
+    - taxonomy
     - user
-    - views_data_export
 id: timesheets
 label: Timesheets
 module: views
@@ -82,11 +84,11 @@ display:
         options:
           grouping:
             -
-              field: field_project
+              field: field_customer
               rendered: true
               rendered_strip: false
             -
-              field: field_activity_type
+              field: field_project
               rendered: true
               rendered_strip: false
           row_class: ''
@@ -97,13 +99,29 @@ display:
           summary: ''
           description: ''
           columns:
+            field_customer: field_customer
+            title: title
             field_project: field_project
             field_activity_type: field_activity_type
-            title: title
             field_time_spent: field_time_spent
-            field_user: field_user
+            field_duration_minutes_: field_duration_minutes_
             field_date: field_date
+            field_user: field_user
           info:
+            field_customer:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             field_project:
               sortable: false
               default_sort_order: asc
@@ -118,13 +136,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            title:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_time_spent:
               sortable: false
               default_sort_order: asc
@@ -132,7 +143,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_user:
+            field_duration_minutes_:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -146,21 +157,89 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_user:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           default: '-1'
           empty_table: false
       row:
-        type: 'entity:node'
-        options:
-          view_mode: teaser
+        type: fields
       fields:
-        field_project:
-          id: field_project
-          table: node__field_project
-          field: field_project
+        field_customer:
+          id: field_customer
+          table: taxonomy_term__field_customer
+          field: field_customer
+          relationship: field_project
+          group_type: group
+          admin_label: ''
+          label: Customer
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        title:
+          id: title
+          table: node_field_data
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          label: Project
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -179,14 +258,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 32
-            word_boundary: false
+            max_length: 0
+            word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: true
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
@@ -194,6 +273,71 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+        field_project:
+          id: field_project
+          table: node__field_project
+          field: field_project
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Project
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -242,14 +386,14 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 32
-            word_boundary: false
+            max_length: 0
+            word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: false
-            trim: true
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
@@ -278,44 +422,67 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
           plugin_id: field
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
+        field_time_spent:
+          id: field_time_spent
+          table: node__field_time_spent
+          field: field_time_spent
           relationship: none
           group_type: group
           admin_label: ''
+          label: 'Time Spent'
           exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
+          hide_empty: false
+          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: duration_human_display
+          settings:
+            text_length: full
+            separator: space
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -326,14 +493,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_time_spent:
-          id: field_time_spent
-          table: node__field_time_spent
-          field: field_time_spent
+          plugin_id: field
+        field_duration_minutes_:
+          id: field_duration_minutes_
+          table: node__field_duration_minutes_
+          field: field_duration_minutes_
           relationship: none
-          group_type: group
+          group_type: sum
           admin_label: ''
-          label: 'Time Spent'
+          label: 'Duration (Minutes)'
           exclude: false
           alter:
             alter_text: false
@@ -375,10 +543,83 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: duration_human_display
+          type: computed_integer
           settings:
-            text_length: full
-            separator: space
+            cache_unit: '-1'
+            cache_duration: '1'
+            thousand_separator: ''''
+            prefix_suffix: 1
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+          plugin_id: field
+        field_date:
+          id: field_date
+          table: node__field_date
+          field: field_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Date
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: html_month
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -441,7 +682,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -453,14 +694,669 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_date:
-          id: field_date
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            timesheet_entry: timesheet_entry
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_date_value:
+          id: field_date_value
           table: node__field_date
-          field: field_date
+          field: field_date_value
           relationship: none
           group_type: group
           admin_label: ''
-          label: Date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_op
+            label: From
+            description: ''
+            use_operator: false
+            operator: field_date_value_op
+            identifier: field_date_value_from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_1_op
+            label: To
+            description: ''
+            use_operator: false
+            operator: field_date_value_1_op
+            identifier: field_date_value_to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_customer_target_id:
+          id: field_customer_target_id
+          table: taxonomy_term__field_customer
+          field: field_customer_target_id
+          relationship: field_project
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_customer_target_id_op
+            label: Customer
+            description: ''
+            use_operator: false
+            operator: field_customer_target_id_op
+            identifier: field_customer_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: customers
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_project_target_id:
+          id: field_project_target_id
+          table: node__field_project
+          field: field_project_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_project_target_id_op
+            label: Project
+            description: ''
+            use_operator: false
+            operator: field_project_target_id_op
+            identifier: field_project_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: project
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      sorts:
+        field_project_target_id:
+          id: field_project_target_id
+          table: node__field_project
+          field: field_project_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+        field_activity_type_target_id:
+          id: field_activity_type_target_id
+          table: node__field_activity_type
+          field: field_activity_type_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      title: Timesheets
+      header: {  }
+      footer: {  }
+      empty: {  }
+      relationships:
+        field_project:
+          id: field_project
+          table: node__field_project
+          field: field_project
+          relationship: none
+          group_type: group
+          admin_label: 'field_project: Taxonomy term'
+          required: true
+          plugin_id: standard
+      arguments: {  }
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_activity_type'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_duration_minutes_'
+        - 'config:field.storage.node.field_project'
+        - 'config:field.storage.node.field_time_spent'
+        - 'config:field.storage.node.field_user'
+        - 'config:field.storage.taxonomy_term.field_customer'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'All Sheets'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: timesheets
+      menu:
+        type: none
+        title: Timesheets
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: tools
+      display_description: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            timesheet_entry: timesheet_entry
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        field_date_value:
+          id: field_date_value
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_op
+            label: From
+            description: ''
+            use_operator: false
+            operator: field_date_value_op
+            identifier: field_date_value_from
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_date_value_1:
+          id: field_date_value_1
+          table: node__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_value_1_op
+            label: To
+            description: ''
+            use_operator: false
+            operator: field_date_value_1_op
+            identifier: field_date_value_to
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_customer_target_id:
+          id: field_customer_target_id
+          table: taxonomy_term__field_customer
+          field: field_customer_target_id
+          relationship: field_project
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_customer_target_id_op
+            label: Customer
+            description: ''
+            use_operator: false
+            operator: field_customer_target_id_op
+            identifier: field_customer_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: customers
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_project_target_id:
+          id: field_project_target_id
+          table: node__field_project
+          field: field_project_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_project_target_id_op
+            label: Project
+            description: ''
+            use_operator: false
+            operator: field_project_target_id_op
+            identifier: field_project_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: project
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_activity_type'
+        - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_duration_minutes_'
+        - 'config:field.storage.node.field_project'
+        - 'config:field.storage.node.field_time_spent'
+        - 'config:field.storage.node.field_user'
+        - 'config:field.storage.taxonomy_term.field_customer'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Summary
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: timesheets/summary
+      display_description: ''
+      menu:
+        type: normal
+        title: 'Timeseheet Summary'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 80
+        context: '0'
+        menu_name: main
+      group_by: true
+      defaults:
+        group_by: false
+        fields: false
+        filters: true
+        filter_groups: true
+      fields:
+        field_customer:
+          id: field_customer
+          table: taxonomy_term__field_customer
+          field: field_customer
+          relationship: field_project
+          group_type: group
+          admin_label: ''
+          label: Customer
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_project:
+          id: field_project
+          table: node__field_project
+          field: field_project
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Project
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_activity_type:
+          id: field_activity_type
+          table: node__field_activity_type
+          field: field_activity_type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Activity Type'
           exclude: false
           alter:
             alter_text: false
@@ -501,12 +1397,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            timezone_override: ''
-            format_type: html_date
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -516,236 +1411,87 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          set_precision: false
+          precision: 0
+          decimal: .
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
           plugin_id: field
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            timesheet_entry: timesheet_entry
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      sorts:
-        field_project_target_id:
-          id: field_project_target_id
-          table: node__field_project
-          field: field_project_target_id
+        field_duration_minutes_:
+          id: field_duration_minutes_
+          table: node__field_duration_minutes_
+          field: field_duration_minutes_
           relationship: none
-          group_type: group
+          group_type: sum
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        field_activity_type_target_id:
-          id: field_activity_type_target_id
-          table: node__field_activity_type
-          field: field_activity_type_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exposed: false
-          expose:
-            label: ''
-          granularity: second
-      title: Timesheets
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_activity_type'
-        - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_project'
-        - 'config:field.storage.node.field_time_spent'
-        - 'config:field.storage.node.field_user'
-  data_export_1:
-    display_plugin: data_export
-    id: data_export_1
-    display_title: 'Data export'
-    position: 3
-    display_options:
-      display_extenders: {  }
-      style:
-        type: data_export
-        options:
-          formats:
-            csv: csv
-          csv_settings:
-            delimiter: ','
-            enclosure: '"'
-            escape_char: \
-            strip_tags: true
-            trim: true
-            encoding: utf8
-          xls_settings:
-            xls_format: Excel2007
-            metadata:
-              creator: ''
-              last_modified_by: ''
-              title: ''
-              description: ''
-              subject: ''
-              keywords: ''
-              category: ''
-              manager: ''
-              company: ''
-      path: timesheet/export
-      filename: export.csv
-      pager:
-        type: none
-        options:
-          offset: 0
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - request_format
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_activity_type'
-        - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_project'
-        - 'config:field.storage.node.field_time_spent'
-        - 'config:field.storage.node.field_user'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: timesheets
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.field_activity_type'
-        - 'config:field.storage.node.field_date'
-        - 'config:field.storage.node.field_project'
-        - 'config:field.storage.node.field_time_spent'
-        - 'config:field.storage.node.field_user'
-  page_2:
-    display_plugin: page
-    id: page_2
-    display_title: User
-    position: 2
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      path: user/%/timesheet
-      arguments:
-        field_user_target_id:
-          id: field_user_target_id
-          table: node__field_user
-          field: field_user_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: 'not found'
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-          plugin_id: numeric
-      defaults:
-        arguments: false
-        filters: false
-        filter_groups: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            timesheet_entry: timesheet_entry
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+          label: 'Duration (Minutes)'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ', '
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+          click_sort_column: value
+          type: computed_integer
+          settings:
+            cache_unit: '-1'
+            cache_duration: '1'
+            thousand_separator: ''''
+            prefix_suffix: 1
+          group_column: null
+          group_columns: null
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       max-age: -1
       contexts:
@@ -753,11 +1499,49 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_activity_type'
+        - 'config:field.storage.node.field_project'
+        - 'config:field.storage.taxonomy_term.field_customer'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: Users
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: timesheets/mine
+      menu:
+        type: none
+        title: Timesheets
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: tools
+      display_description: ''
+      title: 'My Timesheet'
+      defaults:
+        title: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.field_activity_type'
         - 'config:field.storage.node.field_date'
+        - 'config:field.storage.node.field_duration_minutes_'
         - 'config:field.storage.node.field_project'
         - 'config:field.storage.node.field_time_spent'
         - 'config:field.storage.node.field_user'
+        - 'config:field.storage.taxonomy_term.field_customer'

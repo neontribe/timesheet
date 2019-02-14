@@ -45,6 +45,17 @@ function timesheet_theme() {
 function computed_field_field_duration_minutes__compute($entity_type_manager, $entity, $fields, $delta) {
     $field_time_spent = $fields['field_time_spent'];
     $value = $field_time_spent[0]['value'] ?? 0; 
+
+    if (!$value) {
+      $val = rand(15,180);
+      $field_time_spent[0]['value'] = sprintf(
+        "PT%dH%dM",
+        floor($val/60),
+        $val - (floor($val/60) * 60)
+      );
+      return $val;
+    }
+
     $interval = new DateInterval($value);
 
     $hours = $interval->format("%H");

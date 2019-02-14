@@ -1,13 +1,12 @@
-uuid: 3e27802b-ad98-46b8-b492-801c6b81a7ef
+uuid: 18f0beaf-ad5a-450d-9bfe-197b4ffa917e
 langcode: en
 status: true
 dependencies:
   module:
-    - node
     - taxonomy
-id: node.field_activity_type
-field_name: field_activity_type
-entity_type: node
+id: taxonomy_term.field_customer
+field_name: field_customer
+entity_type: taxonomy_term
 type: entity_reference
 settings:
   target_type: taxonomy_term

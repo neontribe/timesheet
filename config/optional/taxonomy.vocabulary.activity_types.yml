@@ -1,0 +1,9 @@
+uuid: 3639551e-67d2-405a-a604-6b4645be8350
+langcode: en
+status: true
+dependencies: {  }
+name: 'Activity Types'
+vid: activity_types
+description: 'All activities, a subset of these can be applied to a single project.'
+hierarchy: 0
+weight: 0

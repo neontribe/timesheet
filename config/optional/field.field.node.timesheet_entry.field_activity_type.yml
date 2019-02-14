@@ -4,14 +4,14 @@ dependencies:
   config:
     - field.storage.node.field_activity_type
     - node.type.timesheet_entry
-    - taxonomy.vocabulary.project
+    - taxonomy.vocabulary.activity_types
 id: node.timesheet_entry.field_activity_type
 field_name: field_activity_type
 entity_type: node
 bundle: timesheet_entry
 label: 'Activity Type'
-description: ''
-required: false
+description: 'Select the type of activity'
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      project: project
+      activity_types: activity_types
     sort:
       field: name
       direction: asc

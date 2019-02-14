@@ -4,11 +4,13 @@ dependencies:
   config:
     - field.field.node.timesheet_entry.field_activity_type
     - field.field.node.timesheet_entry.field_date
+    - field.field.node.timesheet_entry.field_duration_minutes_
     - field.field.node.timesheet_entry.field_project
     - field.field.node.timesheet_entry.field_time_spent
     - field.field.node.timesheet_entry.field_user
     - node.type.timesheet_entry
   module:
+    - computed_field
     - datetime
     - duration_field
 id: node.timesheet_entry.default
@@ -17,7 +19,7 @@ bundle: timesheet_entry
 mode: default
 content:
   field_activity_type:
-    weight: 26
+    weight: 28
     settings:
       match_operator: CONTAINS
       size: 60
@@ -31,8 +33,14 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_duration_minutes_:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
   field_project:
-    weight: 6
+    weight: 29
     settings:
       match_operator: CONTAINS
       size: 60

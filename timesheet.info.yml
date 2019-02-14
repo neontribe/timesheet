@@ -8,11 +8,12 @@ dependencies:
   1: views_data_export
   2: csv_serialization
   3: datetime
-  5: node
-  6: rest
-  7: serialization
-  8: user
-  9: computed_field
-mtime: 1549626503
+  4: node
+  5: rest
+  6: serialization
+  7: user
+  8: computed_field
+  13: taxonomy
+mtime: 1549965691
 version: null
 php: 5.5.9
