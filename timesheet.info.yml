@@ -12,6 +12,7 @@ dependencies:
   6: rest
   7: serialization
   8: user
+  9: computed_field
 mtime: 1549626503
 version: null
 php: 5.5.9

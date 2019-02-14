@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\views\ViewExecutable;
 
 /**
  * Implements hook_help().
@@ -26,14 +27,48 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_theme().
  */
-//function timesheet_theme() {
-//    $theme['node__timesheet_entry'] = [
-//        'render element' => 'children',
-//        'template' => 'node--timesheet-entry',
-//        'variables' => [
-//            'content' => NULL
-//        ],
-//    ];
-//
-//    return $theme;
-//}
+function timesheet_theme() {
+    $theme['timesheet_tree'] = [
+        'variables' => [
+            'projects' => NULL
+        ],
+    ];
+
+    return $theme;
+}
+
+/**
+ * I really don't like this.  If another module / content type declares a
+ * field_duration_minutes_ field and then adds an override we'll get a name
+ * clash.
+ */
+function computed_field_field_duration_minutes__compute($entity_type_manager, $entity, $fields, $delta) {
+    $field_time_spent = $fields['field_time_spent'];
+    $value = $field_time_spent[0]['value'] ?? 0; 
+    $interval = new DateInterval($value);
+
+    $hours = $interval->format("%H");
+    $minutes = $interval->format("%I");
+
+    return ($hours * 60) + $minutes;
+}
+
+/*
+function timesheet_views_pre_render(ViewExecutable $view) {
+  if ($view->id() == 'timesheets' && $view->current_display == 'timesheet_summary') {
+    $results = $view->result;
+    foreach ($results as $result) {
+      dpm($result->_entity->getFields(), 'fields');
+      # dpm(get_class_methods(get_class($result->_entity)));
+      # dpm($result->_entity);
+      # dpm($result->_entity->get('field_duration_minutes_'));
+      $result->_entity->set('field_duration_minutes_', 'xxxxxxxxxxx');
+    }
+  }
+}
+
+function _timesheet_formate_time($minutes) {
+  return date('H:i', mktime(0, $minutes));
+}
+ */
+// vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

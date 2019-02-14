@@ -11,7 +11,7 @@ timesheet.admin_settings_form:
 timesheet.autocomplete_project:
   path: '/timesheet/handleAutocompleteProject'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::handleAutocompleteProject'
+    _controller: '\Drupal\timesheet\Controller\AutoCompleteController::handleAutocompleteProject'
     _format: json
   requirements:
     _permission: 'authenticated'
@@ -19,7 +19,7 @@ timesheet.autocomplete_project:
 timesheet.autocomplete_activity:
   path: '/timesheet/handleAutocompleteActivity'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::handleAutocompleteActivity'
+    _controller: '\Drupal\timesheet\Controller\AutoCompleteController::handleAutocompleteActivity'
     _format: json
   requirements:
     _permission: 'authenticated'

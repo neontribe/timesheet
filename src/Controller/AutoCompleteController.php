@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
  *
  * https://boylesoftware.com/blog/drupal-8-get-taxonomy-terms-level/
  */
-class DefaultController extends ControllerBase {
+class AutoCompleteController extends ControllerBase {
 
   /**
    * Handleautocomplete.
