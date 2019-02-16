@@ -28,6 +28,7 @@ class TimesheetForm extends FormBase {
 
     $form['timesheets_description'] = [
       '#type' => 'textarea',
+      '#maxlength' => 255,
       '#title' => $this->t('Description of activity'),
     ];  
 
@@ -50,15 +51,33 @@ class TimesheetForm extends FormBase {
       '#granularity' => 'h:i',
     ];  
 
+    $form['timesheets_customer'] = [
+      '#type' => 'entity_autocomplete',
+      '#target_type' => 'taxonomy_term',
+      '#attributes' => [
+        'placeholder' => "Choose customer",
+      ],
+      '#selection_settings' => [
+        'target_bundles' => ['customers'],
+      ],
+      '#title' => $this->t('Customer'),
+    ];  
+
     $form['timesheets_project'] = [
       '#type' => 'textfield',
       '#autocomplete_route_name' => 'timesheet.autocomplete_project',
+      '#attributes' => [
+        'placeholder' => "Choose customer first",
+      ],
       '#title' => $this->t('Project'),
     ];  
 
     $form['timesheets_activity_type'] = [
       '#type' => 'textfield',
       '#autocomplete_route_name' => 'timesheet.autocomplete_activity',
+      '#attributes' => [
+        'placeholder' => "Choose activity first",
+      ],
       '#title' => $this->t('Activity Type'),
     ];  
 

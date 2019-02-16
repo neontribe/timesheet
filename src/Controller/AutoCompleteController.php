@@ -25,16 +25,31 @@ class AutoCompleteController extends ControllerBase {
   public function handleAutocompleteProject(Request $request) {
     $results = [];
 
+    $customer = $request->query->get('customer') ?? False;
+    if (!$customer) {
+      return new JsonResponse([]);
+    }
+
+    $manager = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
     if ($input = $request->query->get('q')) {
       $typed_string = Tags::explode($input);
       $typed_string = Unicode::strtolower(array_pop($typed_string));
 
-      $manager = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
-      $tree = $manager->loadTree( 'project', 0, NULL, TRUE);
+      $tree = $manager->loadTree('project', 0, NULL, TRUE);
+      $customer_tid = $this->getTidFromText($customer);
 
       foreach ($tree as $term) {
-        if (!$this->getParent($term->id())) {
-          # $results[$term->id()] = $term->getName();
+        $pCustomers = $term->get('field_customer');
+        if (!count($pCustomers)) {
+          return new JsonResponse([]);
+        }
+
+        $pCustomer_tid = $pCustomers[0]->getEntity()->id();
+        error_log("pCust: " . $pCustomer_tid);
+        error_log("Cust:  " . $customer_tid);
+
+        if ($pCustomer_tid === $customer_tid) {
           $results[] = $term->getName() . " [" . $term->id() . "]";
         }
       }
@@ -43,9 +58,15 @@ class AutoCompleteController extends ControllerBase {
     return new JsonResponse($results);
   }
 
+  private function getTidFromText($text) {
+    preg_match('#\((.*?)\)#', $text, $match);
+    // error_log(json_encode($match));
+    return $match[1];
+  }
+
   private function getParent($tid) {
-      $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
-      return reset($parent);
+    $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+    return reset($parent);
   }
 
   private function addAncestors($term) {
@@ -71,7 +92,7 @@ class AutoCompleteController extends ControllerBase {
       $typed_string = Unicode::strtolower(array_pop($typed_string));
 
       $manager = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
-      $tree = $manager->loadTree( 'project', 0, NULL, TRUE);
+      $tree = $manager->loadTree('project', 0, NULL, TRUE);
 
       foreach ($tree as $term) {
         if (empty($manager->loadChildren($term->id()))) {
@@ -83,8 +104,6 @@ class AutoCompleteController extends ControllerBase {
 
     return new JsonResponse($results);
   }
-
-
 
 }
 
