@@ -1,40 +1,40 @@
 jQuery(document).ready(function ($) {
 
+    function validateProject() {
+        // Which is better, the jQuery or native function to get value?
+        var customerId = $('#edit-timesheets-customer').val();
+        var projectIds = drupalSettings.timesheet.tree[customerId];
 
-        $( document ).ajaxSend(function( event, request, settings ) {
-            var customer = $('#edit-timesheets-customer').val();
-            var project = $('#edit-timesheets-project').val();
-            settings['url'] = settings['url'] + "&customer=" + customer + "&project=" + project;
+        $('#edit-timesheets-project').empty();
+
+        $.each(projectIds, function(projectId) {
+            var projectName = drupalSettings.timesheet.project[projectId];
+            $('#edit-timesheets-project').append('<option value="' + projectId + '">' + projectName + ' (' + projectId + ')</option>');
         });
-        
-    /**
-     * Use the ajax setup to intercept the response data and filter out those 
-     * terms that do not apply to our project if selected.
-    $.ajaxSetup({
-        beforeSend(xhr){
-            // debugger;
-        },	
-        
-        
-        dataFilter: function (response, type) {
-            var _project = $('#edit-timesheets-project').val();
-            var project = _project.substr(0, _project.lastIndexOf('[') -1)
-            if (project.trim().length == 0) {
-                return response;
-            }
+    }
 
-            var data = $.parseJSON(response)
-            var cleaned = [];
-            $.each(data, function (key, val) {
-                console.log(val);
-                if (val.startsWith(project)) {
-                    cleaned.push(val);
-                }
-            });
+    function validateActivity() {
+        // Which is better, the jQuery or native function to get value?
+        var customerId = $('#edit-timesheets-customer').val();
+        var projectId = $('#edit-timesheets-project').val();
+        var activityIds = drupalSettings.timesheet.tree[customerId][projectId];
 
-            return JSON.stringify(cleaned);
-        }
+        $('#edit-timesheets-activity-type').empty();
+
+        $.each(activityIds, function(key, activityId) {
+            var activityName = drupalSettings.timesheet.activity_types[activityId];
+            $('#edit-timesheets-activity-type').append('<option value="' + activityId + '">' + activityName + ' (' + activityId + ')</option>');
+        });
+    }
+
+    $('#edit-timesheets-customer').on('change', function(event) {
+        validateProject();
     });
-     */
 
+    $('#edit-timesheets-project').on('change', function(event) {
+        validateActivity();
+    });
+
+    validateProject();
+    validateActivity();
 });

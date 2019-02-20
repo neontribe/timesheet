@@ -8,18 +8,10 @@ timesheet.admin_settings_form:
   options:  
     _admin_route: 
 
-timesheet.autocomplete_project:
-  path: '/timesheet/handleAutocompleteProject'
+timesheet.debug_controller_test:
+  path: '/timesheet/test'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\AutoCompleteController::handleAutocompleteProject'
-    _format: json
+    _controller: '\Drupal\timesheet\Controller\DebugController::test'
+    _title: 'test'
   requirements:
-    _permission: 'authenticated'
-
-timesheet.autocomplete_activity:
-  path: '/timesheet/handleAutocompleteActivity'
-  defaults:
-    _controller: '\Drupal\timesheet\Controller\AutoCompleteController::handleAutocompleteActivity'
-    _format: json
-  requirements:
-    _permission: 'authenticated'
+    _permission: 'access content'
