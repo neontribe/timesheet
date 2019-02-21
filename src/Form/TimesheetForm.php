@@ -153,7 +153,7 @@ class TimesheetForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
 
-    $description = $values['timesheets_description'];
+    $title = $values['timesheets_description'];
     $date = $values['timesheets_date'];
     $user = $values['timesheets_user'];
     $timespent = $values['timesheets_timespent'];
@@ -161,30 +161,16 @@ class TimesheetForm extends FormBase {
     $project = $values['timesheets_project'];
     $customer = $values['timesheets_customer'];
 
-    dpm([
-      'description' => $description,
-      'date' => $date,
-      'user' => $user,
-      'timespent' => $timespent,
-      'activity_type' => $activity_type,
-      'project' => $project,
-      'customer' => $customer,
-    ]);
-    /*
-    $title = sprintf("%s %s", $activity_type, $date);
-
     $node = Node::create([
       'type'  => 'timesheet_entry',
       'title' => $title,
-      'body'  => $description,
     ]);
     $node->set('field_date', $date);
     $node->set('field_user', $user);
     $node->set('field_time_spent', $timespent);
-    $node->set('field_activity_type', $this->getTermFromBrackets($activity_type));
-    $node->set('field_project', $this->getTermFromBrackets($project));
+    $node->set('field_activity_type', $activity_type);
+    $node->set('field_project', $project);
     $node->save();
-     */
   }
   
   
