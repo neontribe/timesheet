@@ -4,16 +4,16 @@ description: 'Neontribe timesheet'
 core: 8.x
 package: Neontribe
 dependencies:
-  0: duration_field
-  1: views_data_export
-  2: csv_serialization
-  3: datetime
-  4: node
-  5: rest
-  6: serialization
-  7: user
-  8: computed_field
-  13: taxonomy
-mtime: 1549965691
+  - duration_field
+  - views_data_export
+  - csv_serialization
+  - datetime
+  - node
+  - rest
+  - serialization
+  - user
+  - computed_field
+  - taxonomy
+mtime: 1550764451
 version: null
 php: 5.5.9
