@@ -62,6 +62,7 @@ class TimesheetForm extends FormBase {
     $form['timesheets_description'] = [
       '#type' => 'textarea',
       '#maxlength' => 255,
+      '#required' => True,
       '#title' => $this->t('Description of activity'),
     ];  
 
@@ -87,7 +88,7 @@ class TimesheetForm extends FormBase {
     $form['timesheets_customer'] = [
       '#type' => 'select',
       '#title' => $this->t('Customer'),
-      '#options' => $this->getCustomersArray(),
+      '#options' => $this->getTermArray('customers'),
     ];  
 
     $form['timesheets_project'] = [
@@ -96,7 +97,7 @@ class TimesheetForm extends FormBase {
         'placeholder' => "Choose customer first",
       ],
       '#title' => $this->t('Project'),
-      '#options' => [],
+      '#options' => $this->getTermArray('project'),
     ];  
 
     $form['timesheets_activity_type'] = [
@@ -105,7 +106,7 @@ class TimesheetForm extends FormBase {
         'placeholder' => "Choose activity first",
       ],
       '#title' => $this->t('Activity Type'),
-      '#options' => [],
+      '#options' => $this->getTermArray('activity_types'),
     ];  
 
     $form['timesheets_import']['timesheet_upload_button'] = [
@@ -121,7 +122,30 @@ class TimesheetForm extends FormBase {
     return $form;
   }  
 
-  public function validateForm(array &$form, FormStateInterface $form_state) {}
+  public function validateForm(array &$form, FormStateInterface $form_state) {
+    $values = $form_state->getValues();
+
+    $_activity_type = $values['timesheets_activity_type'];
+    $_project = $values['timesheets_project'];
+    $_customer = $values['timesheets_customer'];
+
+    $project = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($_project);
+    $customer = $project->get('field_customer');
+    $activity_types = $project->get('field_activity_types');
+
+    $pCustomerTid = $customer[0]->get('target_id')->getValue();
+    if ($pCustomerTid != $_customer) {
+      $form_state->setErrorByName('timesheets_project', t('Project %project is not owned by the the customer %customer'));
+    }
+
+    $activity_type_ids = [];
+    foreach ($activity_types as $activity_type) {
+      $activity_type_ids[] = $activity_type->get('target_id')->getValue();
+    }
+    if (!in_array($_activity_type, $activity_type_ids)) {
+      $form_state->setErrorByName('timesheets_activity_type', t('Activity type %activity_type is not owned by the the project %project'));
+    }
+  }
 
   /**
    * {@inheritdoc}
@@ -135,7 +159,18 @@ class TimesheetForm extends FormBase {
     $timespent = $values['timesheets_timespent'];
     $activity_type = $values['timesheets_activity_type'];
     $project = $values['timesheets_project'];
+    $customer = $values['timesheets_customer'];
 
+    dpm([
+      'description' => $description,
+      'date' => $date,
+      'user' => $user,
+      'timespent' => $timespent,
+      'activity_type' => $activity_type,
+      'project' => $project,
+      'customer' => $customer,
+    ]);
+    /*
     $title = sprintf("%s %s", $activity_type, $date);
 
     $node = Node::create([
@@ -149,6 +184,7 @@ class TimesheetForm extends FormBase {
     $node->set('field_activity_type', $this->getTermFromBrackets($activity_type));
     $node->set('field_project', $this->getTermFromBrackets($project));
     $node->save();
+     */
   }
   
   
@@ -179,12 +215,12 @@ class TimesheetForm extends FormBase {
     return $term;
   }
   
-  private function getCustomersArray() {
-    $customers = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree('customers', 0, NULL, TRUE);
+  private function getTermArray($vocab) {
+    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vocab, 0, NULL, TRUE);
     $carray = [];
     
-    foreach ($customers as $customer) {
-      $carray[$customer->id()] = sprintf("%s (%d)", $customer->getName(), $customer->id());
+    foreach ($terms as $term) {
+      $carray[$term->id()] = sprintf("%s (%d)", $term->getName(), $term->id());
     }
     
     return $carray;
