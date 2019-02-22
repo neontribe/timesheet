@@ -8,10 +8,3 @@ timesheet.admin_settings_form:
   options:  
     _admin_route: 
 
-timesheet.debug_controller_test:
-  path: '/timesheet/test'
-  defaults:
-    _controller: '\Drupal\timesheet\Controller\DebugController::test'
-    _title: 'test'
-  requirements:
-    _permission: 'access content'
