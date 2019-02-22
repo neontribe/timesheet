@@ -21,6 +21,8 @@ dependencies:
     - node
     - taxonomy
     - user
+_core:
+  default_config_hash: Nv9ZM2adcN-5am0iR-De7CNbQwbl2vVjJK69enIk1Vs
 id: timesheet_activities
 label: 'Timesheet: Activities'
 module: views

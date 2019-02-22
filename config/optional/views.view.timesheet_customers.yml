@@ -11,7 +11,9 @@ dependencies:
   module:
     - taxonomy
     - user
-id: customers
+_core:
+  default_config_hash: Sm0bIBZdG5-MvnpG6YlTMEwl1gVTycJZOPC-Mvlu0oY
+id: timesheet_customers
 label: 'Timesheet: Customers and Projects'
 module: views
 description: ''
