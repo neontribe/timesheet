@@ -21,7 +21,6 @@ function timesheet_install() {
     'name' => 'Support', 
     'vid' => 'billing_type',
   ])->save();
-   */
 
   $term = Term::create([
     'name' => 'Default Project', 
@@ -58,6 +57,7 @@ function timesheet_install() {
     }
 
   }
+   */
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

@@ -23,7 +23,21 @@ Module to add time sheeting to drupal 8
 
 ## importing from kimai
 
-    select t.id u.username, a.name, t.start_time, t.duration, t.description, p.name, c.name from kimai2_timesheet t inner join kimai2_users u on t.user=u.id inner join kimai2_activities a on t.activity_id=a.id inner join kimai2_projects p on t.project_id=p.id inner join kimai2_customers c on p.customer_id=c.id;
+    select \
+        t.id          as id,       \
+        c.name        as customer, \
+        p.name        as project,  \
+        a.name        as activity, \
+        t.start_time  as ddate,    \
+        t.duration    as duration, \
+        t.description as title,    \
+        u.username    as username  \
+    from \
+        kimai2_timesheet t \
+        inner join kimai2_users u on t.user=u.id \
+        inner join kimai2_activities a on t.activity_id=a.id \
+        inner join kimai2_projects p on t.project_id=p.id \
+        inner join kimai2_customers c on p.customer_id=c.id;
 
     docker exec -i mysql mysql -B -u root -pchangeme kimai < kimai-dump.sql
 

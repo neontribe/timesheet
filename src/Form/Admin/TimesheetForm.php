@@ -1,9 +1,5 @@
 <?php
 
-/**  
- * @file  
- * Contains Drupal\timesheet\Form\Admin\TimesheetForm.  
- */  
 namespace Drupal\timesheet\Form\Admin;
 
 use Drupal\taxonomy\Entity\Term;
@@ -13,34 +9,35 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 
 class TimesheetForm extends ConfigFormBase {
-  /**  
-   * {@inheritdoc}  
-   */  
-  protected function getEditableConfigNames() {  
-    return [  
-      'timesheet.adminsettings',  
-    ];  
-  }  
 
-  /**  
-   * {@inheritdoc}  
-   */  
-  public function getFormId() {  
-    return 'timesheet_admin_form';  
-  }  
+  /**
+   * {@inheritdoc}
+   */
+  protected function getEditableConfigNames() {
+    return [
+      'timesheet.adminsettings',
+    ];
+  }
 
-  /**  
-   * {@inheritdoc}  
-   */  
-  public function buildForm(array $form, FormStateInterface $form_state) {  
-    $config = $this->config('timesheet.adminsettings');  
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId() {
+    return 'timesheet_admin_form';
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function buildForm(array $form, FormStateInterface $form_state) {
+    $config = $this->config('timesheet.adminsettings');
 
     $form['timesheets_import'] = [
       '#type' => 'fieldset',
       '#title' => $this->t('Import timesheets'),
     ];
 
-    $form['timesheets_import']['timesheet_upload_csv'] = [  
+    $form['timesheets_import']['timesheet_upload_csv'] = [
       '#type' => 'managed_file',
       '#title' => $this->t('Upload CSV'),
       '#upload_location' => 'public://timesheets',
@@ -48,7 +45,7 @@ class TimesheetForm extends ConfigFormBase {
         'file_validate_extensions' => ['csv'],
       ],
       '#description' => $this->t('Upload record extracted from another time system.  The CSV should comma seperated, quote enclosed fields.  The fields shouls be id, user, title, starttime, duration in seconds, description, project name, and compoany name.'),
-    ];  
+    ];
 
     $form['timesheets_import']['timesheet_upload_button'] = [
       '#type' => 'submit',
@@ -56,10 +53,10 @@ class TimesheetForm extends ConfigFormBase {
       '#value' => $this->t('Upload'),
     ];
 
-    return parent::buildForm($form, $form_state);  
-  }  
+    return parent::buildForm($form, $form_state);
+  }
 
-    /**
+  /**
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
@@ -78,15 +75,22 @@ class TimesheetForm extends ConfigFormBase {
 
   private function parseUploadedCsv(File $file) {
     $rows = file($file->getFileUri());
-    
+
     $duplicates = [];
     $importable = [];
 
     $config = $this->config('timesheet.adminsettings');
-    $hashes = $config->get('hashes', []);
+    // $hashes = $config->get('hashes');
+    if (!$hashes) {
+      $hashes = [];
+    }
 
     foreach ($rows as $row) {
-      $cols = str_getcsv($row, ",", '"'); //parse the items in rows 
+      $cols = str_getcsv($row, "\t");
+      if (!($cols || is_array($cols))) {
+        drupal_set_message('Unable to parse CSV row: ' . $row);
+        continue;
+      }
       $hash = md5(implode('|', $cols));
       if (in_array($hash, $hashes)) {
         $duplicates[$hash] = $cols;
@@ -97,59 +101,139 @@ class TimesheetForm extends ConfigFormBase {
           continue;
         }
         $importable[$hash] = $cols;
-        $user = $this->findUser($cols[0]);
-        $title = $cols[1];
-        $date = $cols[2];
-        $time = $this->formatTime($cols[3]);
-        $desc = $cols[4];
-        $activity = $this->findTerm($cols[5], 'billing_type');
-        $project = $this->findTerm($cols[6], 'project');
-        // $node = Node::create([
-          // 'type'        => 'timesheet_entry',
-          // 'title'       => $cols[2],
-          // 'body'        => $cols[5],
-        // ]);
-        // $node->set('field_time_spent', gmdate('\P\TH\Hi\M', $cols[3]));
-        // $node->set('field_user', $user);
-        // $node->set('field_billing_type', $billing);
-        // $node->set('field_project', $project);
-        // $node->save();
+
+        $customer = $this->findCustomer($cols[1]);
+        $activity = $this->findActivityType($cols[3]);
+        $project = $this->findProject($cols[2], $customer, $activity);
+
+        $date = $cols[4];
+        $duration = $this->formatTime($cols[5]);
+        $minutes = $cols[5];
+        $title = $cols[6];
+        $user = $this->findUser($cols[7]);
+        // dpm($user ? $user->getName() : False, 'User');
+
+        $node = Node::create([
+            'type' => 'timesheet_entry',
+            'title' => $title,
+        ]);
+        $node->set('field_time_spent', $duration);
+        $node->set('field_duration_minutes_', $minutes);
+        $node->set('field_user', $user);
+        $node->set('field_project', $project);
+        $node->set('field_activity_type', $activity);
+        $node->save();
       }
     }
 
     return $duplicates;
-    # drupal_set_message($data);
   }
 
   private function findUser($user) {
+    $users = \Drupal::entityTypeManager()
+      ->getStorage('user')
+      ->loadByProperties([
+      'name' => $user,
+    ]);
+    if (count($users)) {
+      $user = array_pop($users);
+      return $user;
+    }
+    else {
+      return False;
+    }
   }
 
-  private function formatTime($seconds) {
-    return gmdate('\P\TH\Hi\M', $seconds/60);
+  private function formatTime($minutes) {
+    return gmdate('\P\TH\Hi\M', $minutes);
   }
 
-  private function findTerm($name, $vocab) {
+  /**
+   * Wrapper for findTerm($customer, 'customers').
+   *
+   * @param string $customer The customer to search for.
+   *
+   * @return Drupal\taxonomy\Entity\Term
+   */
+  private function findCustomer($customer): Term {
+    $term = $this->findTerm($customer, 'customers');
+
+    return $term;
+  }
+
+  /**
+   * Wrapper for findTerm($activity, 'activity_types').
+   *
+   * @param string $activity The activity_type to search for.
+   *
+   * @return Drupal\taxonomy\Entity\Term
+   */
+  private function findActivityType($activity): Term {
+    $term = $this->findTerm($activity, 'activity_types');
+
+    return $term;
+  }
+
+  /**
+   * Find or create a new project.
+   *
+   * @param type $project                         The name of the project.
+   * @param Drupal\taxonomy\Entity\Term $customer The customer term.
+   * @param Drupal\taxonomy\Entity\Term $activity The activity term.
+   *
+   * @return Drupal\taxonomy\Entity\Term
+   */
+  private function findProject($project, Term $customer, Term $activity) {
+    $term = $this->findTerm($project, 'project');
+
+    // Set the customer on this project.
+    $term->set('field_customer', $customer);
+    // Add the activity type, this seems to have a implicit no dupes
+    $term->field_activity_types->appendItem($activity);
+    $term->save();
+
+    return $term;
+  }
+
+  /**
+   * Find a term in the specified vocab, or create it if it does not exist.
+   *
+   * @param string $name  The name of the term to find.
+   * @param string $vocab The vocab to search in.
+   *
+   * @return Drupal\taxonomy\Entity\Term
+   */
+  private function findTerm($name, $vocab): Term {
     $term = false;
 
     $terms = taxonomy_term_load_multiple_by_name($name, $vocab);
     if (count($terms)) {
       // There should only ever be one
-      $term = $terms[0];
+      $term = array_shift($terms);
     }
     else {
       // Create the term
-      $term = Term::create([
-        'name' => $name,
-        'vid' => $vocab,
-      ])->save();
+      $term = Term::create(['name' => $name, 'vid' => $vocab]);
+      $term->save();
+      drupal_set_message(
+        $this->t(
+          'Created %vocab: %term', [
+          '%vocab' => $vocab,
+          '%term' => $name,
+          ]
+        )
+      );
     }
-    #$term = \Drupal::entityTypeManager()
-      #->getStorage('taxonomy_term')
-      #->loadByProperties([
-        #'name' => $term_name,
-    #]);
+    /*
+      $term = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term')
+      ->loadByProperties([
+      'name' => $term_name,
+      ]);
+     */
     return $term;
   }
+
 }
 
 // vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:
