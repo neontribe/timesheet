@@ -2,12 +2,12 @@
 
 namespace Drupal\timesheet\Form\Admin;
 
-use Drupal\taxonomy\Entity\Term;
-use Drupal\node\Entity\Node;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\file\Entity\File;
-use Drupal\Core\Datetime\Element\Datetime;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
 
 /**
  * TODO: move the import into a service and add a cli wrapper/batch process.
@@ -78,13 +78,12 @@ class TimesheetForm extends ConfigFormBase {
   }
 
   private function parseUploadedCsv(File $file) {
+    $messenger = \Drupal::messenger();
+
     $rows = file($file->getFileUri());
 
-    $duplicates = [];
-    $importable = [];
-
     $config = $this->config('timesheet.adminsettings');
-    // $hashes = $config->get('hashes');
+    $hashes = $config->get('hashes');
     if (!$hashes) {
       $hashes = [];
     }
@@ -92,19 +91,18 @@ class TimesheetForm extends ConfigFormBase {
     foreach ($rows as $row) {
       $cols = str_getcsv($row, "\t");
       if (!($cols || is_array($cols))) {
-        drupal_set_message('Unable to parse CSV row: ' . $row);
+        drupal_set_message('Unable to parse CSV row: ' . $row, MessengerInterface::TYPE_WARNING);
         continue;
       }
       $hash = md5(implode('|', $cols));
       if (in_array($hash, $hashes)) {
-        $duplicates[$hash] = $cols;
+        $messenger->addMessage("Row exists: " . $row, MessengerInterface::TYPE_WARNING);
       }
       else {
         if (count($cols) < 7) {
-          drupal_set_message('Invalid row: ' . $row);
+          $messenger->addMessage('Invalid row: ' . $row, MessengerInterface::TYPE_WARNING);
           continue;
         }
-        $importable[$hash] = $cols;
 
         $customer = $this->findCustomer($cols[1]);
         $activity = $this->findActivityType($cols[3]);
@@ -127,11 +125,18 @@ class TimesheetForm extends ConfigFormBase {
         $node->set('field_user', $user);
         $node->set('field_project', $project);
         $node->set('field_activity_type', $activity);
-        $node->save();
+        if ($node->save()) {
+          $hashes[] = $hash;
+        }
+        else {
+          $messenger->addMessage('Failed to save row: ' . $row, MessengerInterface::TYPE_WARNING);
+        }
       }
     }
 
-    return $duplicates;
+    \Drupal::service('config.factory')
+      ->getEditable('timesheet.adminsettings')
+      ->set('hashes', $hashes)->save();
   }
 
   private function findUser($user) {
