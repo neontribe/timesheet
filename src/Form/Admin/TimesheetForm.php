@@ -7,6 +7,7 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Drupal\Core\Datetime\Element\Datetime;
 
 class TimesheetForm extends ConfigFormBase {
 
@@ -106,7 +107,7 @@ class TimesheetForm extends ConfigFormBase {
         $activity = $this->findActivityType($cols[3]);
         $project = $this->findProject($cols[2], $customer, $activity);
 
-        $date = $cols[4];
+        $date = date('Y-m-d', strtotime($cols[4]));
         $duration = $this->formatTime($cols[5]);
         $minutes = $cols[5];
         $title = $cols[6];
@@ -117,6 +118,7 @@ class TimesheetForm extends ConfigFormBase {
             'type' => 'timesheet_entry',
             'title' => $title,
         ]);
+        $node->set('field_date', $date);
         $node->set('field_time_spent', $duration);
         $node->set('field_duration_minutes_', $minutes);
         $node->set('field_user', $user);
@@ -189,7 +191,13 @@ class TimesheetForm extends ConfigFormBase {
     // Set the customer on this project.
     $term->set('field_customer', $customer);
     // Add the activity type, this seems to have a implicit no dupes
-    $term->field_activity_types->appendItem($activity);
+    $existing_activities = [];
+    foreach ($term->field_activity_types as $activty_type) {
+      $existing_activities[] = $activty_type->getEntity()->getName();
+    }
+    if (!in_array($activity->getName(), $existing_activities)) {
+      $term->field_activity_types->appendItem($activity);
+    }
     $term->save();
 
     return $term;

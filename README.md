@@ -90,3 +90,7 @@ Export the views
 Export the content type
 
     drupal config:export:content:type --module=timesheet --remove-uuid --remove-config-hash --optional-config
+
+Clear content
+
+    drush devel-generate-terms customers 0 --kill && drush devel-generate-terms project 0 --kill && drush devel-generate-terms activity_types 0 --kill && drush devel-generate-content 0 --kill --types=timesheet_entry
