@@ -6,6 +6,6 @@ services:
         ports:
             - 8888:8888
         volumes:
-            - ./modules:/opt/drupal/web/modules/custom
+            - .:/opt/drupal/web/modules/custom/timesheet
               # - ./drupal.sqlite:/opt/drupal/web/sites/default/files/.ht.sqlite
         restart: always
