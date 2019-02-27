@@ -8,3 +8,11 @@ timesheet.admin_settings_form:
   options:  
     _admin_route: 
 
+
+timesheet.default_controller_index:
+  path: '/timesheet/index'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\DefaultController::index'
+    _title: 'index'
+  requirements:
+    _permission: 'access content'

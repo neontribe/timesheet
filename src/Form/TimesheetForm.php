@@ -23,6 +23,8 @@ class TimesheetForm extends FormBase {
 
   /**
    * {@inheritdoc}
+   *
+        $this->messenger->addMessage("Row exists: " . $row, MessengerInterface::TYPE_WARNING);
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
