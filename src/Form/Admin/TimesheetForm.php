@@ -9,6 +9,9 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
 use Drupal\Core\Datetime\Element\Datetime;
 
+/**
+ * TODO: move the import into a service and add a cli wrapper/batch process.
+ */
 class TimesheetForm extends ConfigFormBase {
 
   /**

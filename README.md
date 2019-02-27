@@ -4,12 +4,7 @@ Module to add time sheeting to drupal 8
 
 ## Testing with docker
 
-    docker run -ti -p 8888:8888 --rm --name timeshite -v $(pwd):/opt/drupal/web/modules/custom/timesheet -e UID=$(id -u) -e GID=$(id -g) tobybatch/timeshite
-    docker exec -ti timeshite drush -y en timesheet
-
-### These commands will be handled by composer once we are package installing
-
-    docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/duration_field
+    docker-compose up
 
 ### These commands are native to our install
 
@@ -19,7 +14,6 @@ Module to add time sheeting to drupal 8
 
     docker exec -ti timeshite composer --working-dir=/opt/drupal require drupal/ldap
     docker exec -ti timeshite drush en -y ldap ldap_authentication ldap_user ldap_query ldap_servers
-
 
 ## importing from kimai
 
@@ -41,7 +35,6 @@ Module to add time sheeting to drupal 8
 
     docker exec -i mysql mysql -B -u root -pchangeme kimai < kimai-dump.sql
 
-
     composer require drupal/migrate_source_csv
  
 ## Dev stuff
@@ -56,36 +49,7 @@ Module to add time sheeting to drupal 8
 
 Export the views
 
-```
-    tobias@tobias:ts $ drupal config:export:view --module=timesheet --optional-config 
-    View to be exported [Archive]:
-    > timesheets
-
-    Export view in module as an optional configuration (yes/no) [yes]:
-    > yes
-
-    Include view module dependencies in module info YAML file (yes/no) [yes]:
-    > yes
-
-    [+] The following module dependencies were included at "modules/custom/timesheet/timesheet.info.yml"
-       [-] csv_serialization
-       [-] datetime
-       [-] duration_field
-       [-] node
-       [-] rest
-       [-] serialization
-       [-] user
-       [-] views_data_export
-    commands.views.export.messages.view-exported
-    - modules/custom/timesheet/config/optional/views.view.timesheets.yml
-    - modules/custom/timesheet/config/optional/core.entity_view_mode.node.teaser.yml
-    - modules/custom/timesheet/config/optional/field.storage.node.field_activity_type.yml
-    - modules/custom/timesheet/config/optional/field.storage.node.field_date.yml
-    - modules/custom/timesheet/config/optional/field.storage.node.field_project.yml
-    - modules/custom/timesheet/config/optional/field.storage.node.field_time_spent.yml
-    - modules/custom/timesheet/config/optional/field.storage.node.field_user.yml
-    - modules/custom/timesheet/config/optional/node.type.timesheet_entry.yml
-```
+    drupal config:export:view timesheet_customers --module=timesheet --optional-config=yes --include-module-dependencies=yes
 
 Export the content type
 
