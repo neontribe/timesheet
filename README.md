@@ -43,15 +43,20 @@ EOF
 Now run that as a batch export and trim of the header line (TODO there is probably a mysyl command to suppress the headers).  You will need to adjust the SQL details to match your setup.
 
 ```bash
-    mysql -B -u root -pchangeme kimai < kimai-dump.sql
+    mysql -B -u root -pchangeme kimai < kimai-dump.sql > export.orig.csv
 ```
 
 To run this against a container sql:
 
 ```bash
-    docker exec -i mysql mysql -B -u root -pchangeme kimai < kimai-dump.sql
+    docker exec -i mysql mysql -B -u root -pchangeme kimai < kimai-dump.sql > export.orig.csv
 ```
 
+You will then need to noramlise the data ready for our install.  This assumes you have added LDAP auth to this drupal.
+
+```bash
+    .fixtures/convert-and-map.sh
+```
 
 ### These commands are native to our install
 
