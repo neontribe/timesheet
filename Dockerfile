@@ -8,6 +8,7 @@ RUN composer require --working-dir=/opt/drupal drupal/ldap
 RUN composer require --working-dir=/opt/drupal drupal/views_data_export
 RUN composer require --working-dir=/opt/drupal drupal/computed_field
 
-ADD startup.sh /startup.sh
+ADD . modules/custom/timesheet
+ADD .docker/startup.sh /startup.sh
 
 ENTRYPOINT /startup.sh
