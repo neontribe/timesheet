@@ -5,6 +5,8 @@ dependencies:
   module:
     - node
     - taxonomy
+_core:
+  default_config_hash: WS4PluEv5e7cDgosiMAAwNBQGkfo1AuBDsywg4P4uqE
 id: node.field_project
 field_name: field_project
 entity_type: node

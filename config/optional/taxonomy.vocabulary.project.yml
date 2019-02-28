@@ -2,7 +2,9 @@ uuid: 83b0d6d2-16b9-4952-b23e-894f740769ec
 langcode: en
 status: true
 dependencies: {  }
-name: Project
+_core:
+  default_config_hash: tyfvCKAiH7aKxRjFvGvDPm-tWPjRLPTted1jTUZLmCE
+name: Projects
 vid: project
 description: 'A discreet piece work undertaken for a customer.'
 hierarchy: 0

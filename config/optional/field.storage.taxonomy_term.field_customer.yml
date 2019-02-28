@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - taxonomy
+_core:
+  default_config_hash: OgvguyVT9Rh9kEIl_APtKS9kNcM-AE65NQzBa2Uo6O8
 id: taxonomy_term.field_customer
 field_name: field_customer
 entity_type: taxonomy_term

@@ -1,3 +1,4 @@
+uuid: 81e0d132-cafa-40de-82b7-129435f30087
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: 77GzdoIF9Dmh_HOdeWLKut8IVESllUY-CTK6-GuYkF8
 name: 'Timesheet entry'
 type: timesheet_entry
 description: 'A piece of work to log as time spent.'

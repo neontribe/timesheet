@@ -6,7 +6,7 @@ dependencies:
     - duration_field
     - node
 _core:
-  default_config_hash: 8MiGFTiVZJgw5Xbry5KfRw2Ib1TMK5Cxg0sKCjFBSOM
+  default_config_hash: iLp9iEDX1_n0pGDi_wRunYiFhHKcrKUOwqYMT2Z5kN4
 id: node.field_time_spent
 field_name: field_time_spent
 entity_type: node
