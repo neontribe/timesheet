@@ -74,7 +74,9 @@ You will then need to noramlise the data ready for our install.  This assumes yo
 
 Export the views
 
-    drupal config:export:view timesheet_customers --module=timesheet --optional-config=yes --include-module-dependencies=yes
+    drupal config:export:view timesheet_customers    --module=timesheet --optional-config=yes --include-module-dependencies=yes
+    drupal config:export:view timesheet_aggregations --module=timesheet --optional-config=yes --include-module-dependencies=yes
+    drupal config:export:view timesheet_activities   --module=timesheet --optional-config=yes --include-module-dependencies=yes
 
 Export the content type
 
