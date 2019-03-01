@@ -35,6 +35,13 @@ function timesheet_theme() {
     ];
 
     return $theme;
+  }
+
+function timesheet_user_login($account) {
+  $url = "/";
+  $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+  $response->send();
+  return;
 }
 
 /**
@@ -44,7 +51,7 @@ function timesheet_theme() {
  */
 function computed_field_field_duration_minutes__compute($entity_type_manager, $entity, $fields, $delta) {
     $field_time_spent = $fields['field_time_spent'];
-    $value = $field_time_spent[0]['value'] ?? 0; 
+    $value = $field_time_spent[0]['value'] ?? 0;
 
     if (!$value) {
       $val = rand(15,180);
