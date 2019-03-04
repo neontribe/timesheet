@@ -1,0 +1,21 @@
+{#
+  activities => [
+    'title' => 'Item description',
+    'timespent' => 'Time spent'
+  minutes,
+#}
+
+<div>
+    <div>
+        <h3>Time logged</h3>
+        <h4><a href='{{ url }}'>Go to timesheet</a></h4>
+        {%  for activity in activities %}
+            <div><label>{{ activity.title }}</label>{{ activity.timespent }}</div>
+        {%  endfor %}
+        <div><label>Total time:</label>{{ total }}</div>
+    </div>
+    <div>
+        <input type='time' />
+        <input type='button' value='Log Time' />
+    </div>
+</div>

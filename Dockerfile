@@ -7,6 +7,7 @@ RUN composer require --working-dir=/opt/drupal drupal/duration_field
 RUN composer require --working-dir=/opt/drupal drupal/ldap
 RUN composer require --working-dir=/opt/drupal drupal/views_data_export
 RUN composer require --working-dir=/opt/drupal drupal/computed_field
+RUN composer require --working-dir=/opt/drupal drupal/restui
 
 ADD . modules/custom/timesheet
 ADD .docker/startup.sh /startup.sh

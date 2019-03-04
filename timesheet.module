@@ -28,14 +28,16 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function timesheet_theme() {
-    $theme['timesheet_tree'] = [
-        'variables' => [
-            'projects' => NULL
-        ],
-    ];
+  $theme['timesheet_summary'] = [
+    'variables' => [
+      'activities' => NULL,
+      'total' => NULL,
+      'url' => NULL,
+    ],
+  ];
 
-    return $theme;
-  }
+  return $theme;
+}
 
 function timesheet_user_login($account) {
   $url = "/";
