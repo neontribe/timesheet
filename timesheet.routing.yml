@@ -23,12 +23,12 @@ timesheet.chrome_injection_controller_summary:
     _controller: '\Drupal\timesheet\Controller\ChromeInjectionController::summary'
     _title: 'summary'
   requirements:
-    _permission: 'access content'
+    _permission: 'authenticated'
     
 timesheet.chrome_injection_controller_logtime:
-  path: '/timesheet/chrome/logtime'
+  path: '/timesheet/chrome/logtime/{cardid}'
   defaults:
     _controller: '\Drupal\timesheet\Controller\ChromeInjectionController::logtime'
     _title: 'logtime'
   requirements:
-    _permission: 'access content'
+    _permission: 'authenticated'

@@ -3,6 +3,10 @@
     'title' => 'Item description',
     'timespent' => 'Time spent'
   minutes,
+  
+  http://localhost/workspace/NeonTimesheet/test.html
+  http://localhost/workspace/timeshite/web/timesheet/chrome/summary/9F2ZSPOV
+  
 #}
 
 <div>
@@ -15,7 +19,19 @@
         <div><label>Total time:</label>{{ total }}</div>
     </div>
     <div>
-        <input type='time' />
-        <input type='button' value='Log Time' />
+        {% if customers | length == 1 %}
+          <label>Customer:</label> {{  customers | first }}
+        {% else %}
+            <div>
+              <label>Customer:</label>
+              <select name='neontimesheet_customer' class='neontimesheet_customer'>
+              {% for cid, customer in customers %} 
+                <option value='{{ cid }}'>{{ customer }}</option>
+              {% endfor %}
+              </select>
+            </div>
+        {% endif %}
+        <input type='time' name='neontribe_log_time' class='neontribe_duration' />
+        <input type='button' value='Log Time' class='neontimesheet_button' />
     </div>
 </div>

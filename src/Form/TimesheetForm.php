@@ -6,15 +6,15 @@
  */
 namespace Drupal\timesheet\Form;
 
-use Drupal\node\Entity\Node;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\user\Entity\User;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Datetime\DrupalDateTime;
+use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
 
 class TimesheetForm extends FormBase {
+
   /**
+   *
    * {@inheritdoc}
    */
   public function getFormId() {
@@ -22,21 +22,24 @@ class TimesheetForm extends FormBase {
   }
 
   /**
-   * {@inheritdoc}
    *
-        $this->messenger->addMessage("Row exists: " . $row, MessengerInterface::TYPE_WARNING);
+   * {@inheritdoc} $this->messenger->addMessage("Row exists: " . $row, MessengerInterface::TYPE_WARNING);
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $timesheet_service = \Drupal::service('timesheet.helper');
 
     // Build JS
-    $customers = $this->getTerms('customers');
-    $projects = $this->getTerms('project');
-    $activities = $this->getTerms('activity_types');
+    // $customers = $this->getTerms('customers');
+    // $projects = $this->getTerms('project');
+    // $activities = $this->getTerms('activity_types');
+    $customers = $timesheet_service->getCustomers();
+    $projects = $timesheet_service->getProjects();
+    $activities = $timesheet_service->getActivityTypes();
     $tree = [
       'customers' => $customers,
       'project' => $projects,
       'activity_types' => $activities,
-      'tree' => [],
+      'tree' => []
     ];
 
     // loop through projects
@@ -45,9 +48,8 @@ class TimesheetForm extends FormBase {
     foreach ($allProjects as $project) {
       // get customer tid
       $customerId = $project->get('field_customer')[0]->getValue()["target_id"];
-      $customerName = $manager->load($customerId)->getName();
 
-      if (!isset($tree['tree'][$customerId])) {
+      if (! isset($tree['tree'][$customerId])) {
         $tree['tree'][$customerId] = [];
       }
 
@@ -57,7 +59,7 @@ class TimesheetForm extends FormBase {
         $activities[] = $activity->getValue()["target_id"];
       }
 
-      $tree['tree'][$customerId][$project->id()] = $activities;
+      $tree['tree'][$customerId][$project->id()] = array_unique($activities);
     }
 
     // Build Form
@@ -65,61 +67,63 @@ class TimesheetForm extends FormBase {
       '#type' => 'textarea',
       '#maxlength' => 255,
       '#required' => True,
-      '#title' => $this->t('Description of activity'),
+      '#title' => $this->t('Description of activity')
     ];
 
     $form['timesheets_user'] = [
       '#type' => 'entity_autocomplete',
       '#target_type' => 'user',
       '#title' => $this->t('User'),
-      '#default_value' => User::load(\Drupal::currentUser()->id()),
+      '#default_value' => User::load(\Drupal::currentUser()->id())
     ];
 
     $form['timesheets_date'] = [
       '#type' => 'date',
       '#title' => $this->t('Date of activity'),
-      '#default_value' => date('Y-m-d'),
+      '#default_value' => date('Y-m-d')
     ];
 
     $form['timesheets_timespent'] = [
       '#type' => 'duration',
       '#title' => $this->t('Time spent'),
-      '#granularity' => 'h:i',
+      '#granularity' => 'h:i'
     ];
 
     $form['timesheets_customer'] = [
       '#type' => 'select',
       '#title' => $this->t('Customer'),
-      '#options' => $this->getTermArray('customers'),
+      '#options' => $customers
     ];
 
     $form['timesheets_project'] = [
       '#type' => 'select',
       '#attributes' => [
-        'placeholder' => "Choose customer first",
+        'placeholder' => "Choose customer first"
       ],
       '#title' => $this->t('Project'),
-      '#options' => $this->getTermArray('project'),
+      '#options' => $projects
     ];
 
     $form['timesheets_activity_type'] = [
       '#type' => 'select',
       '#attributes' => [
-        'placeholder' => "Choose activity first",
+        'placeholder' => "Choose activity first"
       ],
       '#title' => $this->t('Activity Type'),
-      '#options' => $this->getTermArray('activity_types'),
+      '#options' => $activities
     ];
 
     $form['timesheets_import']['timesheet_upload_button'] = [
       '#type' => 'submit',
       '#name' => 'timesheet_submit_button',
-      '#value' => $this->t('Save'),
+      '#value' => $this->t('Save')
     ];
 
     // kint($tree);
     $form['#attached']['library'][] = 'timesheet/timesheet';
-    $form['#attached']['drupalSettings'] = [ 'timesheet' => $tree, ];
+    $form['#attached']['drupalSettings'] = [
+      'timesheet' => $tree
+    ];
 
     return $form;
   }
@@ -137,19 +141,20 @@ class TimesheetForm extends FormBase {
 
     $pCustomerTid = $customer[0]->get('target_id')->getValue();
     if ($pCustomerTid != $_customer) {
-      $form_state->setErrorByName('timesheets_project', t('Project %project is not owned by the the customer %customer'));
+      $form_state->setErrorByName('timesheets_project', $this->t('Project %project is not owned by the the customer %customer'));
     }
 
     $activity_type_ids = [];
     foreach ($activity_types as $activity_type) {
       $activity_type_ids[] = $activity_type->get('target_id')->getValue();
     }
-    if (!in_array($_activity_type, $activity_type_ids)) {
-      $form_state->setErrorByName('timesheets_activity_type', t('Activity type %activity_type is not owned by the the project %project'));
+    if (! in_array($_activity_type, $activity_type_ids)) {
+      $form_state->setErrorByName('timesheets_activity_type', $this->t('Activity type %activity_type is not owned by the the project %project'));
     }
   }
 
   /**
+   *
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
@@ -164,8 +169,8 @@ class TimesheetForm extends FormBase {
     $customer = $values['timesheets_customer'];
 
     $node = Node::create([
-      'type'  => 'timesheet_entry',
-      'title' => $title,
+      'type' => 'timesheet_entry',
+      'title' => $title
     ]);
     $node->set('field_date', $date);
     $node->set('field_user', $user);
@@ -173,45 +178,6 @@ class TimesheetForm extends FormBase {
     $node->set('field_activity_type', $activity_type);
     $node->set('field_project', $project);
     $node->save();
-  }
-
-
-  private function getTerms($vid) {
-    $data = [];
-
-    $manager = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
-    $terms = $manager->loadTree($vid, 0, NULL, TRUE);
-    foreach ($terms as $term) {
-      $id = $term->id();
-      $name = $term->getName();
-      $data[$id] = $name;
-    }
-
-    return $data;
-  }
-
-  private function getTermFromBrackets($text) {
-    $stack = explode("[", $text);
-    $trailing = array_pop($stack);
-
-    if (!$trailing) {
-      return False;
-    }
-
-    $tid = trim($trailing, "[] ");
-    $term = Term::load($tid);
-    return $term;
-  }
-
-  private function getTermArray($vocab) {
-    $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadTree($vocab, 0, NULL, TRUE);
-    $carray = [];
-
-    foreach ($terms as $term) {
-      $carray[$term->id()] = sprintf("%s (%d)", $term->getName(), $term->id());
-    }
-
-    return $carray;
   }
 }
 
