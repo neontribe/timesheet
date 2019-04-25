@@ -1,4 +1,4 @@
 services:
   timesheet.default:
-    class: Drupal\timesheet\DefaultService
+    class: Drupal\timesheet\Service\DefaultService
     arguments: ['@entity.query', '@entity_type.manager']

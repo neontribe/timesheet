@@ -1,8 +1,8 @@
 <?php
+namespace Drupal\timesheet\Service;
 
-namespace Drupal\timesheet;
-use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Drupal\webprofiler\Entity\EntityManagerWrapper;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 
 /**
  * Class DefaultService.
@@ -15,12 +15,14 @@ class DefaultService {
    * @var \Symfony\Component\DependencyInjection\ContainerAwareInterface
    */
   protected $entityQuery;
+
   /**
    * Drupal\webprofiler\Entity\EntityManagerWrapper definition.
    *
    * @var \Drupal\webprofiler\Entity\EntityManagerWrapper
    */
   protected $entityTypeManager;
+
   /**
    * Constructs a new DefaultService object.
    */
@@ -28,5 +30,4 @@ class DefaultService {
     $this->entityQuery = $entity_query;
     $this->entityTypeManager = $entity_type_manager;
   }
-
 }
