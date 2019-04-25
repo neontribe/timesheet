@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <title></title>
+    <style>
+label {
+  width: 140px;
+  display: inline-block;
+}
+    </style>
+    <script src="client.js" /></script>
+  </head>
+  <body>
+    <div>
+      <h2>Get CRSF Token</h2>
+      <p>
+      <label for='username'>Username:</label>
+      <input type='text' id='username' name='username' value='superadmin' /><br />
+      <label for='password'>Password:</label>
+      <input type='text' id='password' name='password' value='changeme' /><br />
+      <button id='token_button'>Go</button> 
+      </p>
+      <p><span id='token'></span></p>
+    </div>
+    <div>
+      <h2>Get timesheet</h2>
+      <p>
+      <label for="timesheet_id">Time sheet ID:</label>
+      <input id='timesheet_id' name='timesheet_id' value="197" /><br />
+      <button id='timesheet_button'>Go</button>
+      </p>
+      <p><span id='timesheet'></span></p>
+    </div>
+    <div>
+      <h2>Get timesheets</h2>
+      <p>
+      <label for="issue_uuid">Issue UUID:</label>
+      <input id='issue_uuid' name='issue_uuid' value="thipivijastoweslowofravefrunasimespobraprekodo" /><br />
+      <button id='timesheets_button'>Go</button>
+      </p>
+      <p><span id='timesheets'></span></p>
+    </div>
+    <div>
+      <h2>Create/Update timesheet entry</h2>
+
+      <label for='id'>Id (blank to create):</label>
+      <input type='text' id='id' name='id' value='' /><br />
+
+      <label for='detail'>Detail:</label>
+      <input type='text' id='detail' name='detail' value='' /><br />
+
+      <label for='user'>User:</label>
+      <select  id='user' name='user'></select><br />
+
+      <label for='project'>Project:</label>
+      <select  id='project' name='project'></select><br />
+
+      <label for='date'>Date:</label>
+      <input type='date' id='date' name='date' /><br />
+
+      <label for='activity'>Activity type:</label>
+      <select  id='activity' name='activity'></select><br />
+
+      <label for='duration'>Duration (minutes):</label>
+      <input type='number' id='duration' name='duration' value='15' /><br />
+
+      <label for='uuid'>UUID:</label>
+      <input type='text' id='uuid' name='uuid' value='' /><br />
+      
+      <button id='update_button'>Go</button>
+    </div>
+    <p>curl  --request GET   --user superadmin:changeme   --header 'Content-type: application/hal+json' http://127.0.0.1:8888/session/token</p>
+    <p>curl  --request GET   --user superadmin:changeme   --header 'Content-type: application/hal+json' --header 'X-CSRF-Token: cLsDeZQ9stPTrBnGvyIPx7Hvw20AmqBQNIGgF3xTogU' http://127.0.0.1:8888/node/112?_format=json</p>
+
+  </body>
+</html>

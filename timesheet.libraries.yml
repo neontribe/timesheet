@@ -1,4 +1,5 @@
 timesheet:
     version: 1.x
-    js:
-        js/timesheet.js: {}
+    css:
+      theme:
+        css/timesheet.css: {}

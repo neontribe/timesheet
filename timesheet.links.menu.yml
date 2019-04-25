@@ -1,6 +1,0 @@
-entity.timesheet_set.collection:
-  title: Timesheet
-  description: 'Timesheet settings.'
-  route_name: timesheet.admin_settings_form
-  parent: system.admin_config_content
-

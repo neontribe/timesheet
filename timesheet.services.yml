@@ -1,7 +1,4 @@
 services:
-  timesheet.import:
-    class: Drupal\timesheet\Service\ImportService
-    arguments: []
-  timesheet.helper:
-    class: Drupal\timesheet\Service\TimesheetService
-    arguments: ['@entity.manager']
+  timesheet.default:
+    class: Drupal\timesheet\DefaultService
+    arguments: ['@entity.query', '@entity_type.manager']

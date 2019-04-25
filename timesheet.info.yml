@@ -1,20 +1,5 @@
-name: Timesheet
+name: 'Time Sheet'
 type: module
-description: 'Neontribe timesheet'
+description: 'Neontribe time sheeting'
 core: 8.x
-package: Neontribe
-dependencies:
-  - computed_field
-  - csv_serialization
-  - datetime
-  - duration_field
-  - node
-  - rest
-  - restui
-  - serialization
-  - taxonomy
-  - user
-  - views_data_export
-mtime: 1550835811
-version: null
-php: 5.5.9
+package: 'Neontribe'

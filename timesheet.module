@@ -6,6 +6,24 @@
  */
 use Drupal\Core\Routing\RouteMatchInterface;
 
+// http://127.0.0.1:8888/node/add/time_sheet_entry?project=UMM8sQwK/neontribe-internal-projects&uuid=9DpXF2bz
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function timesheet_form_node_time_sheet_entry_form_alter(&$form, &$form_state, $form_id) {
+  dpm($form_id, 'formid');
+  $project = \Drupal::request()->request->get('project');
+  $uuid = \Drupal::request()->request->get('uuid');
+
+  $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+
+  $service = \Drupal::service("timesheet.default");
+
+  $form['field_user']['widget'][0]['target_id']['#default_value'] = $user;
+  // $form['field_issue_uuid']['widget'][0]['value']['#default_value'] = $uuid;
+}
+
 /**
  * Implements hook_help().
  */
@@ -14,8 +32,8 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
     // Main module help for the timesheet module.
     case 'help.page.timesheet':
       $output = '';
-      $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Neontribe timesheet') . '</p>';
+      $output .= '<h3>About</h3>';
+      $output .= '<p>Neontribe time sheeting</p>';
       return $output;
 
     default:
@@ -26,66 +44,9 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_theme().
  */
 function timesheet_theme() {
-  $theme['timesheet_summary'] = [
-    'variables' => [
-      'activities' => NULL,
-      'total' => NULL,
-      'url' => NULL,
-      'customers' => NULL,
-      'projects' => NULL
+  return [
+    'timesheet' => [
+      'render element' => 'children'
     ]
   ];
-
-  return $theme;
 }
-
-function timesheet_user_login($account) {
-  $url = "/";
-  $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
-  $response->send();
-  return;
-}
-
-/**
- * I really don't like this.
- * If another module / content type declares a
- * field_duration_minutes_ field and then adds an override we'll get a name
- * clash.
- */
-function computed_field_field_duration_minutes__compute($entity_type_manager, $entity, $fields, $delta) {
-  $field_time_spent = $fields['field_time_spent'];
-  $value = $field_time_spent[0]['value'] ?? 0;
-
-  if (! $value) {
-    $val = rand(15, 180);
-    $field_time_spent[0]['value'] = sprintf("PT%dH%dM", floor($val / 60), $val - (floor($val / 60) * 60));
-    return $val;
-  }
-
-  $interval = new DateInterval($value);
-
-  $hours = $interval->format("%H");
-  $minutes = $interval->format("%I");
-
-  return ($hours * 60) + $minutes;
-}
-
-/*
-function timesheet_views_pre_render(ViewExecutable $view) {
-  if ($view->id() == 'timesheets' && $view->current_display == 'timesheet_summary') {
-    $results = $view->result;
-    foreach ($results as $result) {
-      dpm($result->_entity->getFields(), 'fields');
-      # dpm(get_class_methods(get_class($result->_entity)));
-      # dpm($result->_entity);
-      # dpm($result->_entity->get('field_duration_minutes_'));
-      $result->_entity->set('field_duration_minutes_', 'xxxxxxxxxxx');
-    }
-  }
-}
-
-function _timesheet_formate_time($minutes) {
-  return date('H:i', mktime(0, $minutes));
-}
- */
-// vim: set filetype=php expandtab tabstop=2 shiftwidth=2 autoindent smartindent:

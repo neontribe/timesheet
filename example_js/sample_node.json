@@ -1,0 +1,141 @@
+{
+    "changed": [
+        {
+            "format": "Y-m-d\\TH:i:sP",
+            "value": "2019-04-08T20:43:47+00:00"
+        }
+    ],
+    "created": [
+        {
+            "format": "Y-m-d\\TH:i:sP",
+            "value": "2019-04-08T03:01:01+00:00"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "field_activity_type": [
+        {
+            "target_id": 6,
+            "target_type": "taxonomy_term",
+            "target_uuid": "87c7dad2-a166-4670-9e80-6015a1a0635b",
+            "url": "/taxonomy/term/6"
+        }
+    ],
+    "field_date": [
+        {
+            "value": "2018-05-12"
+        }
+    ],
+    "field_duration": [],
+    "field_duration_minutes_": [
+        {
+            "value": 0
+        }
+    ],
+    "field_issue_uuid": [
+        {
+            "value": "swoswispecliridupipucroprobitripebuphabuclaciphicrijugoth"
+        }
+    ],
+    "field_project": [
+        {
+            "target_id": 127,
+            "target_type": "node",
+            "target_uuid": "222b372a-a913-4902-85e9-12c717ebd0d7",
+            "url": "/node/127"
+        }
+    ],
+    "field_user": [
+        {
+            "target_id": 0,
+            "target_type": "user",
+            "target_uuid": "2a3fc987-55f7-4d81-9a36-4d47109d4abc",
+            "url": "/user/0"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en-gb"
+        }
+    ],
+    "nid": [
+        {
+            "value": 197
+        }
+    ],
+    "path": [
+        {
+            "alias": null,
+            "langcode": "en-gb",
+            "pid": null
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "revision_log": [],
+    "revision_timestamp": [
+        {
+            "format": "Y-m-d\\TH:i:sP",
+            "value": "2019-04-08T20:43:47+00:00"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true
+        }
+    ],
+    "revision_uid": [
+        {
+            "target_id": 1,
+            "target_type": "user",
+            "target_uuid": "1259bcc1-296c-4847-a109-23b094ff5bf5",
+            "url": "/user/1"
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "sticky": [
+        {
+            "value": false
+        }
+    ],
+    "title": [
+        {
+            "value": "Bene Praesent Ratis Typicus"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "time_sheet_entry",
+            "target_type": "node_type",
+            "target_uuid": "c8f4bc92-3639-4ba4-ab83-b05f6da676a1"
+        }
+    ],
+    "uid": [
+        {
+            "target_id": 1,
+            "target_type": "user",
+            "target_uuid": "1259bcc1-296c-4847-a109-23b094ff5bf5",
+            "url": "/user/1"
+        }
+    ],
+    "uuid": [
+        {
+            "value": "695f961e-b6e1-4cbd-b5bf-9e60ebcd8517"
+        }
+    ],
+    "vid": [
+        {
+            "value": 197
+        }
+    ]
+}
