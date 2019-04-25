@@ -1,30 +1,24 @@
 {
-  "name": "Neontribe timesheet Bridge",
+  "name": "CHANGE THIS : Extension boilerplate",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Allow access to the Neontribe timesheet server",
-  "homepage_url": "https://www.neontribe.co.uk",
+  "description": "This extension was created with the awesome extensionizr.com",
+  "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": true
-  },
   "options_page": "src/options/index.html",
-  "browser_action": {
+  "page_action": {
     "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
-    "default_popup": "src/browser_action/browser_action.html"
+    "default_title": "page action demo",
+    "default_popup": "src/page_action/page_action.html"
   },
   "permissions": [
-    "contentSettings",
     "tabs",
-    "https://*/*",
-    "http://*/*"
+    "http://*/,https://*/,http://127.0.0.1:8888/,https://time.neontribe.org"
   ],
   "content_scripts": [
     {
@@ -33,15 +27,10 @@
       ],
       "css": [
         "src/inject/inject.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://trello.com/*"
       ],
       "js": [
-        "src/inject/inject.js",
-        "js/jquery/jquery.js"
+        "js/jquery/jquery.min.js",
+        "src/inject/inject.js"
       ]
     }
   ]
