@@ -1,32 +1,50 @@
-
-timesheet.default_controller_byuuid:
+timesheet.json_controller_byuuid:
   path: '/timesheet/byuuid/{uuid}'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::byuuid'
-    _title: 'Get sheet by UUID'
+    _controller: '\Drupal\timesheet\Controller\JsonController::byuuid'
+    _title: 'Get sheets by UUID'
   requirements:
     _permission: 'access content'
-    
-timesheet.DefaultController_listusers:
-  path: '/timesheet/listusers'
+timesheet.json_controller_listUsers:
+  path: '/timesheet/listUsers'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::listUsers'
+    _controller: '\Drupal\timesheet\Controller\JsonController::listUsers'
     _title: 'List Users'
   requirements:
     _permission: 'access content'
-
-timesheet.DefaultController_listprojects:
-  path: '/timesheet/listprojects'
+timesheet.json_controller_listProjects:
+  path: '/timesheet/listProjects'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::listProjects'
+    _controller: '\Drupal\timesheet\Controller\JsonController::listProjects'
     _title: 'List projects'
   requirements:
     _permission: 'access content'
-
-timesheet.DefaultController_listactivities:
-  path: '/timesheet/listactivities'
+timesheet.json_controller_listActivities:
+  path: '/timesheet/listActivities'
   defaults:
-    _controller: '\Drupal\timesheet\Controller\DefaultController::listActivities'
+    _controller: '\Drupal\timesheet\Controller\JsonController::listActivities'
     _title: 'List activities'
+  requirements:
+    _permission: 'access content'
+
+timesheet.web_controller_list:
+  path: '/timesheet/list/{board}/{uuid}'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\WebController::list'
+    _title: 'Timesheets'
+  requirements:
+    _permission: 'access content'
+timesheet.web_controller_edit:
+  path: '/timesheet/edit/{board}/{uuid}/{nid}'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\WebController::edit'
+    _title: 'Edit Timesheet'
+  requirements:
+    _permission: 'access content'
+timesheet.web_controller_new:
+  path: '/timesheet/new/{board}/{uuid}'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\WebController::new'
+    _title: 'New Timesheet'
   requirements:
     _permission: 'access content'

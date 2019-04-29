@@ -1,5 +1,4 @@
 <?php
-
 namespace Drupal\timesheet\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -15,10 +14,10 @@ use Drupal\Core\Block\BlockBase;
 class AddBlock extends BlockBase {
 
   /**
+   *
    * {@inheritdoc}
    */
   public function build() {
-
     $node = \Drupal::entityTypeManager()->getStorage('node')->create([
       'type' => 'time_sheet_entry'
     ]);
@@ -29,9 +28,6 @@ class AddBlock extends BlockBase {
     $build = [];
     $build['content'] = $form;
 
-
-
     return $build;
   }
-
 }

@@ -4,24 +4,44 @@
  * @file
  * Contains timesheet.module.
  */
-use Drupal\Core\Routing\RouteMatchInterface;
 
 // http://127.0.0.1:8888/node/add/time_sheet_entry?project=UMM8sQwK/neontribe-internal-projects&uuid=9DpXF2bz
 
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-function timesheet_form_node_time_sheet_entry_form_alter(&$form, &$form_state, $form_id) {
-  dpm($form_id, 'formid');
-  $project = \Drupal::request()->request->get('project');
-  $uuid = \Drupal::request()->request->get('uuid');
+use Drupal\Core\Routing\RouteMatchInterface;
 
+function timesheet_form_node_time_sheet_entry_form_alter(&$form, &$form_state, $form_id) {
   $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
 
-  $service = \Drupal::service("timesheet.default");
+  if (! \is_object($form['field_user']['widget'][0]['target_id']['#default_value'])) {
+    $form['field_user']['widget'][0]['target_id']['#default_value'] = $user;
+  }
 
-  $form['field_user']['widget'][0]['target_id']['#default_value'] = $user;
-  // $form['field_issue_uuid']['widget'][0]['value']['#default_value'] = $uuid;
+  foreach (array_keys($form['actions']) as $action) {
+    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
+      $form['actions'][$action]['#submit'][] = 'timesheet_form_submit';
+    }
+  }
+}
+
+function timesheet_form_submit($form, &$form_state) {
+  $node = $form_state->getFormObject()->getEntity();
+  $uuid = $node->field_issue_uuid->getString();
+
+  $project = $node->field_project->entity;
+  if ($project) {
+    $project_uuid = $project->field_project_uuid->getString();
+  }
+
+  // if the url starts /timesheet we need to redirect the submit to /timesheet/list/BOARD/CARD
+  if ($uuid && $project_uuid) {
+    $form_state->setRedirect('timesheet.web_controller_list', [
+      'board' => $project_uuid,
+      'uuid' => $uuid
+    ]);
+  }
 }
 
 /**
@@ -46,7 +66,32 @@ function timesheet_help($route_name, RouteMatchInterface $route_match) {
 function timesheet_theme() {
   return [
     'timesheet' => [
-      'render element' => 'children'
+      'render element' => 'children',
+      'variables' => [
+        'entry' => NULL
+      ]
+    ],
+    'timesheet_byuuid' => [
+      'template' => 'timesheet_byuuid',
+      'variables' => [
+        'entries' => NULL,
+        'uuid' => NULL,
+        'board' => NULL
+      ]
+    ],
+    'timesheet_404' => [
+      'template' => 'timesheet_404',
+      'variables' => [
+        'id' => NULL,
+        'board' => NULL
+      ]
+    ],
+    'timesheet_links' => [
+      'template' => 'timesheet_links',
+      'variables' => [
+        'uuid' => NULL,
+        'board' => NULL
+      ]
     ]
   ];
 }
