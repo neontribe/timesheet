@@ -1,0 +1,7 @@
+timesheet.timesheet_admin_config_form:
+  title: 'Timesheet Import/Config'
+  route_name: timesheet.timesheet_admin_config_form
+  description: 'Import exsiting timesheets, set up timesheeting'
+  parent: system.admin_config_system
+  weight: 99
+

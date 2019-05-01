@@ -1,8 +1,14 @@
 services:
+
   timesheet.default:
     class: Drupal\timesheet\Service\DefaultService
     arguments: ['@entity.query', '@entity_type.manager']
+    
   jcmodule.theme.negotiator:
     class: Drupal\timesheet\Theme\ThemeNegotiator
     tags:
       - { name: theme_negotiator, priority: 1000 }
+      
+  timesheet.import:
+    class: Drupal\timesheet\Service\ImportService
+    arguments: []

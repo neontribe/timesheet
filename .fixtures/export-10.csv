@@ -1,9 +1,10 @@
-244	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-07 14:35:00	158400	Sprint planning week	Alex Moore
-245	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-14 14:43:00	158400	Sprint planning week	Alex Moore
-246	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-21 14:44:00	158400	Sprint development work	Alex Moore
-248	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 14:46:00	158400	Last bits of Sprint development & deployment	Alex Moore
-249	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 14:49:00	129600	Sprint development work	Alex Moore
-23	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-19 08:30:00	10800	patched all servers and retrieved weekly backup.	Andy Barnes
-24	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 09:30:00	7200	weekly backup retrieval	Andy Barnes
-25	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 10:45:00	3600	monthly momo security audit (momosec), checked all security reports for centos and ubuntu across all installed packages on momo infrastructure.	Andy Barnes
-26	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 10:30:00	3600	momosec-openscap-documentation.txt consolidation of the various decisions and choices we have made for momo next infra so far.	Andy Barnes
+118	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-21 15:49:00	0	NULL	George Deeks
+133	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-22 10:45:00	900	Support ticket	Nick Wade
+134	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-19 08:30:00	10800	patched all servers and retrieved weekly backup.	Andy Barnes
+135	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 09:30:00	7200	weekly backup retrieval	Andy Barnes
+138	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 11:45:00	3600	initial momo ansible openscap remediation script	Andy Barnes
+146	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-20 13:30:00	4500	Andy Barnes Project meeting	Karl Jermy
+153	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-30 09:30:00	14400	MOMO-next infra planning	Andy Barnes
+86	Neontribe	Neontribe website	Design	2019-03-13 12:30:00	10800	Prototyping and usability testing	Nick Wade
+88	Neontribe	Neontribe website	Design	2019-03-14 11:00:00	7200	Prototyping and usability testing	Nick Wade
+141	Neontribe	Neontribe website	Design	2018-11-20 10:00:00	13500	NULL	Steph Adams

@@ -1,339 +1,799 @@
-244	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-07 14:35:00	158400	Sprint planning week	Alex Moore
-245	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-14 14:43:00	158400	Sprint planning week	Alex Moore
-246	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-21 14:44:00	158400	Sprint development work	Alex Moore
-248	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 14:46:00	158400	Last bits of Sprint development & deployment	Alex Moore
-249	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 14:49:00	129600	Sprint development work	Alex Moore
-23	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-19 08:30:00	10800	patched all servers and retrieved weekly backup.	Andy Barnes
-24	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 09:30:00	7200	weekly backup retrieval	Andy Barnes
-25	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 10:45:00	3600	monthly momo security audit (momosec), checked all security reports for centos and ubuntu across all installed packages on momo infrastructure.	Andy Barnes
-26	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 10:30:00	3600	momosec-openscap-documentation.txt consolidation of the various decisions and choices we have made for momo next infra so far.	Andy Barnes
-27	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 11:45:00	3600	initial momo ansible openscap remediation script	Andy Barnes
-50	Neontribe	Neontribe website	Project management and meetings	2018-11-01 11:30:00	3600	Initial website company meeting.	Andy Barnes
-51	Neontribe	Neontribe website	Project management and meetings	2018-11-13 11:45:00	3600	Vote on tickets	Andy Barnes
-53	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-30 09:30:00	14400	MOMO-next infra planning	Andy Barnes
-59	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-06 12:45:00	4500	usual patching & maintenance, plus security changes to /etc/ssh/sshd_config on all hosts, and changes to ufw firewall (to block ssh from unknown sources)	Andy Barnes
-65	Neontribe	Neontribe website	Project management and meetings	2018-12-06 14:45:00	4500	superadmin website redesign discussion, contact us, interaction, content.	Andy Barnes
-78	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-10 08:00:00	7200	weekly backup retreival, monthly patching & reboots.	Andy Barnes
-149	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-14 09:00:00	10800	monthly patching, maintenance and reboot of all momo infra, followed by backup retreival from all hosts.	Andy Barnes
-164	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-21 09:11:00	7200	momo weekly backups	Andy Barnes
-203	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-28 10:36:00	7200	weekly backups	Andy Barnes
-265	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-11 11:45:00	7200	retrieved weekly backups	Andy Barnes
-266	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-12 09:37:00	3600	patched and rebooted all servers bar momolog	Andy Barnes
-132	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-11 15:32:00	18000	Testing and PR CR	Charles Strange
-133	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-11 15:33:00	1800	Fortnightly catchup	Charles Strange
-139	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-09 09:00:00	25200	Testing and bug fixing	Charles Strange
-140	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-08 09:00:00	18000	Testing and bug fixing	Charles Strange
-141	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-10 15:42:00	25200	Testing and bugfixing	Charles Strange
-142	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-08 15:43:00	1800	Tuesday Sprint focus	Charles Strange
-145	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 09:00:00	25200	Report runner	Charles Strange
-146	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-04 09:00:00	25200	Report runner	Charles Strange
-202	Neontribe	Neontribe website	Design	2019-01-23 15:00:00	3600	Injected spurious design commentary into the MVP	Charles Strange
-204	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-18 10:38:00	3600	Check the emails are flowing with correct links	Charles Strange
-205	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-21 10:41:00	3600	ARC washup	Charles Strange
-206	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-14 10:43:00	21600	Deploy	Charles Strange
-207	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-15 10:43:00	7200	Deploy checking.	Charles Strange
-209	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-29 13:00:00	10800	https://github.com/superadmin/ARCVService/tree/1.5/1245-hotfix-voucher-cleaning	Charles Strange
-216	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-31 09:06:00	3600	Add new user for SK https://trello.com/c/q66oBA2l/275-trader-set-up-st	Charles Strange
-217	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-31 09:35:00	10800	Worked with Neil to puzzle out packages, configs and scripts a fresh server install needs (part 1)	Charles Strange
-229	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-05 17:00:00	3600	Look at MOMO Cards-to-include with Neil Dabson	Charles Strange
-230	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-05 17:01:00	10800	https://trello.com/c/I34PTiNn/799-check-user-w-permission-more-accurate-present-vs-future\nhttps://trello.com/c/JRJjphfr/798-check-that-this-card-doesnt-require-one-redeploy	Charles Strange
-231	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-05 17:03:00	3600	confirm this is the case https://trello.com/c/JRJjphfr/798-check-that-this-card-doesnt-require-one-redeploy	Charles Strange
-232	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-04 17:04:00	5400	Drriving round live with Katja\n\thttps://trello.com/c/G02nmCHD/803-old-style-statement-being-generated-by-worker\n\thttps://trello.com/c/vTO4XSLL/806-worker-unable-to-set-a-password-new	Charles Strange
-348	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 13:57:00	28800	Finished the https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support\nMoved on to other cards.	Charles Strange
-350	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-20 13:59:00	1800	10am with Yvonne	Charles Strange
-351	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 14:00:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
-352	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 14:01:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
-353	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-19 14:01:00	1800	Call with Yvonne	Charles Strange
-354	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 14:01:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
-355	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-18 14:04:00	1800	Chat with yvonne	Charles Strange
-356	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-11 15:01:00	25200	Porting Hotfixes	Charles Strange
-357	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 15:02:00	3600	Trello gardening and calls.	Charles Strange
-358	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-12 15:03:00	28800	Hotfix porting	Charles Strange
-359	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-13 15:04:00	28800	Hotfix porting, infosec some cards with Neil	Charles Strange
-360	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-14 15:15:00	25200	The horror that is laravel upgrades. Part 1.	Charles Strange
-361	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-14 15:16:00	1800	Calls with yvonne	Charles Strange
-362	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-15 15:17:00	21600	The unenviable sensation of banging ones head against a brick wall labelled laravel "5.3->5.4->5.5"	Charles Strange
-363	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-15 15:18:00	1800	Pleasantly distracting call with Yvonne.	Charles Strange
-6	Neontribe	Neontribe website	Monthly patching and maintenance	2018-11-21 15:49:00	0	NULL	George Deeks
-1	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	NULL	Harry Harrold
-250	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-02-08 15:52:00	3600	General involvement.	Harry Harrold
-251	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 15:53:00	21600	catch ups etc.	Harry Harrold
-191	Neontribe	Neontribe website	Design	2019-01-28 11:26:00	7200	NULL	Holly Stringer
-192	CAST	Contemplating Action	Development tasks	2019-01-28 11:26:00	7200	NULL	Holly Stringer
-221	Haven	2019 Development work	Development tasks	2019-02-05 13:14:00	10800	Facebook Ad	Holly Stringer
-370	CAST	Contemplating Action	Development tasks	2019-02-19 13:39:00	7200	NULL	Holly Stringer
-371	CAST	Contemplating Action	Development tasks	2019-02-13 13:41:00	18000	Illustrations	Holly Stringer
-373	CAST	Contemplating Action	Development tasks	2019-02-22 13:43:00	3600	NULL	Holly Stringer
-43	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Project management and meetings	2018-11-20 13:15:00	4500	Project team meeting	Karl Jermy
-45	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-20 13:30:00	4500	Andy Barnes Project meeting	Karl Jermy
-47	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-29 16:30:00	1800	NULL	Karl Jermy
-48	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-29 11:30:00	4500	Smoke testing	Karl Jermy
-49	Neontribe	Neontribe website	Project management and meetings	2018-11-20 11:30:00	4500	All staff meeting to vote on tickets	Karl Jermy
-52	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-12 11:45:00	29700	NULL	Karl Jermy
-54	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-30 15:30:00	7200	Setting up .csv file for timesheet reporting	Karl Jermy
-150	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-17 10:36:00	3600	Produce a timesheet report from Kimai	Karl Jermy
-151	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-17 11:10:00	2700	Timesheet reporting coniguration and testing	Karl Jermy
-165	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-22 15:08:00	10800	Producing timesheets, setting up new projects	Karl Jermy
-166	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-23 15:11:00	10800	Setting up timesheet template	Karl Jermy
-167	Neontribe	Neontribe website	Static Content	2019-01-23 16:15:00	5400	Scope MVP meeting	Karl Jermy
-175	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-25 16:32:00	7200	Timesheet wrangling on Kimai to reflect correct formatting and formulas	Karl Jermy
-176	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-28 09:50:00	900	NULL	Karl Jermy
-177	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-28 09:58:00	3600	Setting up a new timesheet template	Karl Jermy
-208	Alexandra Rose Charity	ARC Applications	Data set up	2019-01-29 15:04:00	3600	Discussing dates for data set up with @charlesstrange and the customer. \nAdding dates to project calendar	Karl Jermy
-220	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-04 12:10:00	3600	Planninig meeting	Karl Jermy
-234	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-05 11:55:00	3600	Voucher collection issues and feedback from 1st Place  https://trello.com/c/B4ku5Cxh/279-voucher-collection	Karl Jermy
-241	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-02-08 12:31:00	5400	Fortnightly call, taking meeting notes and publishing	Karl Jermy
-242	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-07 13:22:00	332700	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy
-243	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-08 13:23:00	3600	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy
-252	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-02-08 15:57:00	3600	Trello gardening	Karl Jermy
-264	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 09:49:00	900	Updating the timekeeping process for MOMO heartbeat	Karl Jermy
-279	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-12 12:47:00	7200	Functional testing	Karl Jermy
-280	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-12 12:48:00	3600	Functional testing\nStart a smoke test script	Karl Jermy
-283	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-14 17:18:00	18000	Functional testing.\nWriting UAT tests.	Karl Jermy
-284	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-15 17:18:00	10800	Writing UAT	Karl Jermy
-285	Addaction	Feb/March Heartbeat 2019	Test & Deploy	2019-02-15 17:19:00	5400	Testing of alcohol/cocaine/cannabis quizzes	Karl Jermy
-297	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-18 16:30:00	10800	Finsal run through and write up of UAT script. Adding additional acceptance criteria/	Karl Jermy
-298	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-18 16:30:00	3600	Trello wrangling	Karl Jermy
-299	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-19 09:50:00	3600	Investigating a possible voucher collection history issue	Karl Jermy
-300	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-19 16:02:00	9000	Browser Testing on Chrome/Edge/Firefox/Safari	Karl Jermy
-301	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-19 16:03:00	3600	Further exploritory tests following on from Useability testing	Karl Jermy
-368	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-25 10:27:00	1800	trello wrangling	Karl Jermy
-2	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	Whole team content priority meeting	Katja Mordaunt
-3	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Project management and meetings	2018-11-20 16:00:00	7200	Trello wrangling and slack discussions post whole team content priorty meet around prep for protoyping.	Katja Mordaunt
-11	Neontribe	Neontribe website	Project management and meetings	2018-11-21 14:00:00	3600	Trello wrangle & prototyping prep	Katja Mordaunt
-13	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-21 15:30:00	12600	Activity Hot fix releases, verification and One patch	Katja Mordaunt
-15	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-11-21 15:30:00	1800	Hotfix process stuff	Katja Mordaunt
-16	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-22 15:30:00	3600	Hotfix support and info	Katja Mordaunt
-17	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-11-22 15:30:00	10800	Tidy up after hotfixes. Prep for mini One release	Katja Mordaunt
-18	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-19 15:30:00	14400	Hot fix planning & push to staging	Katja Mordaunt
-28	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-27 12:00:00	3600	Infosec questions from Southampton	Katja Mordaunt
-29	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-26 12:00:00	16200	Test and release hotfix for privacy link in One. Raise trellos to cover hotfixes for new year sprint. Infosec info for Southampton.	Katja Mordaunt
-55	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-03 00:00:00	5400	Keeping an eye on maintenance - express bug becoming more frequent.	Katja Mordaunt
-66	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-03 11:45:00	3600	Support tickets - mostly demo log in issues	Katja Mordaunt
-67	Neontribe	Neontribe website	Infrastructure	2018-12-03 11:45:00	3600	Mostly code review	Katja Mordaunt
-68	Neontribe	Neontribe website	Project management and meetings	2018-12-06 11:45:00	21600	MVP meeting and moving trello to git meeting and actions	Katja Mordaunt
-69	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-05 11:45:00	3600	Investigate express error	Katja Mordaunt
-70	Neontribe	Neontribe website	Infrastructure	2018-12-05 11:45:00	3600	Code review & research	Katja Mordaunt
-71	Neontribe	Neontribe website	Project management and meetings	2018-12-05 11:45:00	7200	Project related wrangling and comments in realtime	Katja Mordaunt
-72	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-12-07 11:45:00	3600	Stand-up & chat with Roz about One statement saving	Katja Mordaunt
-73	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-07 11:45:00	3600	Logging on demo for express authentication issue	Katja Mordaunt
-74	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-06 12:00:00	1800	Dev support  check up	Katja Mordaunt
-75	Neontribe	Neontribe website	Project management and meetings	2018-12-07 12:00:00	7200	Trello to git wrangle and connecting people for conversations	Katja Mordaunt
-76	Neontribe	Neontribe website	Infrastructure	2018-12-07 12:00:00	1800	Code reveiw	Katja Mordaunt
-82	Neontribe	Neontribe website	Design	2018-12-10 15:30:00	1800	Prototype feedback	Katja Mordaunt
-83	Neontribe	Neontribe website	Project management and meetings	2018-12-10 15:30:00	10800	Migrate content from trello to git	Katja Mordaunt
-93	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-02 12:09:00	21600	Worcs dashboard loading bug diagnose and temp fix	Katja Mordaunt
-94	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-04 11:27:00	5400	3000 - create and deploy app_user data patch to staging	Katja Mordaunt
-95	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-04 11:28:00	1800	Weekly standup	Katja Mordaunt
-106	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-04 16:22:00	3600	Chat with Neil about infosec & apply hotfix patch to live	Katja Mordaunt
-114	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-09 17:56:00	14400	Organisation distance confirmation. Fake user investigation. New worker type. app_user hotfix card create	Katja Mordaunt
-117	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 15:12:00	3600	Bug fix and code review	Katja Mordaunt
-118	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-08 15:13:00	10800	Voucher payment confirmation seeds. Bug investigation. Tidy release code. and review.	Katja Mordaunt
-119	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-09 15:14:00	3600	Code review	Katja Mordaunt
-120	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-10 15:15:00	900	Code review	Katja Mordaunt
-123	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-07 15:16:00	900	Support	Katja Mordaunt
-124	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-10 15:20:00	1800	Pre-standup report and maintenance/support	Katja Mordaunt
-126	Haven	2019 Development work	Development tasks	2019-01-07 15:21:00	9000	Upgrade framework	Katja Mordaunt
-127	Haven	2019 Development work	Project management tasks	2019-01-11 15:22:00	5400	Issue wrangle prep for sprint scope/ plan meeting	Katja Mordaunt
-129	Haven	2019 Development work	Project management tasks	2019-01-11 15:22:00	3600	Upgrade framework	Katja Mordaunt
-130	Haven	2019 Development work	Development tasks	2019-01-10 15:23:00	5400	Upgrade framework	Katja Mordaunt
-137	Haven	2019 Development work	Development tasks	2018-11-27 15:36:00	14400	Upgrade framework to Elm 0.19	Katja Mordaunt
-138	Haven	2019 Development work	Project management tasks	2019-01-04 15:39:00	1800	Kick off call for 2019 work	Katja Mordaunt
-148	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-14 10:48:00	1800	Thoughts and conversation around spam accounts.	Katja Mordaunt
-152	Haven	2019 Development work	Development tasks	2019-01-14 11:11:00	10800	Upgrade to 0.19	Katja Mordaunt
-153	Haven	2019 Development work	Development tasks	2019-01-15 11:12:00	10800	NULL	Katja Mordaunt
-154	Haven	2019 Development work	Project management tasks	2019-01-16 11:12:00	7200	Upgrade framework	Katja Mordaunt
-155	Haven	2019 Development work	Project management tasks	2019-01-16 11:13:00	3600	Issue wrangle & progress updates	Katja Mordaunt
-156	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-18 11:14:00	1800	Standup	Katja Mordaunt
-157	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-17 11:15:00	28800	Insights mapping	Katja Mordaunt
-158	Haven	2019 Development work	Project management tasks	2019-01-18 11:15:00	7200	Call about GA, issues and timeline + research before	Katja Mordaunt
-159	Haven	2019 Development work	Development tasks	2019-01-18 11:16:00	7200	Updates to timeout function	Katja Mordaunt
-160	CAST	Contemplating Action	Development tasks	2019-01-17 12:06:00	1800	Upgrade underlying packages	Katja Mordaunt
-161	CAST	Contemplating Action	Project management tasks	2019-01-18 12:08:00	3600	Set up timetracking and repo for PM	Katja Mordaunt
-162	CAST	Contemplating Action	Project management tasks	2019-01-11 12:10:00	3600	Initial repo clean and setup in prep for project. Set up meetings.	Katja Mordaunt
-163	CAST	Contemplating Action	Development tasks	2019-01-14 12:11:00	28800	Create whitelabel site (was done in Sept 18 - but can put suitable date here within project funding scope)	Katja Mordaunt
-168	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-22 15:50:00	3600	User stats spec. With Rose and Yvonne	Katja Mordaunt
-169	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-22 15:51:00	10800	Prep for scoping	Katja Mordaunt
-170	Neontribe	Neontribe website	Project management and meetings	2019-01-21 15:52:00	3600	Prep for flow workshop	Katja Mordaunt
-171	Neontribe	Neontribe website	Design	2019-01-23 15:53:00	18000	Flow and MVP prototyping workshops	Katja Mordaunt
-172	CAST	Contemplating Action	Project management tasks	2019-01-24 15:54:00	3600	Meeting with Holly Stringer about what to customise & project generally	Katja Mordaunt
-173	Haven	2019 Development work	Project management tasks	2019-01-25 15:56:00	9000	Stats and analytics + catchup chat including timeline & people days set	Katja Mordaunt
-174	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-25 15:57:00	7200	User stats query spec	Katja Mordaunt
-210	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-29 15:51:00	28800	Scoping	Katja Mordaunt
-211	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-30 15:53:00	7200	Scoping debrief and actions.	Katja Mordaunt
-212	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-30 15:54:00	18000	User number stats & scoping prep	Katja Mordaunt
-213	CAST	Contemplating Action	Project management tasks	2019-01-30 15:55:00	1800	Review issue progress	Katja Mordaunt
-255	Haven	2019 Development work	Project management tasks	2019-02-04 10:00:00	1800	Catch-up	Katja Mordaunt
-256	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-04 10:00:00	9000	Planning prep & support tasks	Katja Mordaunt
-257	Haven	2019 Development work	Project management tasks	2019-02-05 10:00:00	1800	Catch-up	Katja Mordaunt
-258	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-05 10:00:00	7200	planning prep and support	Katja Mordaunt
-259	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-08 10:00:00	28800	Planning day	Katja Mordaunt
-260	CAST	Contemplating Action	Project management tasks	2019-02-07 10:00:00	10800	Call & organising project	Katja Mordaunt
-261	Haven	2019 Development work	Development tasks	2019-02-07 10:00:00	5400	Bug fixes on upgrade	Katja Mordaunt
-262	CAST	Contemplating Action	Project management tasks	2019-02-06 10:00:00	3600	Prep work for project timelines	Katja Mordaunt
-263	Haven	2019 Development work	Development tasks	2019-02-06 10:00:00	7200	Bug fix 19 upgrade	Katja Mordaunt
-270	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-11 10:00:00	14400	Planning & upgrade laravel	Katja Mordaunt
-271	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 10:00:00	1800	Catch-up	Katja Mordaunt
-272	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-12 10:00:00	900	Catch-up	Katja Mordaunt
-273	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-12 10:00:00	1800	demo to international locator	Katja Mordaunt
-274	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-12 10:00:00	14400	Upgrade laravel	Katja Mordaunt
-275	Neontribe	Neontribe website	Project management and meetings	2019-02-12 10:00:00	1800	Catch-up/ progress meeting	Katja Mordaunt
-276	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-13 10:00:00	21600	Upgrade laravel, planning	Katja Mordaunt
-277	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-13 10:00:00	1800	catch-up Yvonne + team	Katja Mordaunt
-278	CAST	Contemplating Action	Project management tasks	2019-02-11 10:00:00	3600	Demo/ Info instance design discussions & general management	Katja Mordaunt
-302	Neontribe	Neontribe website	Project management and meetings	2019-02-19 10:00:00	3600	MVP prototype catch-up meeting.	Katja Mordaunt
-303	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 10:00:00	14400	Upgrade laravel and better seeds.	Katja Mordaunt
-304	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-19 10:00:00	1800	Support ticket response & wrangle	Katja Mordaunt
-305	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-14 10:00:00	7200	Upgrade to 5.4 app_user and collection fixes	Katja Mordaunt
-306	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-15 10:00:00	10800	Upgrade to 5.4 more passing tests	Katja Mordaunt
-307	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 10:00:00	7200	Better seeds. Code review and upgrade 5.4.	Katja Mordaunt
-364	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 10:00:00	25200	One Honeypot. Better worker & express info + date stuff.	Katja Mordaunt
-365	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 10:00:00	28800	Tests and date formatting  + sorted worker list. Code review.	Katja Mordaunt
-369	CAST	Contemplating Action	Project management tasks	2019-02-25 10:00:00	1800	Chasing tasks and check up project progress.	Katja Mordaunt
-77	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	MOMO ISO27001 general process	2018-12-07 12:15:00	23400	monthly meetings (two skipped by arrangement) 3 *30 mins\nmonthly infosec november finish: 2h\nmonthly infosec december scans and actions on results: 3h	Neil Dabson
-92	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	MOMO ISO27001 general process	2018-12-12 12:39:00	1800	fix sshd config and complete monthly infosec review	Neil Dabson
-96	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	MOMO ISO27001 general process	2019-01-04 13:47:00	28800	Neil to london for day with Yvonne 18th Dec	Neil Dabson
-97	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-04 13:48:00	3600	Worcester issue investigation	Neil Dabson
-98	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-04 13:49:00	4800	monthly scans and weekly meetings, setting up momo drop box accnt	Neil Dabson
-218	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-01 11:30:00	28800	new server work and weekly momo, MOMO DOWN event	Neil Dabson
-219	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-01 16:19:00	14400	new server works	Neil Dabson
-374	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-25 15:39:00	1800	momo info sec calls	Neil Dabson
-375	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-25 15:39:00	1800	specific advice re customer questions	Neil Dabson
-376	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-25 15:40:00	50400	ansible and openscap setups\nalso https config on staging test machine\nsetup and updating ready for pentests	Neil Dabson
-56	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 11:30:00	1800	NULL	superadmin
-57	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 12:00:00	900	NULL	superadmin
-58	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 12:15:00	900	NULL	superadmin
-60	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-06 12:30:00	2700	NULL	superadmin
-91	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-12-11 09:32:00	900	NULL	superadmin
-14	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-19 13:00:00	3600	Support tickets and hotfix assistance	Nick Wade
-19	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	7200	User story priority call and subsequent discussion	Nick Wade
-20	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-20 15:00:00	1800	Support tickets	Nick Wade
-21	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-21 13:30:00	1800	Support tickets	Nick Wade
-22	MOMO	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-22 10:45:00	900	Support ticket	Nick Wade
-115	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-02 10:00:00	10800	Payment controller update and seed creation	Nick Wade
-116	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-02 10:00:00	14400	Investigate corrupt app_user issue	Nick Wade
-121	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-03 10:00:00	21600	Payment controller update, voucher state progression	Nick Wade
-122	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-04 10:00:00	23400	Payment controller update, scanner issue	Nick Wade
-125	Neontribe	Neontribe website	Project management and meetings	2019-01-09 11:00:00	2700	Scheduling and planning meeting	Nick Wade
-128	MOMO	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-09 15:00:00	3600	New meeting type and unusual activity investigation	Nick Wade
-131	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 10:00:00	23400	Payment request\nhttps://github.com/superadmin/ARCVService/pull/247	Nick Wade
-214	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-08 10:00:00	21600	Voucher state migration, PR fixes	Nick Wade
-215	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-09 10:00:00	19800	View tests and styling bugs\nhttps://github.com/superadmin/ARCVService/pull/251\nhttps://github.com/superadmin/ARCVService/pull/252	Nick Wade
-233	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-10 10:00:00	12600	Scanner delay, bugfixes\nhttps://github.com/superadmin/ARCVService/pull/256ARC	Nick Wade
-236	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-05 13:00:00	14400	Code review, results merge conflicts and bugfixes	Nick Wade
-237	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-05 10:00:00	7200	Handover and project calls	Nick Wade
-238	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-04 10:30:00	23400	Backend code review, infobox improvements and components	Nick Wade
-239	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 10:00:00	1800	Calls, handover and travel organisation	Nick Wade
-240	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-11 10:00:00	14400	Code review, email issues, improve scanner input\nhttps://github.com/superadmin/ARCVService/pull/258	Nick Wade
-253	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-30 14:00:00	2700	Scoping de-brief call	Nick Wade
-254	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-28 15:30:00	9000	Server stats collection	Nick Wade
-308	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-15 09:00:00	25200	Usability testing and mini-sprint planning	Nick Wade
-309	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-13 09:30:00	900	Planning call	Nick Wade
-310	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-11 08:30:00	25200	Diagnostic tool, fix state and AWS	Nick Wade
-311	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-12 10:00:00	25200	Update copy and validatinon improvements, styling\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/13\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/15	Nick Wade
-312	Neontribe	Neontribe website	Project management and meetings	2019-02-12 10:00:00	1800	Update call	Nick Wade
-313	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-14 10:00:00	14400	Components and planning	Nick Wade
-314	SEAP	SEAP Project work	Badge design	2019-01-15 15:00:00	1800	Comms and planning	Nick Wade
-315	Haven	2019 Development work	Development tasks	2019-01-15 14:00:00	7200	Code review	Nick Wade
-316	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-15 11:00:00	10800	Components and planning	Nick Wade
-317	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-16 10:00:00	14400	Planning and improve documentation setup	Nick Wade
-318	Haven	2019 Development work	Development tasks	2019-01-16 11:00:00	5400	Code review	Nick Wade
-319	Haven	2019 Development work	Project management tasks	2019-01-16 10:30:00	1800	Update call	Nick Wade
-320	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-17 11:30:00	16200	Markup documentation improvement, planning	Nick Wade
-321	SEAP	SEAP Project work	Badge design	2019-01-17 13:00:00	1800	Button design and a11y checks	Nick Wade
-322	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-18 10:00:00	18000	Planning and additional components\nhttps://github.com/superadmin/ncvo-tools/pull/22	Nick Wade
-323	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-18 09:30:00	1800	Calls and planning	Nick Wade
-324	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-18 10:00:00	5400	Calls, testing writeup and notes	Nick Wade
-325	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 11:00:00	14400	Branding and updates	Nick Wade
-326	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-19 10:00:00	1800	Calls and planning	Nick Wade
-327	Neontribe	Neontribe website	Project management and meetings	2019-02-19 12:15:00	2700	Website update call	Nick Wade
-328	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 10:30:00	16200	One copy changes, branding and security upgrades\nhttps://github.com/superadmin/MomoOne/pull/382	Nick Wade
-329	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-20 11:00:00	3600	Browser test issue review and planning	Nick Wade
-330	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 12:00:00	23400	Upgrades and branding\nhttps://github.com/superadmin/MomoForWorkers/pull/49\nhttps://github.com/superadmin/MomoOne/pull/384	Nick Wade
-331	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-13 08:00:00	28800	Sprint dev - style application and fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/16\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/17\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/22	Nick Wade
-332	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-21 10:15:00	3600	Wash up call	Nick Wade
-333	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-19 11:00:00	19800	Sprint dev	Nick Wade
-334	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-22 10:00:00	23400	Sprint dev	Nick Wade
-335	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-23 10:00:00	25200	Sprint dev - components, docs, calls\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/1	Nick Wade
-336	CAST	Contemplating Action	Development tasks	2019-01-24 09:00:00	1800	Build and code review	Nick Wade
-337	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-24 10:00:00	21600	Sprint dev	Nick Wade
-338	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-25 09:00:00	25200	Sprint dev - landing, tracking and calls	Nick Wade
-339	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-08 09:00:00	25200	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/11	Nick Wade
-340	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-07 09:00:00	19800	Sprint dev - deployment calls, code review	Nick Wade
-341	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-06 10:00:00	21600	Sprint dev - PR fixes info buttons\nhttps://github.com/NCVO-Digital/NCVO-content-components/pull/9	Nick Wade
-342	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-31 13:00:00	14400	Sprint dev - PR fixes, markup discussions, advance wip branches	Nick Wade
-343	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-01 08:45:00	25200	Sprint dev - spider diagram, glossary\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/6	Nick Wade
-344	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-14 08:00:00	28800	Sprint dev - final work to glossary and other testing fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/27\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/26\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/24	Nick Wade
-345	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 10:00:00	14400	Sprint dev	Nick Wade
-346	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-29 10:00:00	23400	Sprint dev - tracking and forms	Nick Wade
-347	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-30 09:00:00	25200	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/5\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/3	Nick Wade
-366	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 09:30:00	25200	Sprint dev\nhttps://github.com/superadmin/MomoExpress/pull/141	Nick Wade
-367	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-22 10:00:00	28800	Sprint dev\nhttps://github.com/superadmin/MomoOne/pull/386\nhttps://github.com/superadmin/MomoOne/pull/385\nhttps://github.com/superadmin/ServiceMomo/pull/487	Nick Wade
-8	Neontribe	Neontribe website	Infrastructure	2018-11-14 15:45:00	15300	https://github.com/superadmin/demostack prototyping	Rob Preus-MacLaren
-9	Neontribe	Neontribe website	Project management and meetings	2018-11-20 16:00:00	5400	discussion + catchup	Rob Preus-MacLaren
-10	Neontribe	Neontribe website	Static Content	2018-10-31 16:00:00	4500	non static meeting	Rob Preus-MacLaren
-286	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-21 09:55:00	108000	Sprint week, work on front controlller, work spread over 5 days	Rob Preus-MacLaren
-287	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-21 10:21:00	28800	Work with Alex planning and coding sprint. Work spread over 5 days	Rob Preus-MacLaren
-288	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-28 10:22:00	93600	Dev work spread over 4 days	Rob Preus-MacLaren
-289	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 10:24:00	21600	planning and dev work with Alex, spread over 4 days	Rob Preus-MacLaren
-290	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-04 10:24:00	57600	Finishing deploys and writing documentation + meetings. Spread over 5 days	Rob Preus-MacLaren
-291	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-04 10:26:00	64800	Working with Alex on finishing off sprint, spread over 3 days	Rob Preus-MacLaren
-292	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 10:28:00	21600	Documenting and deploying DMM with Alex, spread over 2 days	Rob Preus-MacLaren
-293	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 10:29:00	54000	Documentation and Deploys + helping with test scripts. Spread over 3 days	Rob Preus-MacLaren
-294	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-11 10:30:00	21600	Deploy  + Documentation with Nick, deploying DMM, spread over 3 days	Rob Preus-MacLaren
-295	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-14 10:31:00	25200	Usability testing & monitoring usability test	Rob Preus-MacLaren
-7	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	Meeting to discuss prioritising user stories, infrastructure and content.	rose.superadmin
-178	Addaction	Feb/March Heartbeat 2019	User research	2019-01-18 11:00:00	3600	Go through survey stats	rose.superadmin
-179	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-01-21 11:00:00	1800	Steph Catch-Up	rose.superadmin
-180	Addaction	Feb/March Heartbeat 2019	User research	2019-01-21 11:01:00	10800	Analyse stats from the quizzes	rose.superadmin
-181	Addaction	Feb/March Heartbeat 2019	User research	2019-01-23 11:02:00	1800	Finish off stats from quiz and update deckumentation	rose.superadmin
-182	Haven	2019 Development work	Project management tasks	2019-01-18 11:03:00	5400	Weekly catchup	rose.superadmin
-183	Haven	2019 Development work	Project management tasks	2019-01-25 11:04:00	2700	Digital Campaign Catch Up	rose.superadmin
-184	Haven	2019 Development work	Project management tasks	2019-01-25 11:04:00	3600	Weekly catch-up	rose.superadmin
-185	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-21 11:06:00	1800	Room booking for MOMO scoping meeting in London	rose.superadmin
-186	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-17 11:07:00	18000	Insight mapping day in London	rose.superadmin
-187	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-22 11:08:00	3600	MOMO meeting with Yvonne and Katja re analytics	rose.superadmin
-188	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-22 11:08:00	9000	Neontribe Meeting to prep for scoping	rose.superadmin
-189	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-24 11:10:00	5400	Write up notes from Scoping MVP meeting	rose.superadmin
-190	MOMO	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-24 11:10:00	1800	Write up user stories on Trello	rose.superadmin
-193	Neontribe	Neontribe website	General support	2018-10-31 16:07:00	1800	Narrow down user stories for Trello	rose.superadmin
-194	Neontribe	Neontribe website	Project management and meetings	2018-11-13 16:07:00	3600	Meeting re the content	rose.superadmin
-195	Neontribe	Neontribe website	Project management and meetings	2018-11-20 16:08:00	5400	Meeting re the content	rose.superadmin
-196	Neontribe	Neontribe website	Project management and meetings	2018-11-27 16:08:00	900	Meeting to plan next steps	rose.superadmin
-197	Neontribe	Neontribe website	Project management and meetings	2018-12-05 16:09:00	3600	Review realtime board	rose.superadmin
-198	Neontribe	Neontribe website	Project management and meetings	2019-01-28 16:09:00	4500	Updating current website with new projects and people bios	rose.superadmin
-199	Neontribe	Neontribe website	Project management and meetings	2018-12-12 16:10:00	1800	Update website project page with Haven	rose.superadmin
-200	Neontribe	Neontribe website	Project management and meetings	2019-01-23 16:11:00	5400	Scope MVP	rose.superadmin
-201	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-01-15 16:11:00	900	Collate NCVO questionnaire types and create Google survey	rose.superadmin
-34	Neontribe	Neontribe website	Design	2018-11-20 10:00:00	13500	NULL	Steph Adams
-35	Neontribe	Neontribe website	Design	2018-11-21 10:00:00	14400	NULL	Steph Adams
-36	Neontribe	Neontribe website	Design	2018-11-29 10:15:00	12600	NULL	Steph Adams
-37	Neontribe	Neontribe website	Design	2018-11-26 10:15:00	13500	NULL	Steph Adams
-84	Neontribe	Neontribe website	Design	2018-12-07 15:45:00	18900	NULL	Steph Adams
-85	Neontribe	Neontribe website	Design	2018-12-06 15:45:00	11700	NULL	Steph Adams
-86	Neontribe	Neontribe website	Design	2018-12-05 15:45:00	15300	NULL	Steph Adams
-87	Neontribe	Neontribe website	Design	2018-12-04 15:54:00	8100	NULL	Steph Adams
-99	Neontribe	Devops	Infrastructure	2019-01-02 14:21:00	14400	Created a LTSP server to provide PXE clients	Toby Batch
-102	Neontribe	Devops	Infrastructure	2019-01-03 14:25:00	14400	LTSP Armfh root	Toby Batch
-103	Neontribe	Devops	Infrastructure	2019-01-03 14:26:00	7200	What happened to neonfreenas?	Toby Batch
-104	Neontribe	Devops	Infrastructure	2019-01-04 14:28:00	10800	Restore script for docker volumes.	Toby Batch
-105	Neontribe	Devops	Infrastructure	2019-01-04 14:29:00	14400	Built VLAN test in vagrant	Toby Batch
-108	Neontribe	Devops	Infrastructure	2019-01-07 13:19:00	3600	Tested and evaluated LTSP on PI	Toby Batch
-109	Neontribe	Timesheet	Development	2019-01-07 13:19:00	21600	Timeshite trying to generate a custom template for time entry	Toby Batch
-110	Neontribe	Timesheet	Development	2019-01-08 13:20:00	7200	Switched timeshite back to standard display	Toby Batch
-111	Neontribe	Devops	Infrastructure	2019-01-08 13:21:00	1800	Fixed Calibre	Toby Batch
-112	Alexandra Rose Charity	ARC Applications	Maintenance Tasks	2019-01-08 13:21:00	2700	Moved time sheeting to kimai	Toby Batch
-113	Neontribe	Devops	Infrastructure	2019-01-08 15:42:00	10800	LTSP now auths against LDAP with shred home spaces	Toby Batch
-222	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-29 13:35:00	14400	Pair programming with Ed on the schema issue	Toby Batch
-223	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-30 13:38:00	18000	138 the front controller has gated access to backend systems	Toby Batch
-224	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-31 13:40:00	7200	138 the front controller has gated access to backend systems	Toby Batch
-225	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-31 13:41:00	14400	123 configurable security headers	Toby Batch
-226	NCVO	Front Controller BETA heartbeat	Sprint development	2019-02-01 13:42:00	25200	125 bug error handling displays incorrect error message	Toby Batch
-227	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-05 13:43:00	10800	120 configurable templated error messages	Toby Batch
-228	NCVO	Front Controller BETA heartbeat	Sprint development	2019-02-05 13:43:00	12600	120 configurable templated error messages -  tests	Toby Batch
-235	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-01-28 12:11:00	25200	Jenkins file	Toby Batch
-267	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-08 09:58:00	10800	Fixing Zappa deploy	Toby Batch
-268	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 09:59:00	14400	CReating new deployment env	Toby Batch
-269	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-12 10:00:00	10800	137-staging-and-production-deploys	Toby Batch
-281	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-15 12:32:00	21600	Deploying via ansible	Toby Batch
-282	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-15 12:33:00	10800	Pentest deployment	Toby Batch
+118	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-21 15:49:00	0	NULL	George Deeks
+133	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-22 10:45:00	900	Support ticket	Nick Wade
+134	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-19 08:30:00	10800	patched all servers and retrieved weekly backup.	Andy Barnes
+135	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 09:30:00	7200	weekly backup retrieval	Andy Barnes
+136	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-26 10:45:00	3600	monthly momo security audit (momosec), checked all security reports for centos and ubuntu across all installed packages on momo infrastructure.	Andy Barnes
+137	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 10:30:00	3600	momosec-openscap-documentation.txt consolidation of the various decisions and choices we have made for momo next infra so far.	Andy Barnes
+138	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-27 11:45:00	3600	initial momo ansible openscap remediation script	Andy Barnes
+146	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-20 13:30:00	4500	Andy Barnes Project meeting	Karl Jermy
+153	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-11-30 09:30:00	14400	MOMO-next infra planning	Andy Barnes
+156	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 11:30:00	1800	NULL	superadmin
+157	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 12:00:00	900	NULL	superadmin
+158	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-05 12:15:00	900	NULL	superadmin
+159	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-06 12:45:00	4500	usual patching & maintenance, plus security changes to /etc/ssh/sshd_config on all hosts, and changes to ufw firewall (to block ssh from unknown sources)	Andy Barnes
+160	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-06 12:30:00	2700	NULL	superadmin
+174	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Monthly patching and maintenance	2018-12-10 08:00:00	7200	weekly backup retreival, monthly patching & reboots.	Andy Barnes
+173	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	MOMO ISO27001 general process	2018-12-07 12:15:00	23400	monthly meetings (two skipped by arrangement) 3 *30 mins\nmonthly infosec november finish: 2h\nmonthly infosec december scans and actions on results: 3h	Neil Dabson
+182	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	MOMO ISO27001 general process	2018-12-12 12:39:00	1800	fix sshd config and complete monthly infosec review	Neil Dabson
+124	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-21 15:30:00	12600	Activity Hot fix releases, verification and One patch	Katja Mordaunt
+125	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-19 13:00:00	3600	Support tickets and hotfix assistance	Nick Wade
+127	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-22 15:30:00	3600	Hotfix support and info	Katja Mordaunt
+129	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-19 15:30:00	14400	Hot fix planning & push to staging	Katja Mordaunt
+131	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-20 15:00:00	1800	Support tickets	Nick Wade
+132	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-21 13:30:00	1800	Support tickets	Nick Wade
+139	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-27 12:00:00	3600	Infosec questions from Southampton	Katja Mordaunt
+140	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-26 12:00:00	16200	Test and release hotfix for privacy link in One. Raise trellos to cover hotfixes for new year sprint. Infosec info for Southampton.	Katja Mordaunt
+147	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-11-29 16:30:00	1800	NULL	Karl Jermy
+155	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-03 00:00:00	5400	Keeping an eye on maintenance - express bug becoming more frequent.	Katja Mordaunt
+162	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-03 11:45:00	3600	Support tickets - mostly demo log in issues	Katja Mordaunt
+165	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-05 11:45:00	3600	Investigate express error	Katja Mordaunt
+169	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-07 11:45:00	3600	Logging on demo for express authentication issue	Katja Mordaunt
+170	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Ongoing development support	2018-12-06 12:00:00	1800	Dev support  check up	Katja Mordaunt
+126	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-11-21 15:30:00	1800	Hotfix process stuff	Katja Mordaunt
+128	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-11-22 15:30:00	10800	Tidy up after hotfixes. Prep for mini One release	Katja Mordaunt
+168	Mind of my Own	Heartbeat (6 weeks) 19 Nov - 14 Dec 2018	Sprint admin management and meetings	2018-12-07 11:45:00	3600	Stand-up & chat with Roz about One statement saving	Katja Mordaunt
+13	Neontribe	Neontribe website	Static Content	2019-03-20 10:00:00	21600	Automated deplyment	Toby Batch
+122	Neontribe	Neontribe website	Static Content	2018-10-31 16:00:00	4500	non static meeting	Rob Preus-MacLaren
+248	Neontribe	Neontribe website	Static Content	2019-01-23 16:15:00	5400	Scope MVP meeting	Karl Jermy
+676	Neontribe	Neontribe website	Static Content	2019-03-26 13:00:00	3600	Worker alphabetical sorting\nhttps://github.com/superadmin/ServiceMomo/pull/500	Nick Wade
+770	Neontribe	Neontribe website	Static Content	2019-04-16 13:45:00	10800	Circle CI base build	Toby Batch
+21	Neontribe	Neontribe website	Design	2019-03-12 10:00:00	3600	Catch-up and MVP design work	Katja Mordaunt
+28	Neontribe	Neontribe website	Design	2019-03-13 10:00:00	12600	MVP paper testing sessions	Katja Mordaunt
+34	Neontribe	Neontribe website	Design	2019-03-14 10:00:00	3600	MVP paper testing	Katja Mordaunt
+86	Neontribe	Neontribe website	Design	2019-03-13 12:30:00	10800	Prototyping and usability testing	Nick Wade
+88	Neontribe	Neontribe website	Design	2019-03-14 11:00:00	7200	Prototyping and usability testing	Nick Wade
+141	Neontribe	Neontribe website	Design	2018-11-20 10:00:00	13500	NULL	Steph Adams
+142	Neontribe	Neontribe website	Design	2018-11-21 10:00:00	14400	NULL	Steph Adams
+143	Neontribe	Neontribe website	Design	2018-11-29 10:15:00	12600	NULL	Steph Adams
+144	Neontribe	Neontribe website	Design	2018-11-26 10:15:00	13500	NULL	Steph Adams
+175	Neontribe	Neontribe website	Design	2018-12-10 15:30:00	1800	Prototype feedback	Katja Mordaunt
+177	Neontribe	Neontribe website	Design	2018-12-07 15:45:00	18900	NULL	Steph Adams
+178	Neontribe	Neontribe website	Design	2018-12-06 15:45:00	11700	NULL	Steph Adams
+179	Neontribe	Neontribe website	Design	2018-12-05 15:45:00	15300	NULL	Steph Adams
+180	Neontribe	Neontribe website	Design	2018-12-04 15:54:00	8100	NULL	Steph Adams
+252	Neontribe	Neontribe website	Design	2019-01-23 15:53:00	18000	Flow and MVP prototyping workshops	Katja Mordaunt
+272	Neontribe	Neontribe website	Design	2019-01-28 11:26:00	7200	NULL	Holly Stringer
+283	Neontribe	Neontribe website	Design	2019-01-23 15:00:00	3600	Injected spurious design commentary into the MVP	Charles Strange
+120	Neontribe	Neontribe website	Infrastructure	2018-11-14 15:45:00	15300	https://github.com/superadmin/demostack prototyping	Rob Preus-MacLaren
+163	Neontribe	Neontribe website	Infrastructure	2018-12-03 11:45:00	3600	Mostly code review	Katja Mordaunt
+166	Neontribe	Neontribe website	Infrastructure	2018-12-05 11:45:00	3600	Code review & research	Katja Mordaunt
+172	Neontribe	Neontribe website	Infrastructure	2018-12-07 12:00:00	1800	Code reveiw	Katja Mordaunt
+783	Neontribe	Neontribe website	Infrastructure	2019-04-17 10:00:00	1800	Code review	Katja Mordaunt
+3	Neontribe	Neontribe website	Project management and meetings	2019-03-19 13:21:00	5400	Actions for improving MVP from testing sessions in Exeter	Katja Mordaunt
+44	Neontribe	Neontribe website	Project management and meetings	2019-03-19 10:45:00	9000	Website meeting, prep, usability testing issue	Nick Wade
+115	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	NULL	Harry Harrold
+116	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	Whole team content priority meeting	Katja Mordaunt
+117	Neontribe	Neontribe website	Project management and meetings	2018-11-20 16:00:00	7200	Trello wrangling and slack discussions post whole team content priorty meet around prep for protoyping.	Katja Mordaunt
+119	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	5400	Meeting to discuss prioritising user stories, infrastructure and content.	rose.superadmin
+121	Neontribe	Neontribe website	Project management and meetings	2018-11-20 16:00:00	5400	discussion + catchup	Rob Preus-MacLaren
+123	Neontribe	Neontribe website	Project management and meetings	2018-11-21 14:00:00	3600	Trello wrangle & prototyping prep	Katja Mordaunt
+130	Neontribe	Neontribe website	Project management and meetings	2018-11-20 10:00:00	7200	User story priority call and subsequent discussion	Nick Wade
+145	Neontribe	Neontribe website	Project management and meetings	2018-11-20 13:15:00	4500	Project team meeting	Karl Jermy
+149	Neontribe	Neontribe website	Project management and meetings	2018-11-20 11:30:00	4500	All staff meeting to vote on tickets	Karl Jermy
+150	Neontribe	Neontribe website	Project management and meetings	2018-11-01 11:30:00	3600	Initial website company meeting.	Andy Barnes
+151	Neontribe	Neontribe website	Project management and meetings	2018-11-13 11:45:00	3600	Vote on tickets	Andy Barnes
+161	Neontribe	Neontribe website	Project management and meetings	2018-12-06 14:45:00	4500	superadmin website redesign discussion, contact us, interaction, content.	Andy Barnes
+164	Neontribe	Neontribe website	Project management and meetings	2018-12-06 11:45:00	21600	MVP meeting and moving trello to git meeting and actions	Katja Mordaunt
+167	Neontribe	Neontribe website	Project management and meetings	2018-12-05 11:45:00	7200	Project related wrangling and comments in realtime	Katja Mordaunt
+171	Neontribe	Neontribe website	Project management and meetings	2018-12-07 12:00:00	7200	Trello to git wrangle and connecting people for conversations	Katja Mordaunt
+176	Neontribe	Neontribe website	Project management and meetings	2018-12-10 15:30:00	10800	Migrate content from trello to git	Katja Mordaunt
+212	Neontribe	Neontribe website	Project management and meetings	2019-01-09 11:00:00	2700	Scheduling and planning meeting	Nick Wade
+251	Neontribe	Neontribe website	Project management and meetings	2019-01-21 15:52:00	3600	Prep for flow workshop	Katja Mordaunt
+275	Neontribe	Neontribe website	Project management and meetings	2018-11-13 16:07:00	3600	Meeting re the content	rose.superadmin
+276	Neontribe	Neontribe website	Project management and meetings	2018-11-20 16:08:00	5400	Meeting re the content	rose.superadmin
+277	Neontribe	Neontribe website	Project management and meetings	2018-11-27 16:08:00	900	Meeting to plan next steps	rose.superadmin
+278	Neontribe	Neontribe website	Project management and meetings	2018-12-05 16:09:00	3600	Review realtime board	rose.superadmin
+279	Neontribe	Neontribe website	Project management and meetings	2019-01-28 16:09:00	4500	Updating current website with new projects and people bios	rose.superadmin
+280	Neontribe	Neontribe website	Project management and meetings	2018-12-12 16:10:00	1800	Update website project page with Haven	rose.superadmin
+281	Neontribe	Neontribe website	Project management and meetings	2019-01-23 16:11:00	5400	Scope MVP	rose.superadmin
+355	Neontribe	Neontribe website	Project management and meetings	2019-02-12 10:00:00	1800	Catch-up/ progress meeting	Katja Mordaunt
+381	Neontribe	Neontribe website	Project management and meetings	2019-02-19 10:00:00	3600	MVP prototype catch-up meeting.	Katja Mordaunt
+391	Neontribe	Neontribe website	Project management and meetings	2019-02-12 10:00:00	1800	Update call	Nick Wade
+406	Neontribe	Neontribe website	Project management and meetings	2019-02-19 12:15:00	2700	Website update call	Nick Wade
+461	Neontribe	Neontribe website	Project management and meetings	2019-02-26 10:00:00	1800	Progress chat and issue tidy	Katja Mordaunt
+684	Neontribe	Neontribe website	Project management and meetings	2019-04-09 10:00:00	900	Catch-up - info to Ollie	Katja Mordaunt
+802	Neontribe	Neontribe website	Project management and meetings	2019-04-23 10:00:00	3600	catch up	Katja Mordaunt
+274	Neontribe	Neontribe website	General support	2018-10-31 16:07:00	1800	Narrow down user stories for Trello	rose.superadmin
+148	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-29 11:30:00	4500	Smoke testing	Karl Jermy
+152	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-12 11:45:00	29700	NULL	Karl Jermy
+154	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-11-30 15:30:00	7200	Setting up .csv file for timesheet reporting	Karl Jermy
+181	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2018-12-11 09:32:00	900	NULL	superadmin
+231	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-17 10:36:00	3600	Produce a timesheet report from Kimai	Karl Jermy
+232	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-17 11:10:00	2700	Timesheet reporting coniguration and testing	Karl Jermy
+246	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-22 15:08:00	10800	Producing timesheets, setting up new projects	Karl Jermy
+257	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-28 09:50:00	900	NULL	Karl Jermy
+258	Kimai Timesheet Reporting	Kimai support	Testing timesheet reports	2019-01-28 09:58:00	3600	Setting up a new timesheet template	Karl Jermy
+1	Kimai Timesheet Reporting	Kimai support	Ongoing development support	2019-03-14 10:02:00	21480	Fixing broken SQL	Toby Batch
+10	Kimai Timesheet Reporting	Kimai support	Ongoing development support	2019-03-19 10:00:00	21600	More sql backup / restore wrangling	Toby Batch
+187	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-04 13:48:00	3600	Worcester issue investigation	Neil Dabson
+188	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-04 13:49:00	4800	monthly scans and weekly meetings, setting up momo drop box accnt	Neil Dabson
+230	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-14 09:00:00	10800	monthly patching, maintenance and reboot of all momo infra, followed by backup retreival from all hosts.	Andy Barnes
+245	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-21 09:11:00	7200	momo weekly backups	Andy Barnes
+284	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Monthly patching and maintenance	2019-01-28 10:36:00	7200	weekly backups	Andy Barnes
+186	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	MOMO ISO27001 general process	2019-01-04 13:47:00	28800	Neil to london for day with Yvonne 18th Dec	Neil Dabson
+183	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-02 12:09:00	21600	Worcs dashboard loading bug diagnose and temp fix	Katja Mordaunt
+184	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-04 11:27:00	5400	3000 - create and deploy app_user data patch to staging	Katja Mordaunt
+194	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-04 16:22:00	3600	Chat with Neil about infosec & apply hotfix patch to live	Katja Mordaunt
+201	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-09 17:56:00	14400	Organisation distance confirmation. Fake user investigation. New worker type. app_user hotfix card create	Katja Mordaunt
+203	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-02 10:00:00	14400	Investigate corrupt app_user issue	Nick Wade
+210	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-07 15:16:00	900	Support	Katja Mordaunt
+211	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-10 15:20:00	1800	Pre-standup report and maintenance/support	Katja Mordaunt
+215	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-09 15:00:00	3600	New meeting type and unusual activity investigation	Nick Wade
+229	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-14 10:48:00	1800	Thoughts and conversation around spam accounts.	Katja Mordaunt
+249	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-22 15:50:00	3600	User stats spec. With Rose and Yvonne	Katja Mordaunt
+255	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-25 15:57:00	7200	User stats query spec	Katja Mordaunt
+256	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	Ongoing development support	2019-01-25 16:32:00	7200	Timesheet wrangling on Kimai to reflect correct formatting and formulas	Karl Jermy
+185	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-04 11:28:00	1800	Weekly standup	Katja Mordaunt
+237	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-18 11:14:00	1800	Standup	Katja Mordaunt
+238	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-17 11:15:00	28800	Insights mapping	Katja Mordaunt
+247	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-23 15:11:00	10800	Setting up timesheet template	Karl Jermy
+250	Mind of my Own	Support and Maintenance (6 weeks) 17 Dec 2018 - 25 Jan 2019	General product management time	2019-01-22 15:51:00	10800	Prep for scoping	Katja Mordaunt
+189	Neontribe	Devops	Infrastructure	2019-01-02 14:21:00	14400	Created a LTSP server to provide PXE clients	Toby Batch
+190	Neontribe	Devops	Infrastructure	2019-01-03 14:25:00	14400	LTSP Armfh root	Toby Batch
+191	Neontribe	Devops	Infrastructure	2019-01-03 14:26:00	7200	What happened to neonfreenas?	Toby Batch
+192	Neontribe	Devops	Infrastructure	2019-01-04 14:28:00	10800	Restore script for docker volumes.	Toby Batch
+193	Neontribe	Devops	Infrastructure	2019-01-04 14:29:00	14400	Built VLAN test in vagrant	Toby Batch
+195	Neontribe	Devops	Infrastructure	2019-01-07 13:19:00	3600	Tested and evaluated LTSP on PI	Toby Batch
+198	Neontribe	Devops	Infrastructure	2019-01-08 13:21:00	1800	Fixed Calibre	Toby Batch
+200	Neontribe	Devops	Infrastructure	2019-01-08 15:42:00	10800	LTSP now auths against LDAP with shred home spaces	Toby Batch
+202	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-02 10:00:00	10800	Payment controller update and seed creation	Nick Wade
+204	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 15:12:00	3600	Bug fix and code review	Katja Mordaunt
+205	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-08 15:13:00	10800	Voucher payment confirmation seeds. Bug investigation. Tidy release code. and review.	Katja Mordaunt
+206	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-09 15:14:00	3600	Code review	Katja Mordaunt
+207	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-10 15:15:00	900	Code review	Katja Mordaunt
+208	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-03 10:00:00	21600	Payment controller update, voucher state progression	Nick Wade
+209	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-04 10:00:00	23400	Payment controller update, scanner issue	Nick Wade
+218	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 10:00:00	23400	Payment request\nhttps://github.com/superadmin/ARCVService/pull/247	Nick Wade
+227	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-07 09:00:00	25200	Report runner	Charles Strange
+228	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-04 09:00:00	25200	Report runner	Charles Strange
+295	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-08 10:00:00	21600	Voucher state migration, PR fixes	Nick Wade
+296	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-09 10:00:00	19800	View tests and styling bugs\nhttps://github.com/superadmin/ARCVService/pull/251\nhttps://github.com/superadmin/ARCVService/pull/252	Nick Wade
+314	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-10 10:00:00	12600	Scanner delay, bugfixes\nhttps://github.com/superadmin/ARCVService/pull/256ARC	Nick Wade
+321	Alexandra Rose Charity	ARC Applications	Sprint Development Time	2019-01-11 10:00:00	14400	Code review, email issues, improve scanner input\nhttps://github.com/superadmin/ARCVService/pull/258	Nick Wade
+219	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-11 15:32:00	18000	Testing and PR CR	Charles Strange
+223	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-09 09:00:00	25200	Testing and bug fixing	Charles Strange
+224	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-08 09:00:00	18000	Testing and bug fixing	Charles Strange
+225	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-10 15:42:00	25200	Testing and bugfixing	Charles Strange
+287	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-14 10:43:00	21600	Deploy	Charles Strange
+288	Alexandra Rose Charity	ARC Applications	Testing Time	2019-01-15 10:43:00	7200	Deploy checking.	Charles Strange
+220	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-11 15:33:00	1800	Fortnightly catchup	Charles Strange
+226	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-08 15:43:00	1800	Tuesday Sprint focus	Charles Strange
+286	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-21 10:41:00	3600	ARC washup	Charles Strange
+322	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-02-08 12:31:00	5400	Fortnightly call, taking meeting notes and publishing	Karl Jermy
+332	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-02-08 15:57:00	3600	Trello gardening	Karl Jermy
+411	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-01-21 10:15:00	3600	Wash up call	Nick Wade
+455	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-02-25 12:02:00	3600	Bugs and Tech debt discussion	Karl Jermy
+587	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-03-08 15:48:00	3600	Fortnightly stand up and minute taking	Karl Jermy
+614	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-03 14:00:00	3600	Testing definitions and flow with Amanda	Karl Jermy
+646	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-04 10:02:00	5400	Discussing Faiths email with charlie, ticket issues& requests raised	Karl Jermy
+653	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-05 13:55:00	3600	Fortnightly meeting and minute taking	Karl Jermy
+708	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-08 10:00:00	3600	Roadmapping and trello mamanegement	Charles Strange
+774	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-16 17:33:00	1800	Process discussion with Amanda	Karl Jermy
+788	Alexandra Rose Charity	ARC Applications	Project Management and Meetings	2019-04-18 12:15:00	2700	Fortnightly catch up and meeting notes	Karl Jermy
+199	Alexandra Rose Charity	ARC Applications	Maintenance Tasks	2019-01-08 13:21:00	2700	Moved time sheeting to kimai	Toby Batch
+537	Alexandra Rose Charity	ARC Applications	Maintenance Tasks	2019-02-25 10:00:00	21600	inputting all the data for hackney new centres\nsetting up users etc.	Charles Strange
+542	Alexandra Rose Charity	ARC Applications	Maintenance Tasks	2019-02-26 10:00:00	7200	Fixing some more users for hackney	Charles Strange
+285	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-18 10:38:00	3600	Check the emails are flowing with correct links	Charles Strange
+290	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-29 13:00:00	10800	https://github.com/superadmin/ARCVService/tree/1.5/1245-hotfix-voucher-cleaning	Charles Strange
+297	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-01-31 09:06:00	3600	Add new user for SK https://trello.com/c/q66oBA2l/275-trader-set-up-st	Charles Strange
+312	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-05 17:03:00	3600	confirm this is the case https://trello.com/c/JRJjphfr/798-check-that-this-card-doesnt-require-one-redeploy	Charles Strange
+315	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-05 11:55:00	3600	Voucher collection issues and feedback from 1st Place  https://trello.com/c/B4ku5Cxh/279-voucher-collection	Karl Jermy
+378	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-19 09:50:00	3600	Investigating a possible voucher collection history issue	Karl Jermy
+446	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-02-25 10:27:00	1800	trello wrangling	Karl Jermy
+483	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-03-04 10:10:00	3600	H&F data wrangling	Karl Jermy
+731	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-03-14 10:00:00	60	bughinting and hotfixing in 1stplace	Charles Strange
+777	Alexandra Rose Charity	ARC Applications	Ongoing Support	2019-04-17 14:36:00	3600	Voucher creation for https://trello.com/c/dXrCauOj/321-new-vouchers-ordered	Karl Jermy
+196	Neontribe	Timesheet	Development	2019-01-07 13:19:00	21600	Timeshite trying to generate a custom template for time entry	Toby Batch
+197	Neontribe	Timesheet	Development	2019-01-08 13:20:00	7200	Switched timeshite back to standard display	Toby Batch
+36	Haven	2019 Development work	Project management tasks	2019-03-14 10:00:00	3600	Catch-up and code review / issue wrangle	Katja Mordaunt
+48	Haven	2019 Development work	Project management tasks	2019-03-22 10:00:00	1800	Catch-up call	Katja Mordaunt
+75	Haven	2019 Development work	Project management tasks	2019-03-11 11:30:00	900	Update call	Nick Wade
+214	Haven	2019 Development work	Project management tasks	2019-01-11 15:22:00	5400	Issue wrangle prep for sprint scope/ plan meeting	Katja Mordaunt
+216	Haven	2019 Development work	Project management tasks	2019-01-11 15:22:00	3600	Upgrade framework	Katja Mordaunt
+222	Haven	2019 Development work	Project management tasks	2019-01-04 15:39:00	1800	Kick off call for 2019 work	Katja Mordaunt
+235	Haven	2019 Development work	Project management tasks	2019-01-16 11:12:00	7200	Upgrade framework	Katja Mordaunt
+236	Haven	2019 Development work	Project management tasks	2019-01-16 11:13:00	3600	Issue wrangle & progress updates	Katja Mordaunt
+239	Haven	2019 Development work	Project management tasks	2019-01-18 11:15:00	7200	Call about GA, issues and timeline + research before	Katja Mordaunt
+254	Haven	2019 Development work	Project management tasks	2019-01-25 15:56:00	9000	Stats and analytics + catchup chat including timeline & people days set	Katja Mordaunt
+263	Haven	2019 Development work	Project management tasks	2019-01-18 11:03:00	5400	Weekly catchup	rose.superadmin
+264	Haven	2019 Development work	Project management tasks	2019-01-25 11:04:00	2700	Digital Campaign Catch Up	rose.superadmin
+265	Haven	2019 Development work	Project management tasks	2019-01-25 11:04:00	3600	Weekly catch-up	rose.superadmin
+335	Haven	2019 Development work	Project management tasks	2019-02-04 10:00:00	1800	Catch-up	Katja Mordaunt
+337	Haven	2019 Development work	Project management tasks	2019-02-05 10:00:00	1800	Catch-up	Katja Mordaunt
+398	Haven	2019 Development work	Project management tasks	2019-01-16 10:30:00	1800	Update call	Nick Wade
+469	Haven	2019 Development work	Project management tasks	2019-02-28 10:00:00	7200	Scoping	Katja Mordaunt
+472	Haven	2019 Development work	Project management tasks	2019-02-27 10:00:00	1800	Prep for scoping GA questions with Rose	Katja Mordaunt
+499	Haven	2019 Development work	Project management tasks	2019-03-05 12:00:00	5400	Digital Campaign Catch Up with Holly Stringer and thinkings	rose.superadmin
+501	Haven	2019 Development work	Project management tasks	2019-03-05 12:01:00	4980	Catch up call	rose.superadmin
+502	Haven	2019 Development work	Project management tasks	2019-03-05 13:23:00	1800	Copy for Facebook slideshow advert	rose.superadmin
+503	Haven	2019 Development work	Project management tasks	2019-03-05 13:24:00	2700	Catch up call	rose.superadmin
+504	Haven	2019 Development work	Project management tasks	2019-03-05 13:24:00	3600	Catch up call	rose.superadmin
+505	Haven	2019 Development work	Project management tasks	2019-03-05 13:25:00	1800	Catch up call	rose.superadmin
+506	Haven	2019 Development work	Project management tasks	2019-03-05 13:25:00	3600	Prep for scoping day in Birmingham	rose.superadmin
+508	Haven	2019 Development work	Project management tasks	2019-03-05 13:26:00	18000	Scoping day in Birmingham - metrics that matter, google analytics discussions, prep for next sprint, paper prototyping.	rose.superadmin
+509	Haven	2019 Development work	Project management tasks	2019-03-05 13:27:00	3600	Write up from scoping day and amending github issues	rose.superadmin
+661	Haven	2019 Development work	Project management tasks	2019-04-05 10:00:00	1800	Code review. Catch-up.	Katja Mordaunt
+747	Haven	2019 Development work	Project management tasks	2019-04-12 10:00:00	1800	Catch-up	Katja Mordaunt
+809	Haven	2019 Development work	Project management tasks	2019-04-26 10:00:00	3600	Catch-up call and release to staging	Katja Mordaunt
+110	Haven	2019 Development work	Testing tasks	2019-03-29 16:26:00	3600	Proof reading the https://docs.google.com/spreadsheets/d/1U6wZDzcim96CXc8hYeVyv-m3T1AWiIJuJ5kOZql7_Gk/edit#gid=976816835	Karl Jermy
+16	Haven	2019 Development work	Development tasks	2019-03-11 10:00:00	1800	Code review	Katja Mordaunt
+17	Haven	2019 Development work	Development tasks	2019-03-18 10:00:00	1800	Code review	Katja Mordaunt
+22	Haven	2019 Development work	Development tasks	2019-03-12 10:00:00	3600	Code review & translation strategy	Katja Mordaunt
+25	Haven	2019 Development work	Development tasks	2019-03-15 10:00:00	1800	Code review	Katja Mordaunt
+38	Haven	2019 Development work	Development tasks	2019-03-12 08:00:00	3600	Fix code flagged by elm-analyse	Nick Wade
+41	Haven	2019 Development work	Development tasks	2019-03-18 09:00:00	900	PR fix and merge	Nick Wade
+63	Haven	2019 Development work	Development tasks	2019-03-07 12:30:00	3600	Code review	Nick Wade
+81	Haven	2019 Development work	Development tasks	2019-03-13 14:00:00	1800	Move comments to issues and PR\nhttps://github.com/superadmin/haven/pull/641	Nick Wade
+105	Haven	2019 Development work	Development tasks	2019-03-27 10:00:00	3600	Translate info work	Katja Mordaunt
+213	Haven	2019 Development work	Development tasks	2019-01-07 15:21:00	9000	Upgrade framework	Katja Mordaunt
+217	Haven	2019 Development work	Development tasks	2019-01-10 15:23:00	5400	Upgrade framework	Katja Mordaunt
+221	Haven	2019 Development work	Development tasks	2018-11-27 15:36:00	14400	Upgrade framework to Elm 0.19	Katja Mordaunt
+233	Haven	2019 Development work	Development tasks	2019-01-14 11:11:00	10800	Upgrade to 0.19	Katja Mordaunt
+234	Haven	2019 Development work	Development tasks	2019-01-15 11:12:00	10800	NULL	Katja Mordaunt
+240	Haven	2019 Development work	Development tasks	2019-01-18 11:16:00	7200	Updates to timeout function	Katja Mordaunt
+302	Haven	2019 Development work	Development tasks	2019-02-05 13:14:00	10800	Facebook Ad	Holly Stringer
+341	Haven	2019 Development work	Development tasks	2019-02-07 10:00:00	5400	Bug fixes on upgrade	Katja Mordaunt
+343	Haven	2019 Development work	Development tasks	2019-02-06 10:00:00	7200	Bug fix 19 upgrade	Katja Mordaunt
+394	Haven	2019 Development work	Development tasks	2019-01-15 14:00:00	7200	Code review	Nick Wade
+397	Haven	2019 Development work	Development tasks	2019-01-16 11:00:00	5400	Code review	Nick Wade
+516	Haven	2019 Development work	Development tasks	2019-03-05 10:00:00	10800	Upgrade and testing	Katja Mordaunt
+569	Haven	2019 Development work	Development tasks	2019-03-06 10:00:00	1800	Debug timeout	Katja Mordaunt
+577	Haven	2019 Development work	Development tasks	2019-03-07 10:00:00	7200	Finish code upgrade. Begin translations work.	Katja Mordaunt
+592	Haven	2019 Development work	Development tasks	2019-03-08 10:00:00	10800	Translations	Katja Mordaunt
+682	Haven	2019 Development work	Development tasks	2019-04-05 11:30:00	5400	Translation bugfix pairing	Nick Wade
+699	Haven	2019 Development work	Development tasks	2019-04-09 10:00:00	5400	Translation of info	Katja Mordaunt
+745	Haven	2019 Development work	Development tasks	2019-04-10 10:00:00	3600	Translation	Katja Mordaunt
+746	Haven	2019 Development work	Development tasks	2019-04-11 10:00:00	3600	Translation	Katja Mordaunt
+748	Haven	2019 Development work	Development tasks	2019-04-12 10:00:00	5400	Translation & code review	Katja Mordaunt
+755	Haven	2019 Development work	Development tasks	2019-04-10 14:00:00	2700	i18n support, code review	Nick Wade
+758	Haven	2019 Development work	Development tasks	2019-04-11 10:30:00	5400	Code review, language tabs design	Nick Wade
+760	Haven	2019 Development work	Development tasks	2019-04-15 14:15:00	5400	Translation design and development	Nick Wade
+762	Haven	2019 Development work	Development tasks	2019-04-15 10:00:00	10800	Translatable stories	Katja Mordaunt
+780	Haven	2019 Development work	Development tasks	2019-04-16 10:00:00	9000	Translations & code review	Katja Mordaunt
+784	Haven	2019 Development work	Development tasks	2019-04-17 10:00:00	1800	Chat link	Katja Mordaunt
+791	Haven	2019 Development work	Development tasks	2019-04-18 10:00:00	3600	Proof of concept on chat widget	Katja Mordaunt
+801	Haven	2019 Development work	Development tasks	2019-04-23 10:00:00	7200	Chat link	Katja Mordaunt
+803	Haven	2019 Development work	Development tasks	2019-04-24 10:00:00	1800	code review & chat catch up	Katja Mordaunt
+507	Haven	2019 Development work	Research time	2019-03-05 13:25:00	7200	Google analytics research	rose.superadmin
+4	CAST	Contemplating Action	Development tasks	2019-03-19 13:22:00	5400	Call to action feature	Katja Mordaunt
+6	CAST	Contemplating Action	Development tasks	2019-03-20 10:00:00	3600	Call to action implementation	Katja Mordaunt
+14	CAST	Contemplating Action	Development tasks	2019-03-11 10:00:00	7200	Code review & support	Katja Mordaunt
+18	CAST	Contemplating Action	Development tasks	2019-03-18 10:00:00	1800	Code review	Katja Mordaunt
+19	CAST	Contemplating Action	Development tasks	2019-03-12 10:00:00	1800	Code review	Katja Mordaunt
+26	CAST	Contemplating Action	Development tasks	2019-03-15 10:00:00	1800	Code review	Katja Mordaunt
+30	CAST	Contemplating Action	Development tasks	2019-03-21 13:30:00	5400	Type form, support with font issue dev	Nick Wade
+35	CAST	Contemplating Action	Development tasks	2019-03-14 10:00:00	1800	Code review	Katja Mordaunt
+46	CAST	Contemplating Action	Development tasks	2019-03-19 17:00:00	1800	Code review	Nick Wade
+56	CAST	Contemplating Action	Development tasks	2019-03-05 09:00:00	7200	Restyling work	Nick Wade
+61	CAST	Contemplating Action	Development tasks	2019-03-06 10:30:00	1800	Code review and catchup calls	Nick Wade
+64	CAST	Contemplating Action	Development tasks	2019-03-07 10:15:00	3600	Replace CSS classes, sort new issues	Nick Wade
+69	CAST	Contemplating Action	Development tasks	2019-03-08 08:00:00	7200	Complete info version styling, code review\nhttps://github.com/superadmin/contemplating-action/pull/79	Nick Wade
+79	CAST	Contemplating Action	Development tasks	2019-03-25 10:00:00	1800	Code review. Release.	Katja Mordaunt
+91	CAST	Contemplating Action	Development tasks	2019-03-15 10:30:00	5400	Code review and typeform dev	Nick Wade
+111	CAST	Contemplating Action	Development tasks	2019-04-01 10:00:00	25200	Prep release and last few copy changes. Some pairing with Holly Stringer.	Katja Mordaunt
+112	CAST	Contemplating Action	Development tasks	2019-03-29 10:00:00	7200	Prep for heroku deploy and last few issue wrangle	Katja Mordaunt
+241	CAST	Contemplating Action	Development tasks	2019-01-17 12:06:00	1800	Upgrade underlying packages	Katja Mordaunt
+244	CAST	Contemplating Action	Development tasks	2019-01-14 12:11:00	28800	Create whitelabel site (was done in Sept 18 - but can put suitable date here within project funding scope)	Katja Mordaunt
+273	CAST	Contemplating Action	Development tasks	2019-01-28 11:26:00	7200	NULL	Holly Stringer
+415	CAST	Contemplating Action	Development tasks	2019-01-24 09:00:00	1800	Build and code review	Nick Wade
+448	CAST	Contemplating Action	Development tasks	2019-02-19 13:39:00	7200	NULL	Holly Stringer
+449	CAST	Contemplating Action	Development tasks	2019-02-13 13:41:00	18000	Illustrations	Holly Stringer
+450	CAST	Contemplating Action	Development tasks	2019-02-22 13:43:00	3600	NULL	Holly Stringer
+494	CAST	Contemplating Action	Development tasks	2019-03-04 17:00:00	1800	CSS update	Nick Wade
+495	CAST	Contemplating Action	Development tasks	2019-03-01 18:00:00	1800	CSS check and edits	Nick Wade
+518	CAST	Contemplating Action	Development tasks	2019-03-04 12:03:00	10800	Copy changes	Holly Stringer
+544	CAST	Contemplating Action	Development tasks	2019-03-05 10:00:00	3600	Code review. Infrastructure. Bug fix.	Katja Mordaunt
+567	CAST	Contemplating Action	Development tasks	2019-03-06 10:00:00	5400	Infrastructure and code review	Katja Mordaunt
+571	CAST	Contemplating Action	Development tasks	2019-03-06 12:58:00	14400	adding pages and copy	Holly Stringer
+572	CAST	Contemplating Action	Development tasks	2019-03-05 14:45:00	10800	NULL	Holly Stringer
+573	CAST	Contemplating Action	Development tasks	2019-03-07 15:48:00	19800	NULL	Holly Stringer
+574	CAST	Contemplating Action	Development tasks	2019-03-07 10:00:00	7200	Releases, code review, pairing	Katja Mordaunt
+593	CAST	Contemplating Action	Development tasks	2019-03-08 10:00:00	1800	Code review. Releases.	Katja Mordaunt
+657	CAST	Contemplating Action	Development tasks	2019-04-02 10:00:00	3600	Prep for release	Katja Mordaunt
+660	CAST	Contemplating Action	Development tasks	2019-04-03 10:00:00	3600	Release	Katja Mordaunt
+665	CAST	Contemplating Action	Development tasks	2019-04-04 10:00:00	1800	Release and verify. Set timeout 15mins	Katja Mordaunt
+672	CAST	Contemplating Action	Development tasks	2019-03-20 14:00:00	10800	Development work, mostly typeform	Nick Wade
+691	CAST	Contemplating Action	Development tasks	2019-04-01 12:00:00	5400	Code review and discussion	Nick Wade
+693	CAST	Contemplating Action	Development tasks	2019-03-28 15:00:00	3600	Code review and investigation	Nick Wade
+698	CAST	Contemplating Action	Development tasks	2019-04-09 10:00:00	900	Up timeout to 1 hour	Katja Mordaunt
+779	CAST	Contemplating Action	Development tasks	2019-04-16 10:00:00	3600	Update readme for deploy process. Wrangle tickets.	Katja Mordaunt
+785	CAST	Contemplating Action	Development tasks	2019-04-17 10:00:00	0	Readme / release process & testing.	Katja Mordaunt
+794	CAST	Contemplating Action	Development tasks	2019-03-07 13:16:00	3600	Set up Google Analytics	rose.superadmin
+29	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-13 10:00:00	3600	CAST call project update to Dan	Katja Mordaunt
+74	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-11 10:15:00	900	Issue update	Nick Wade
+80	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-25 10:00:00	900	Testing support	Katja Mordaunt
+100	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-28 10:41:00	28800	Testing various chnages w/c 25th March	Karl Jermy
+104	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-28 10:00:00	1800	Progress call - prep for release	Katja Mordaunt
+109	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-29 14:57:00	3600	Styling tests, browser sweep, accessibility	Karl Jermy
+114	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-02 10:57:00	9000	Copy testing	Karl Jermy
+242	CAST	Contemplating Action	Project management & Testing  tasks	2019-01-18 12:08:00	3600	Set up timetracking and repo for PM	Katja Mordaunt
+243	CAST	Contemplating Action	Project management & Testing  tasks	2019-01-11 12:10:00	3600	Initial repo clean and setup in prep for project. Set up meetings.	Katja Mordaunt
+253	CAST	Contemplating Action	Project management & Testing  tasks	2019-01-24 15:54:00	3600	Meeting with Holly Stringer about what to customise & project generally	Katja Mordaunt
+294	CAST	Contemplating Action	Project management & Testing  tasks	2019-01-30 15:55:00	1800	Review issue progress	Katja Mordaunt
+340	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-07 10:00:00	10800	Call & organising project	Katja Mordaunt
+342	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-06 10:00:00	3600	Prep work for project timelines	Katja Mordaunt
+358	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-11 10:00:00	3600	Demo/ Info instance design discussions & general management	Katja Mordaunt
+447	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-25 10:00:00	1800	Chasing tasks and check up project progress.	Katja Mordaunt
+457	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-26 10:00:00	3600	Progress catch-up meeting and plan this week	Katja Mordaunt
+484	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-25 09:30:00	1800	Issue and design review	Nick Wade
+486	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-26 11:00:00	2700	Planning call	Nick Wade
+510	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-05 13:28:00	3600	Copy for the stages of change	rose.superadmin
+511	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-04 13:29:00	2700	Catch up meeting	rose.superadmin
+514	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-04 10:00:00	10800	Get Holly Stringer started with dev. Code review and issue wrangling.	Katja Mordaunt
+515	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-05 10:00:00	3600	Issue wrangle. Code review.	Katja Mordaunt
+517	CAST	Contemplating Action	Project management & Testing  tasks	2019-02-27 13:30:00	3600	PIA checklist creation	rose.superadmin
+568	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-06 10:00:00	3600	Issue wrangling	Katja Mordaunt
+575	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-07 10:00:00	5400	Planning, issue wrangling catch-up chat	Katja Mordaunt
+594	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-08 10:00:00	3600	Issue wrangling. Chats. Plans.	Katja Mordaunt
+692	CAST	Contemplating Action	Project management & Testing  tasks	2019-03-28 14:00:00	1800	Update call	Nick Wade
+763	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-15 10:00:00	1800	Action plan for survey	Katja Mordaunt
+798	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-15 13:21:00	7200	Contacting those who might be interesting in the project via email, slack, Twitter etc.	rose.superadmin
+799	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-15 13:22:00	900	Meeting with Kat, Harry and Katja to discuss contact they know who might be interested in the project	rose.superadmin
+800	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-23 13:23:00	1800	Email those who expressed an interest in partnering	rose.superadmin
+806	CAST	Contemplating Action	Project management & Testing  tasks	2019-04-24 10:00:00	0	handover meeting Rose, Kat, Katja Harry	Katja Mordaunt
+306	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-31 13:41:00	14400	123 configurable security headers	Toby Batch
+308	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-05 13:43:00	10800	120 configurable templated error messages	Toby Batch
+325	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-07 14:35:00	158400	Sprint planning week	Alex Moore
+326	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-14 14:43:00	158400	Sprint planning week	Alex Moore
+387	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-15 09:00:00	25200	Usability testing and mini-sprint planning	Nick Wade
+392	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-14 10:00:00	14400	Components and planning	Nick Wade
+395	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-15 11:00:00	10800	Components and planning	Nick Wade
+396	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-16 10:00:00	14400	Planning and improve documentation setup	Nick Wade
+399	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-17 11:30:00	16200	Markup documentation improvement, planning	Nick Wade
+401	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-18 10:00:00	18000	Planning and additional components\nhttps://github.com/superadmin/ncvo-tools/pull/22	Nick Wade
+405	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-19 10:00:00	1800	Calls and planning	Nick Wade
+408	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-20 11:00:00	3600	Browser test issue review and planning	Nick Wade
+425	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-29 10:00:00	23400	Sprint dev - tracking and forms	Nick Wade
+317	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-05 13:00:00	14400	Code review, results merge conflicts and bugfixes	Nick Wade
+319	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-04 10:30:00	23400	Backend code review, infobox improvements and components	Nick Wade
+327	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-21 14:44:00	158400	Sprint development work	Alex Moore
+329	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 14:49:00	129600	Sprint development work	Alex Moore
+349	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-12 10:00:00	10800	137-staging-and-production-deploys	Toby Batch
+367	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-21 10:21:00	28800	Work with Alex planning and coding sprint. Work spread over 5 days	Rob Preus-MacLaren
+369	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 10:24:00	21600	planning and dev work with Alex, spread over 4 days	Rob Preus-MacLaren
+371	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-04 10:26:00	64800	Working with Alex on finishing off sprint, spread over 3 days	Rob Preus-MacLaren
+389	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-11 08:30:00	25200	Diagnostic tool, fix state and AWS	Nick Wade
+390	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-12 10:00:00	25200	Update copy and validatinon improvements, styling\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/13\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/15	Nick Wade
+410	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-13 08:00:00	28800	Sprint dev - style application and fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/16\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/17\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/22	Nick Wade
+412	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-19 11:00:00	19800	Sprint dev	Nick Wade
+413	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-22 10:00:00	23400	Sprint dev	Nick Wade
+414	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-23 10:00:00	25200	Sprint dev - components, docs, calls\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/1	Nick Wade
+416	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-24 10:00:00	21600	Sprint dev	Nick Wade
+417	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-25 09:00:00	25200	Sprint dev - landing, tracking and calls	Nick Wade
+418	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-08 09:00:00	25200	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/11	Nick Wade
+419	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-07 09:00:00	19800	Sprint dev - deployment calls, code review	Nick Wade
+420	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-06 10:00:00	21600	Sprint dev - PR fixes info buttons\nhttps://github.com/NCVO-Digital/NCVO-content-components/pull/9	Nick Wade
+421	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-31 13:00:00	14400	Sprint dev - PR fixes, markup discussions, advance wip branches	Nick Wade
+422	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-01 08:45:00	25200	Sprint dev - spider diagram, glossary\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/6	Nick Wade
+423	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-14 08:00:00	28800	Sprint dev - final work to glossary and other testing fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/27\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/26\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/24	Nick Wade
+424	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 10:00:00	14400	Sprint dev	Nick Wade
+426	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-30 09:00:00	25200	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/5\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/3	Nick Wade
+316	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-01-28 12:11:00	25200	Jenkins file	Toby Batch
+328	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 14:46:00	158400	Last bits of Sprint development & deployment	Alex Moore
+359	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-12 12:47:00	7200	Functional testing	Karl Jermy
+363	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-14 17:18:00	18000	Functional testing.\nWriting UAT tests.	Karl Jermy
+364	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-15 17:18:00	10800	Writing UAT	Karl Jermy
+372	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 10:28:00	21600	Documenting and deploying DMM with Alex, spread over 2 days	Rob Preus-MacLaren
+374	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-11 10:30:00	21600	Deploy  + Documentation with Nick, deploying DMM, spread over 3 days	Rob Preus-MacLaren
+375	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-14 10:31:00	25200	Usability testing & monitoring usability test	Rob Preus-MacLaren
+379	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-19 16:02:00	9000	Browser Testing on Chrome/Edge/Firefox/Safari	Karl Jermy
+380	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-19 16:03:00	3600	Further exploritory tests following on from Useability testing	Karl Jermy
+474	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-20 10:00:00	54000	Deployment via scripts/ansible	Toby Batch
+303	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-29 13:35:00	14400	Pair programming with Ed on the schema issue	Toby Batch
+304	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-30 13:38:00	18000	138 the front controller has gated access to backend systems	Toby Batch
+305	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-31 13:40:00	7200	138 the front controller has gated access to backend systems	Toby Batch
+307	NCVO	Front Controller BETA heartbeat	Sprint development	2019-02-01 13:42:00	25200	125 bug error handling displays incorrect error message	Toby Batch
+309	NCVO	Front Controller BETA heartbeat	Sprint development	2019-02-05 13:43:00	12600	120 configurable templated error messages -  tests	Toby Batch
+366	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-21 09:55:00	108000	Sprint week, work on front controlller, work spread over 5 days	Rob Preus-MacLaren
+368	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-28 10:22:00	93600	Dev work spread over 4 days	Rob Preus-MacLaren
+475	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-04 09:14:00	3600	Deployed the almanac route	Toby Batch
+477	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-04 14:44:00	18000	164-print-relevant-codes-to-user-on-error-e	Toby Batch
+519	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-05 15:26:00	18000	Delpoynenbt	Toby Batch
+520	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-05 15:26:00	3600	170-show-the-difference-between-404	Toby Batch
+347	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-08 09:58:00	10800	Fixing Zappa deploy	Toby Batch
+348	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 09:59:00	14400	CReating new deployment env	Toby Batch
+360	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-12 12:48:00	3600	Functional testing\nStart a smoke test script	Karl Jermy
+361	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-15 12:32:00	21600	Deploying via ansible	Toby Batch
+362	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-15 12:33:00	10800	Pentest deployment	Toby Batch
+373	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 10:29:00	54000	Documentation and Deploys + helping with test scripts. Spread over 3 days	Rob Preus-MacLaren
+376	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-18 16:30:00	10800	Finsal run through and write up of UAT script. Adding additional acceptance criteria/	Karl Jermy
+545	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 09:33:00	10800	NULL	Rob Preus-MacLaren
+318	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-05 10:00:00	7200	Handover and project calls	Nick Wade
+320	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 10:00:00	1800	Calls, handover and travel organisation	Nick Wade
+331	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 15:53:00	21600	catch ups etc.	Harry Harrold
+403	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-18 10:00:00	5400	Calls, testing writeup and notes	Nick Wade
+370	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-04 10:24:00	57600	Finishing deploys and writing documentation + meetings. Spread over 5 days	Rob Preus-MacLaren
+377	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-18 16:30:00	3600	Trello wrangling	Karl Jermy
+282	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-01-15 16:11:00	900	Collate NCVO questionnaire types and create Google survey	rose.superadmin
+323	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-07 13:22:00	332700	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy
+324	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-08 13:23:00	3600	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy
+311	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-05 17:01:00	10800	https://trello.com/c/I34PTiNn/799-check-user-w-permission-more-accurate-present-vs-future\nhttps://trello.com/c/JRJjphfr/798-check-that-this-card-doesnt-require-one-redeploy	Charles Strange
+345	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-11 11:45:00	7200	retrieved weekly backups	Andy Barnes
+346	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-12 09:37:00	3600	patched and rebooted all servers bar momolog	Andy Barnes
+476	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-03-04 12:47:00	14400	monthly scans, and a small amount of server prep. Basically everything leading up to pentesting week starting 4th march	Neil Dabson
+500	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-03-04 09:00:00	7200	retreived weekly backups	Andy Barnes
+543	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-03-05 16:53:00	32400	working on pentesting 4th and 5th march	Neil Dabson
+590	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-02-01 10:26:00	10800	did patching a week early so Neil Dabson could harden before the deploy	Andy Barnes
+591	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-03-11 10:27:00	7200	retreived weekly backups	Andy Barnes
+597	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Monthly patching and maintenance	2019-03-06 10:36:00	28800	deploy, pentesting etc, 6th mostly as little on 7th as charlie was man down and Hunter was using staging. included couple of hours for friday.	Neil Dabson
+299	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-01 11:30:00	28800	new server work and weekly momo, MOMO DOWN event	Neil Dabson
+300	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-01 16:19:00	14400	new server works	Neil Dabson
+451	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-25 15:39:00	1800	momo info sec calls	Neil Dabson
+452	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-02-25 15:39:00	1800	specific advice re customer questions	Neil Dabson
+533	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-03-05 16:26:00	7200	pentesting with Neil Dabson	Charles Strange
+536	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-03-04 10:00:00	7200	bufixing and pentesting with Neil Dabson	Charles Strange
+596	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	MOMO ISO27001 general process	2019-03-08 10:31:00	14400	monthly uploads, meetings, iso sec process	Neil Dabson
+292	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-30 15:53:00	7200	Scoping debrief and actions.	Katja Mordaunt
+293	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-30 15:54:00	18000	User number stats & scoping prep	Katja Mordaunt
+298	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-31 09:35:00	10800	Worked with Neil to puzzle out packages, configs and scripts a fresh server install needs (part 1)	Charles Strange
+313	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-04 17:04:00	5400	Drriving round live with Katja\n\thttps://trello.com/c/G02nmCHD/803-old-style-statement-being-generated-by-worker\n\thttps://trello.com/c/vTO4XSLL/806-worker-unable-to-set-a-password-new	Charles Strange
+334	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-01-28 15:30:00	9000	Server stats collection	Nick Wade
+336	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-04 10:00:00	9000	Planning prep & support tasks	Katja Mordaunt
+338	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-05 10:00:00	7200	planning prep and support	Katja Mordaunt
+353	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-12 10:00:00	1800	demo to international locator	Katja Mordaunt
+383	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-19 10:00:00	1800	Support ticket response & wrangle	Katja Mordaunt
+453	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-02-25 15:40:00	50400	ansible and openscap setups\nalso https config on staging test machine\nsetup and updating ready for pentests	Neil Dabson
+566	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-03-06 10:00:00	1800	Support and code review	Katja Mordaunt
+576	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Ongoing development support	2019-03-07 10:00:00	2700	Code review. Support investigations.	Katja Mordaunt
+270	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-24 11:10:00	5400	Write up notes from Scoping MVP meeting	rose.superadmin
+271	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-24 11:10:00	1800	Write up user stories on Trello	rose.superadmin
+291	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-29 15:51:00	28800	Scoping	Katja Mordaunt
+330	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-02-08 15:52:00	3600	General involvement.	Harry Harrold
+333	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-30 14:00:00	2700	Scoping de-brief call	Nick Wade
+583	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-03-08 11:38:00	3600	Conversation about shape of heartbeats and testing.	Harry Harrold
+600	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-29 13:28:00	14400	Scoping	Harry Harrold
+601	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-28 13:28:00	7200	NULL	Harry Harrold
+602	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	General product management time	2019-01-30 13:29:00	2700	Scoping de-brief call	Harry Harrold
+350	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-11 10:00:00	14400	Planning & upgrade laravel	Katja Mordaunt
+354	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-12 10:00:00	14400	Upgrade laravel	Katja Mordaunt
+356	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-13 10:00:00	21600	Upgrade laravel, planning	Katja Mordaunt
+382	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 10:00:00	14400	Upgrade laravel and better seeds.	Katja Mordaunt
+384	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-14 10:00:00	7200	Upgrade to 5.4 app_user and collection fixes	Katja Mordaunt
+385	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-15 10:00:00	10800	Upgrade to 5.4 more passing tests	Katja Mordaunt
+386	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 10:00:00	7200	Better seeds. Code review and upgrade 5.4.	Katja Mordaunt
+404	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 11:00:00	14400	Branding and updates	Nick Wade
+407	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 10:30:00	16200	One copy changes, branding and security upgrades\nhttps://github.com/superadmin/MomoOne/pull/382	Nick Wade
+409	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 12:00:00	23400	Upgrades and branding\nhttps://github.com/superadmin/MomoForWorkers/pull/49\nhttps://github.com/superadmin/MomoOne/pull/384	Nick Wade
+427	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 13:57:00	28800	Finished the https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support\nMoved on to other cards.	Charles Strange
+429	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 14:00:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
+430	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-19 14:01:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
+432	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-18 14:01:00	27000	https://trello.com/c/hPO0A2gB/1344-upgrade-to-laravel-55-lts-release-or-56-for-better-i18n-support	Charles Strange
+434	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-11 15:01:00	25200	Porting Hotfixes	Charles Strange
+436	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-12 15:03:00	28800	Hotfix porting	Charles Strange
+437	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-13 15:04:00	28800	Hotfix porting, infosec some cards with Neil	Charles Strange
+438	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-14 15:15:00	25200	The horror that is laravel upgrades. Part 1.	Charles Strange
+440	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-15 15:17:00	21600	The unenviable sensation of banging ones head against a brick wall labelled laravel "5.3->5.4->5.5"	Charles Strange
+442	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-20 10:00:00	25200	One Honeypot. Better worker & express info + date stuff.	Katja Mordaunt
+443	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 10:00:00	28800	Tests and date formatting  + sorted worker list. Code review.	Katja Mordaunt
+444	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-21 09:30:00	25200	Sprint dev\nhttps://github.com/superadmin/MomoExpress/pull/141	Nick Wade
+445	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-22 10:00:00	28800	Sprint dev\nhttps://github.com/superadmin/MomoOne/pull/386\nhttps://github.com/superadmin/MomoOne/pull/385\nhttps://github.com/superadmin/ServiceMomo/pull/487	Nick Wade
+458	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-22 10:00:00	28800	Activity to more useful usage page	Katja Mordaunt
+459	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-25 10:00:00	21600	Activities to usage & fix tests	Katja Mordaunt
+460	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-26 10:00:00	21600	Activity/ Usage page + test support	Katja Mordaunt
+470	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-28 10:00:00	21600	Rebrand & bugfixes	Katja Mordaunt
+471	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-27 10:00:00	25200	Get ready for deploy, support, bugfixes	Katja Mordaunt
+473	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-01 10:00:00	28800	Re-brand and some bug fix	Katja Mordaunt
+485	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-25 09:00:00	7200	Welsh copy and PR updates	Nick Wade
+487	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-26 09:00:00	5400	Code review, design issues	Nick Wade
+492	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-28 16:30:00	1800	Reband copy check, code review	Nick Wade
+496	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-27 09:30:00	1800	Style fix\nhttps://github.com/superadmin/ServiceMomo/pull/492	Nick Wade
+512	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-04 10:00:00	21600	Rebrand, test, deploy	Katja Mordaunt
+534	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-05 16:30:00	10800	bughunting auth problems https://trello.com/c/dJJY2lB0/3125-team-portal-auth-bug	Charles Strange
+535	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-04 16:30:00	18000	bughunting auth problems https://trello.com/c/dJJY2lB0/3125-team-portal-auth-bug\nfixing bits of branding	Charles Strange
+538	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-01 10:00:00	25200	rebranding things	Charles Strange
+539	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-02-28 10:00:00	21600	rebranding things	Charles Strange
+598	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-06 10:00:00	21600	Fixing testing bugs	Charles Strange
+599	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint development	2019-03-07 10:00:00	21600	Fixing testing bugs\nHunting down rebranding opportunities	Charles Strange
+266	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-21 11:06:00	1800	Room booking for MOMO scoping meeting in London	rose.superadmin
+267	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-17 11:07:00	18000	Insight mapping day in London	rose.superadmin
+268	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-22 11:08:00	3600	MOMO meeting with Yvonne and Katja re analytics	rose.superadmin
+269	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-22 11:08:00	9000	Neontribe Meeting to prep for scoping	rose.superadmin
+301	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-04 12:10:00	3600	Planninig meeting	Karl Jermy
+310	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-05 17:00:00	3600	Look at MOMO Cards-to-include with Neil Dabson	Charles Strange
+339	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-08 10:00:00	28800	Planning day	Katja Mordaunt
+344	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 09:49:00	900	Updating the timekeeping process for MOMO heartbeat	Karl Jermy
+351	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 10:00:00	1800	Catch-up	Katja Mordaunt
+352	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-12 10:00:00	900	Catch-up	Katja Mordaunt
+357	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-13 10:00:00	1800	catch-up Yvonne + team	Katja Mordaunt
+388	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-13 09:30:00	900	Planning call	Nick Wade
+402	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-18 09:30:00	1800	Calls and planning	Nick Wade
+428	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-20 13:59:00	1800	10am with Yvonne	Charles Strange
+431	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-19 14:01:00	1800	Call with Yvonne	Charles Strange
+433	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-18 14:04:00	1800	Chat with yvonne	Charles Strange
+435	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-11 15:02:00	3600	Trello gardening and calls.	Charles Strange
+439	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-14 15:16:00	1800	Calls with yvonne	Charles Strange
+441	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-15 15:18:00	1800	Pleasantly distracting call with Yvonne.	Charles Strange
+531	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-01-29 16:07:00	18000	Service MOMO sprint scoping in London	rose.superadmin
+532	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-02-08 16:08:00	18000	Service MOMO sprint 1 planning in London	rose.superadmin
+581	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-03-08 11:23:00	9000	Scrums fo week 2 of test and deploy	Karl Jermy
+582	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-03-01 11:24:00	9000	Scums for week 1 test and deploy	Karl Jermy
+585	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-03-08 15:24:00	3600	Release notes. Trello wrangling	Karl Jermy
+604	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint management & meetings	2019-03-11 14:59:00	1800	Pre deploy scrum	Karl Jermy
+454	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-02-25 12:01:00	14400	Browser testing for MOMO for workers and MOMO Express	Karl Jermy
+456	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-02-26 17:07:00	14400	Functional testing of heartbeat 1	Karl Jermy
+466	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-02-28 17:15:00	18000	Functional testing	Karl Jermy
+468	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-01 16:43:00	14400	Functional testing - Dev tests	Karl Jermy
+482	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-04 10:09:00	7200	Functional testing	Karl Jermy
+513	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-05 10:00:00	9000	Infosec notes and testing	Katja Mordaunt
+540	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-02-27 10:00:00	21600	test bug fixes	Charles Strange
+541	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-02-26 10:00:00	14400	test bug fixes	Charles Strange
+578	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-05 11:20:00	10800	Feb sprint 2019	Karl Jermy
+579	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-06 11:22:00	18000	Browser testing	Karl Jermy
+580	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-07 11:22:00	14400	Browser testing. Functional testing	Karl Jermy
+584	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-08 15:23:00	5400	Browser testing	Karl Jermy
+595	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-08 10:00:00	10800	Dev testing and prep for deploy	Katja Mordaunt
+605	Mind of my Own	Service MOMO heartbeat 1 (28 Jan - 8 Mar 2019)	Sprint testing	2019-03-11 15:00:00	3600	Last tidy up of sprint testing	Karl Jermy
+775	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Monthly patching and maintenance	2019-04-15 09:00:00	7200	weekly backup retrival	Andy Barnes
+97	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	MOMO ISO27001 general process	2019-03-27 15:50:00	55200	infosec and vlan 1h 15/3\nserver config 3h 14/3\nwhat deletes what and how & servers 4h20 18/3\nrsyslog selinux new servers 5h\nmacsec new servers 1h\ninfo sec sprint 26+27/3 1h	Neil Dabson
+679	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	MOMO ISO27001 general process	2019-04-09 09:56:00	115200	monday 1st 4h new servers\ntuesday 2nd 6h new servers\nwednesday 3rd 4h new servers\nthursday 4th  6h new servers\nfriday 5th 1h infosec 5h new servers\nsunday 7th 2h new servers\nmonday 8th 4h new servers	Neil Dabson
+735	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	MOMO ISO27001 general process	2019-04-11 12:41:00	46800	tuesday new server deploy 7h\nWedneasday 3h\nThursday 3h	Neil Dabson
+793	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	MOMO ISO27001 general process	2019-04-24 10:30:00	100800	deploy demo to new servers\npentest\nfix issues\nprepare new live\n15th to 24th	Neil Dabson
+5	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-19 10:00:00	3600	Maintenence & hotfix	Katja Mordaunt
+9	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-20 10:00:00	3600	Trello wrangle & ongoing review/ chats	Katja Mordaunt
+15	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-11 10:00:00	5400	Releases and support	Katja Mordaunt
+20	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-12 10:00:00	9000	Maintenence. Add worker and meeting. Trello wrangle.	Katja Mordaunt
+23	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-18 10:00:00	9000	Usage bugs & memory issue	Katja Mordaunt
+24	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-15 10:00:00	14400	Stand-up. Support/ investigations/ Usage portal call.	Katja Mordaunt
+31	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-13 10:00:00	9000	Support - adding data and trello wrangle	Katja Mordaunt
+33	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-14 10:00:00	9000	Wash- up & support	Katja Mordaunt
+87	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-13 09:00:00	1800	Help with footer styling hotfix	Nick Wade
+102	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-28 10:00:00	7200	Support tickets and trello wrangle	Katja Mordaunt
+610	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-15 12:30:00	12600	Maintenance support and stats	Nick Wade
+655	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-02 10:00:00	5400	Support around stats mostly & deleted workers	Katja Mordaunt
+658	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-03 10:00:00	3600	More stats enquiry	Katja Mordaunt
+664	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-04 10:00:00	5400	maintenence/ support	Katja Mordaunt
+718	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-28 10:00:00	3600	NULL	Charles Strange
+730	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-03-18 10:00:00	7200	maintenance with katja	Charles Strange
+743	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-10 10:00:00	9000	Catching up on support tickets	Katja Mordaunt
+749	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-12 10:00:00	14400	Stats chat and general support cards	Katja Mordaunt
+754	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-10 11:00:00	1800	Support ticket assist	Nick Wade
+766	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-15 10:00:00	1800	Un-delete worker and board tidy	Katja Mordaunt
+787	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-17 10:00:00	3600	Support tasks and trello wrangle/ arragne prep scopiong	Katja Mordaunt
+790	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Ongoing development support	2019-04-18 10:00:00	1800	Worker types and typo in Meeting	Katja Mordaunt
+27	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-21 10:15:00	12600	Planning calls and issues	Nick Wade
+39	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-12 10:00:00	21600	Scoping meeting	Nick Wade
+40	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-18 08:00:00	25200	Design planning meeting, design strategy	Nick Wade
+45	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-19 09:30:00	1800	Catchup calls and meetings	Nick Wade
+76	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-25 10:00:00	1800	Trello wrangle.	Katja Mordaunt
+609	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-03-15 14:30:00	3600	Design planning meetings	Nick Wade
+669	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	General product management time	2019-04-08 13:25:00	1800	NULL	Harry Harrold
+101	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-27 10:00:00	7200	Upgrades, code review and hotfix wrangle	Katja Mordaunt
+103	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-28 10:00:00	3600	Usage update prep	Katja Mordaunt
+113	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-01 10:00:00	1800	Code review	Katja Mordaunt
+656	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-02 10:00:00	7200	Improve seeds & usage counts	Katja Mordaunt
+659	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-03 10:00:00	9000	Express doc to statement. Code review	Katja Mordaunt
+663	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-05 10:00:00	18000	Usage counts. Code review. Organisation settings page design, Task page	Katja Mordaunt
+666	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-04 10:00:00	14400	Counts and code review.	Katja Mordaunt
+670	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-08 09:20:00	19800	Worker sorting UI, logos, code review	Nick Wade
+673	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-25 09:00:00	16200	Sticky footer, IE display\nhttps://github.com/superadmin/ServiceMomo/pull/499	Nick Wade
+677	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-03 10:00:00	23400	Selections copy, spreadsheets, code review\nhttps://github.com/superadmin/ServiceMomo/pull/510	Nick Wade
+681	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-27 10:00:00	18000	Page title, PHP setup changes, design work	Nick Wade
+683	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-09 10:00:00	3600	Code review - release issues	Katja Mordaunt
+685	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-07 10:00:00	14400	Tasks page	Katja Mordaunt
+688	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-04 10:00:00	21600	Spreadsheet age and date formatting\nhttps://github.com/superadmin/ServiceMomo/pull/511	Nick Wade
+689	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-05 10:00:00	21600	Fix usage copy, PR fixes to spreadsheet age and honeypot\nhttps://github.com/superadmin/ServiceMomo/pull/517	Nick Wade
+690	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-01 10:00:00	18000	Update Express statement copy, honeypot logging\nhttps://github.com/superadmin/ServiceMomo/pull/507	Nick Wade
+694	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-28 10:30:00	3600	Design call and comms	Nick Wade
+695	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-28 13:00:00	7200	Layout changes for header	Nick Wade
+696	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-29 10:00:00	23400	Reorganise header, PRs, stats assist\nhttps://github.com/superadmin/ServiceMomo/pull/505\nhttps://github.com/superadmin/ServiceMomo/pull/506	Nick Wade
+697	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-02 10:00:00	21600	Improve honeypot detection, write tests	Nick Wade
+704	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-10 10:00:00	10800	bugfixing for t&d	Charles Strange
+706	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-09 10:00:00	10800	bugfixes for testing	Charles Strange
+707	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-08 10:00:00	18000	bugfixes for t&d	Charles Strange
+709	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-05 10:00:00	21600	moving the nav about	Charles Strange
+710	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-04 10:00:00	21600	Sortable workers on the workers pages	Charles Strange
+712	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-03 10:00:00	21600	Sprint - worker sorting	Charles Strange
+715	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-02 10:00:00	21600	Sprint dev	Charles Strange
+716	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-01 10:00:00	25200	sprint dev	Charles Strange
+717	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-29 10:00:00	14400	sprint dev	Charles Strange
+719	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-28 10:00:00	18000	sprint dev	Charles Strange
+722	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-27 10:00:00	10800	sprint dev	Charles Strange
+723	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-26 10:00:00	25200	sprint dev	Charles Strange
+726	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-03-25 10:00:00	25200	Sprint dev	Charles Strange
+744	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-10 10:00:00	1800	code review	Katja Mordaunt
+751	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-12 10:00:00	3600	Code review. Prep release for Monday.	Katja Mordaunt
+752	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-09 09:00:00	19800	Organisation page, worker sorting and logo bugs\nhttps://github.com/superadmin/ServiceMomo/pull/522	Nick Wade
+753	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-10 10:00:00	14400	Organisation style fixes, other bugs\nhttps://github.com/superadmin/ServiceMomo/pull/524	Nick Wade
+756	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-11 10:00:00	14400	Organisation page fixes, copy updates, other bugs\nhttps://github.com/superadmin/ServiceMomo/pull/525\nhttps://github.com/superadmin/ServiceMomo/pull/526	Nick Wade
+759	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-12 09:30:00	16200	Fix small bugs, copy, titles and tasks page\nhttps://github.com/superadmin/ServiceMomo/pull/530\nhttps://github.com/superadmin/ServiceMomo/pull/529\nhttps://github.com/superadmin/ServiceMomo/pull/528	Nick Wade
+764	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint development	2019-04-15 10:00:00	5400	Prep for release	Katja Mordaunt
+50	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-22 10:00:00	2700	Weekly standup	Katja Mordaunt
+51	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-22 10:00:00	18000	Sprint planning with Yvonne and board prep for sprint.	Katja Mordaunt
+52	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-21 10:00:00	14400	Planning for sprint - with Team and Nick	Katja Mordaunt
+71	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-22 10:30:00	3600	Planning review calls	Nick Wade
+106	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-29 09:41:00	1800	Weekly standup	Katja Mordaunt
+662	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-05 10:00:00	5400	Stand-up, catch-up, trello wrangle	Katja Mordaunt
+671	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-08 09:20:00	1800	Planning meetings and comms	Nick Wade
+674	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-25 09:00:00	900	Sprint calls	Nick Wade
+678	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-03 09:15:00	1800	Sprint and planning calls	Nick Wade
+711	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-03 10:00:00	1800	Sprint meeting with yvonne	Charles Strange
+713	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-02 10:00:00	1800	Sprint call with yvonne	Charles Strange
+714	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-01 10:00:00	1800	Sprint call with yvonne	Charles Strange
+720	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-28 10:00:00	3600	Call with yvonne\nmanaging trello	Charles Strange
+721	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-27 10:00:00	1800	Sprint call with yvonne	Charles Strange
+724	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-26 10:00:00	1800	calls with yvonne	Charles Strange
+725	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-25 10:00:00	1800	sprint kickoff chat with yvonne	Charles Strange
+727	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-03-22 10:00:00	14400	Momo Planning	Charles Strange
+733	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-11 10:46:00	2400	Acceptanc Criteria sign off with Yvonne and Nick	Karl Jermy
+736	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-12 10:37:00	1800	Scrum	Karl Jermy
+750	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-12 10:00:00	3600	Weekly stand-up and trello wrangle	Katja Mordaunt
+757	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-11 08:30:00	2700	AC and planning calls	Nick Wade
+765	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-15 10:00:00	1800	Catch-up and trello wrangle	Katja Mordaunt
+773	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-16 17:32:00	1800	Daily scrum to discuss progress	Karl Jermy
+776	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-17 14:30:00	7200	Release notes.\nTidying up trello post sprint	Karl Jermy
+782	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Sprint management & meetings	2019-04-16 10:00:00	0	Trello wrangle/ catch-ups	Katja Mordaunt
+77	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-03-25 10:00:00	1800	Post release testing and hotfix verify	Katja Mordaunt
+705	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-09 10:00:00	10800	developing deploy scripts with Neil Dabson	Charles Strange
+732	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-10 10:45:00	10800	Functional Testing	Karl Jermy
+734	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-11 10:47:00	10800	Functional testing	Karl Jermy
+737	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-12 10:37:00	5400	NULL	Karl Jermy
+761	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-15 15:54:00	7200	Dev Testing	kara
+771	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-16 15:17:00	21600	Finishing up Dev tests and then Browser Testing	kara
+772	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-16 17:31:00	27000	functional testing. Browser Testing	Karl Jermy
+781	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-16 10:00:00	3600	Dev testing	Katja Mordaunt
+786	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-17 10:00:00	9000	Deploy troubleshooting / post live dev tests	Katja Mordaunt
+789	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-18 10:00:00	3600	Deploy stuff ready for release/ pen test review	Katja Mordaunt
+792	Mind of my Own	Service MOMO heartbeat 2 (March 11 - April 19)	Test & Deploy	2019-04-23 10:00:00	1800	Code review. Patch error logging.	Katja Mordaunt
+525	Addaction	Feb/March Heartbeat 2019	Planning	2019-02-11 16:02:00	12600	Copy work for goal setting quiz	rose.superadmin
+526	Addaction	Feb/March Heartbeat 2019	Planning	2019-02-13 16:03:00	1800	Finalise and update copy for goal setting	rose.superadmin
+528	Addaction	Feb/March Heartbeat 2019	Planning	2019-02-15 16:04:00	1800	Update quizzes from test feedback	rose.superadmin
+530	Addaction	Feb/March Heartbeat 2019	Planning	2019-02-20 16:06:00	3600	Rewrite quizzes and test	rose.superadmin
+107	Addaction	Feb/March Heartbeat 2019	Test & Deploy	2019-03-28 09:59:00	10800	https://trello.com/c/oxnG1LwS/179-testing-spreadsheet	Karl Jermy
+365	Addaction	Feb/March Heartbeat 2019	Test & Deploy	2019-02-15 17:19:00	5400	Testing of alcohol/cocaine/cannabis quizzes	Karl Jermy
+527	Addaction	Feb/March Heartbeat 2019	Test & Deploy	2019-02-14 16:04:00	3600	Test quizzes	rose.superadmin
+260	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-01-21 11:00:00	1800	Steph Catch-Up	rose.superadmin
+521	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-01-30 15:58:00	1800	Neontribe Next Stage meeting	rose.superadmin
+523	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-02-06 16:00:00	1800	Catch up call with Steph	rose.superadmin
+524	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-02-11 16:01:00	18000	Planning day with Steph	rose.superadmin
+529	Addaction	Feb/March Heartbeat 2019	Project Management & meetings	2019-02-19 16:05:00	10800	Liase with Steph over quiz Facebook set back	rose.superadmin
+259	Addaction	Feb/March Heartbeat 2019	User research	2019-01-18 11:00:00	3600	Go through survey stats	rose.superadmin
+261	Addaction	Feb/March Heartbeat 2019	User research	2019-01-21 11:01:00	10800	Analyse stats from the quizzes	rose.superadmin
+262	Addaction	Feb/March Heartbeat 2019	User research	2019-01-23 11:02:00	1800	Finish off stats from quiz and update deckumentation	rose.superadmin
+522	Addaction	Feb/March Heartbeat 2019	User research	2019-02-04 16:00:00	1800	Research other quiz/advice formats	rose.superadmin
+92	CAST	Chatting it Through	Planning	2019-03-15 12:30:00	1800	Catchup planning call	Nick Wade
+796	CAST	Chatting it Through	Planning	2019-04-03 13:19:00	3600	Draft campaign for survey and partner recruitment	rose.superadmin
+797	CAST	Chatting it Through	Planning	2019-04-08 13:20:00	3600	Write up copy for social media campaign	rose.superadmin
+795	CAST	Chatting it Through	Research	2019-03-14 13:18:00	900	Update survey and link	rose.superadmin
+289	Alexandra Rose Charity	ARC Applications	Data set up	2019-01-29 15:04:00	3600	Discussing dates for data set up with @charlesstrange and the customer. \nAdding dates to project calendar	Karl Jermy
+728	Alexandra Rose Charity	ARC Applications	Data set up	2019-03-21 10:00:00	10800	fix problem with data	Charles Strange
+729	Alexandra Rose Charity	ARC Applications	Data set up	2019-03-20 10:00:00	10800	insert data	Charles Strange
+7	SEAP	SEAP Project work	Ongoing support and activity	2019-03-19 10:00:00	1800	Code review and chats	Katja Mordaunt
+8	SEAP	SEAP Project work	Ongoing support and activity	2019-03-20 10:00:00	900	Code review	Katja Mordaunt
+49	SEAP	SEAP Project work	Ongoing support and activity	2019-03-22 10:00:00	1800	Pre release and code review	Katja Mordaunt
+78	SEAP	SEAP Project work	Ongoing support and activity	2019-03-25 10:00:00	1800	Release verify and test instruction	Katja Mordaunt
+84	SEAP	SEAP Project work	Ongoing support and activity	2019-03-25 14:36:00	7800	Testing	Karl Jermy
+93	SEAP	SEAP Project work	Ongoing support and activity	2019-03-26 10:00:00	1800	Releases	Katja Mordaunt
+42	SEAP	SEAP Project work	Badge design	2019-03-18 19:00:00	5400	Fix typo, fix button role, design buttons\nhttps://github.com/superadmin/seap_core/pull/94	Nick Wade
+43	SEAP	SEAP Project work	Badge design	2019-03-19 09:30:00	1800	Accessibility PR and fixes\nhttps://github.com/superadmin/seap_core/pull/95	Nick Wade
+47	SEAP	SEAP Project work	Badge design	2019-03-22 09:30:00	5400	Add buttons, PRs, update issue AC\nhttps://github.com/superadmin/seap_core/pull/96\nhttps://github.com/superadmin/seap_esa/pull/184\nhttps://github.com/superadmin/SEAP_PIP/pull/186	Nick Wade
+393	SEAP	SEAP Project work	Badge design	2019-01-15 15:00:00	1800	Comms and planning	Nick Wade
+400	SEAP	SEAP Project work	Badge design	2019-01-17 13:00:00	1800	Button design and a11y checks	Nick Wade
+675	SEAP	SEAP Project work	Badge design	2019-03-25 11:00:00	900	Test support, AC and resolve issues	Nick Wade
+32	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-03-21 10:00:00	900	Update calls and issues	Nick Wade
+72	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-03-22 10:00:00	1800	Update planning calls	Nick Wade
+90	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-03-15 10:00:00	900	Planning catchup	Nick Wade
+462	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-02-25 14:53:00	21600	Mini sprint planning meeting	Rob Preus-MacLaren
+463	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-02-27 14:54:00	3600	Chat about css	Rob Preus-MacLaren
+464	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-02-28 14:54:00	14400	NULL	Rob Preus-MacLaren
+480	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-02-25 10:00:00	16200	Scoping meeting and issue management	Nick Wade
+497	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-02-27 13:00:00	12600	Styling strategy call and planning	Nick Wade
+611	NCVO	Diagnostic Tools Mini Sprint	Planning	2019-03-19 10:00:00	3600	Catchup call and planning	Nick Wade
+37	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-12 09:00:00	3600	Fix layout bug for Edge and Firefox, code review\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/41	Nick Wade
+57	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-05 10:00:00	9000	Update section copy and other fixes	Nick Wade
+58	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-06 10:00:00	12600	Update all section and glossary copy and test, code review\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/36	Nick Wade
+62	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-07 10:00:00	14400	Copy fixes and backend required fields validation\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/38\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/37	Nick Wade
+481	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-02-25 17:00:00	1800	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/28	Nick Wade
+488	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-02-26 13:00:00	10800	Sprint dev - remove internal styling	Nick Wade
+490	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-01 09:00:00	28800	Sprint dev - linting, form submit, code review\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/32	Nick Wade
+491	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-02-28 09:00:00	27000	Sprint dev - style transfer, bug fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/31\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/30\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/29\nhttps://github.com/NCVO-Digital/NCVO-content-components/pull/26\nhttps://github.com/NCVO-Digital/NCVO-content-components/pull/25\nhttps://github.com/NCVO-Digital/NCVO-content-components/pull/24	Nick Wade
+493	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-03-04 09:00:00	25200	Sprint dev - getting started, copy updates\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/35	Nick Wade
+498	NCVO	Diagnostic Tools Mini Sprint	Sprint Development	2019-02-27 11:00:00	7200	Sprint dev - style transfer, small issues	Nick Wade
+53	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-11 09:36:00	7200	Functional testing	Karl Jermy
+55	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-12 09:39:00	12600	Functional testing	Karl Jermy
+59	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-13 09:41:00	9000	Functional testing	Karl Jermy
+60	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-14 10:11:00	10800	Functional testing of FC and DMM	Karl Jermy
+70	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-08 11:00:00	14400	Deploy and code review	Nick Wade
+73	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-11 10:00:00	14400	New tabs bug and deployment\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/40	Nick Wade
+85	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-13 10:00:00	9000	Code review and bug fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/45\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/44	Nick Wade
+89	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-14 10:00:00	3600	Code review for deploy	Nick Wade
+586	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-08 15:47:00	3600	functional testing	Karl Jermy
+627	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-11 08:59:00	7200	NULL	Rob Preus-MacLaren
+631	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-12 09:28:00	7200	NULL	Rob Preus-MacLaren
+633	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-13 09:29:00	7200	NULL	Rob Preus-MacLaren
+635	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-14 09:32:00	7200	NULL	Rob Preus-MacLaren
+636	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-15 09:33:00	3600	NULL	Rob Preus-MacLaren
+638	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-18 09:34:00	21600	Deploying prod dmm	Rob Preus-MacLaren
+645	NCVO	Diagnostic Tools Mini Sprint	Test and Deploy	2019-03-22 09:38:00	10800	Deploying prod DMM	Rob Preus-MacLaren
+478	NCVO	Diagnostic Tools Mini Sprint	Project Management & Meetings	2019-03-04 17:01:00	900	Setting up projects on Kimai	Karl Jermy
+489	NCVO	Diagnostic Tools Mini Sprint	Project Management & Meetings	2019-02-26 10:00:00	3600	Issue planning	Nick Wade
+607	NCVO	Diagnostic Tools Mini Sprint	Project Management & Meetings	2019-03-20 16:00:00	5400	Sprint washup	Nick Wade
+465	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-28 14:55:00	14400	NULL	Rob Preus-MacLaren
+467	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-25 16:32:00	7200	NULL	Rob Preus-MacLaren
+547	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-18 09:37:00	25200	NULL	Rob Preus-MacLaren
+548	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-19 09:37:00	21600	NULL	Rob Preus-MacLaren
+549	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-20 09:37:00	21600	NULL	Rob Preus-MacLaren
+551	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-21 09:39:00	25200	NULL	Rob Preus-MacLaren
+552	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-22 09:39:00	21600	NULL	Rob Preus-MacLaren
+554	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-26 09:45:00	28800	NULL	Rob Preus-MacLaren
+555	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-02-27 09:45:00	21600	NULL	Rob Preus-MacLaren
+565	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-03-07 10:00:00	7200	Fixed tests for new error codes	Toby Batch
+570	NCVO	Front Controller GAMMA Heartbeat	Planning	2019-03-07 12:16:00	7200	Switched to b32 encoding in cache keys	Toby Batch
+11	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-15 10:00:00	21600	Schema rewriet	Toby Batch
+12	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-18 10:00:00	21600	Schema rewrite	Toby Batch
+558	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-01 09:47:00	14400	NULL	Rob Preus-MacLaren
+559	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-04 09:48:00	21600	NULL	Rob Preus-MacLaren
+561	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-05 09:49:00	21600	NULL	Rob Preus-MacLaren
+563	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-06 10:00:00	21600	More deployment pairing with Rob	Toby Batch
+564	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-06 10:00:00	3600	404 error seperation	Toby Batch
+588	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-08 10:00:00	10800	173-ssl-certs	Toby Batch
+589	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-11 10:17:00	2700	173-ssl-certs	Toby Batch
+603	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-11 14:19:00	10800	139 query strings	Toby Batch
+623	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-06 09:00:00	21600	NULL	Rob Preus-MacLaren
+624	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-06 08:53:00	3600	NULL	Rob Preus-MacLaren
+625	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-07 08:56:00	25200	NULL	Rob Preus-MacLaren
+626	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-08 08:57:00	25200	NULL	Rob Preus-MacLaren
+629	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-11 09:26:00	21600	NULL	Rob Preus-MacLaren
+630	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-12 09:27:00	21600	NULL	Rob Preus-MacLaren
+632	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-13 09:29:00	21600	NULL	Rob Preus-MacLaren
+634	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-14 09:32:00	21600	NULL	Rob Preus-MacLaren
+637	NCVO	Front Controller GAMMA Heartbeat	Sprint Development	2019-03-15 09:33:00	21600	NULL	Rob Preus-MacLaren
+65	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-15 10:32:00	7200	Functional testing	Karl Jermy
+66	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-18 10:38:00	10800	Functional testing	Karl Jermy
+67	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-19 10:38:00	10800	Functional testing	Karl Jermy
+68	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-25 10:39:00	9000	UAT scripting	Karl Jermy
+82	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-25 10:00:00	10800	NCVO Front Controller Systems document	Toby Batch
+83	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-21 10:00:00	14400	Fixing doc tests	Toby Batch
+94	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-26 12:34:00	3600	Wagtail meeting	Toby Batch
+95	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-26 12:34:00	7200	Fonts	Toby Batch
+96	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-26 12:35:00	10800	Fonts	Toby Batch
+98	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-27 10:00:00	14400	Schema docs	Toby Batch
+99	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-27 10:00:00	10800	New fonts	Toby Batch
+606	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-11 17:06:00	7200	Testing Front Controller	kara
+608	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-27 16:00:00	1800	Deploy support	Nick Wade
+613	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-03 10:30:00	4500	css late changes	Karl Jermy
+615	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-28 10:00:00	21600	Statiuc fonts	Toby Batch
+616	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-29 10:00:00	10800	New DMM routes	Toby Batch
+617	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-29 10:00:00	10800	New x-forward header	Toby Batch
+618	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-01 10:00:00	10800	Versioned released to dev and demo	Toby Batch
+619	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-01 10:00:00	10800	Schema docs	Toby Batch
+621	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-02 10:00:00	25200	Better ansible	Toby Batch
+639	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-18 09:35:00	7200	NULL	Rob Preus-MacLaren
+640	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-19 09:35:00	25200	NULL	Rob Preus-MacLaren
+641	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-20 09:36:00	25200	NULL	Rob Preus-MacLaren
+642	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-21 09:36:00	25200	NULL	Rob Preus-MacLaren
+643	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-22 09:37:00	7200	NULL	Rob Preus-MacLaren
+644	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-03-22 09:38:00	14400	Deploying prod BETA FC for dmm deploy	Rob Preus-MacLaren
+767	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-15 13:44:00	7200	Released v0.81	Toby Batch
+768	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-16 13:44:00	3600	Release v0.82	Toby Batch
+769	NCVO	Front Controller GAMMA Heartbeat	Test and Deploy	2019-04-15 13:45:00	10800	Debugged 502s on staging and dev	Toby Batch
+54	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-03-15 09:37:00	12600	Weekly scrums	Karl Jermy
+479	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-03-04 17:01:00	900	Setting up projects on Kimai	Karl Jermy
+546	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-02-18 15:35:00	3600	Meeting with Torchbox	Rob Preus-MacLaren
+550	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-02-20 09:38:00	3600	NULL	Rob Preus-MacLaren
+553	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-02-22 09:40:00	7200	NULL	Rob Preus-MacLaren
+556	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-02-27 09:46:00	3600	NULL	Rob Preus-MacLaren
+557	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-03-01 09:46:00	14400	NULL	Rob Preus-MacLaren
+560	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-03-04 09:48:00	3600	NULL	Rob Preus-MacLaren
+562	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-03-05 09:53:00	3600	NULL	Rob Preus-MacLaren
+654	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-04-05 13:57:00	3600	Wash up	Karl Jermy
+668	NCVO	Front Controller GAMMA Heartbeat	Product Management & Meetings	2019-04-05 12:42:00	7200	NULL	Harry Harrold
+622	GBPTM	GBPTM	Testing Support	2019-04-03 08:14:00	5400	Testing bug fix for https://github.com/superadmin/gbptm/issues/392	Karl Jermy
+680	GBPTM	GBPTM	Testing Support	2019-04-09 10:34:00	3600	Testing bug fix 393	Karl Jermy
+778	GBPTM	GBPTM	Testing Support	2019-04-17 15:15:00	1800	https://github.com/superadmin/gbptm/issues/402	Karl Jermy
+648	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Diagnostic Tools	2019-04-01 10:42:00	21600	Get DMM in line with Gamma FC. Deploy and get env set up for testing	Rob Preus-MacLaren
+650	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Diagnostic Tools	2019-04-02 10:43:00	14400	Get DMM in line with Gamma FC. Deploy and get env set up for testing	Rob Preus-MacLaren
+652	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Diagnostic Tools	2019-04-03 10:45:00	14400	Deploy and testing support for gamma FC.	Rob Preus-MacLaren
+686	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Diagnostic Tools	2019-04-04 13:30:00	3600	DT future sprint planning meeting	Nick Wade
+687	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Diagnostic Tools	2019-04-04 11:00:00	900	Code review	Nick Wade
+649	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Front Controller	2019-04-01 10:43:00	3600	Fixes and support for Almanac and deploy to demo	Rob Preus-MacLaren
+651	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Front Controller	2019-04-02 10:44:00	7200	FC support, gamma deploys.	Rob Preus-MacLaren
+740	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Front Controller	2019-04-12 14:36:00	18000	Building simple analytics support https://trello.com/c/gWsYkBfp/217-add-simple-tracking	Rob Preus-MacLaren
+741	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Front Controller	2019-04-12 14:36:00	21600	Building simple analytics support https://trello.com/c/gWsYkBfp/217-add-simple-tracking	Rob Preus-MacLaren
+742	NCVO	Support, maintenance and advisory services	Ongoing Development Support - Front Controller	2019-04-08 00:00:00	10800	Support for bug fix deploys and chats	Rob Preus-MacLaren
+738	NCVO	Support, maintenance and advisory services	Project Management & Meetings	2019-04-10 14:34:00	18000	Front Controller washup	Rob Preus-MacLaren
+739	NCVO	Support, maintenance and advisory services	Project Management & Meetings	2019-04-11 14:35:00	2700	Call and chat with Sophie, support with redirect plan.	Rob Preus-MacLaren
+667	NCVO	SSSP	User research	2019-04-01 12:41:00	28800	NULL	Harry Harrold
+804	Mind of my Own	Finland l10n heartbeat (29 April - 7 June 2019)	Ongoing development support	2019-04-24 10:00:00	7200	Translation doc spec & research	Katja Mordaunt
+808	Mind of my Own	Finland l10n heartbeat (29 April - 7 June 2019)	Ongoing development support	2019-04-26 10:00:00	19800	Update translation docs workers	Katja Mordaunt
+805	Mind of my Own	Finland l10n heartbeat (29 April - 7 June 2019)	Sprint admin management and meetings	2019-04-24 10:00:00	7200	Breifing with Jill Yvonne Charles Strange to prep for Finland sprint	Katja Mordaunt
+807	Mind of my Own	Finland l10n heartbeat (29 April - 7 June 2019)	Sprint admin management and meetings	2019-04-26 10:00:00	1800	weekly stand-up	Katja Mordaunt

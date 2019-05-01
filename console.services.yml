@@ -1,0 +1,6 @@
+services:
+  timesheet.timesheet_import:
+    class: Drupal\timesheet\Command\TimesheetImportCommand
+    arguments: []
+    tags:
+      - { name: drupal.command }
