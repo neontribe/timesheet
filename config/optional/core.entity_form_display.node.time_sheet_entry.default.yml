@@ -1,0 +1,91 @@
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.node.time_sheet_entry.field_activity_type
+    - field.field.node.time_sheet_entry.field_date
+    - field.field.node.time_sheet_entry.field_duration
+    - field.field.node.time_sheet_entry.field_duration_minutes_
+    - field.field.node.time_sheet_entry.field_issue_uuid
+    - field.field.node.time_sheet_entry.field_project
+    - field.field.node.time_sheet_entry.field_user
+    - node.type.time_sheet_entry
+  module:
+    - computed_field
+    - datetime
+    - duration_field
+id: node.time_sheet_entry.default
+targetEntityType: node
+bundle: time_sheet_entry
+mode: default
+content:
+  field_activity_type:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_date:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_duration:
+    weight: 5
+    settings:
+      duration: ''
+    third_party_settings: {  }
+    type: duration_widget
+    region: content
+  field_duration_minutes_:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_number_widget
+    region: content
+  field_issue_uuid:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_project:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_user:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

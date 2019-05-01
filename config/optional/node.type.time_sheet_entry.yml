@@ -1,0 +1,17 @@
+uuid: c8f4bc92-3639-4ba4-ab83-b05f6da676a1
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Time-sheet Entry'
+type: time_sheet_entry
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

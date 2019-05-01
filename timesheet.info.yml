@@ -3,3 +3,10 @@ type: module
 description: 'Neontribe time sheeting'
 core: 8.x
 package: 'Neontribe'
+dependencies:
+  - node
+  - user
+  - computed_field
+  - datetime
+  - duration_field
+

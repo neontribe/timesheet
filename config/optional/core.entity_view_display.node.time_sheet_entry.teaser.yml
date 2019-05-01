@@ -1,0 +1,20 @@
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.time_sheet_entry
+  module:
+    - user
+id: node.time_sheet_entry.teaser
+targetEntityType: node
+bundle: time_sheet_entry
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true
