@@ -28,11 +28,11 @@ class ImportFromCSV {
     }
   }
 
-  public function importRowsFinishedCallback($success, $results, $operations) {
+  public static function importRowsFinishedCallback($success, $results, $operations) {
     if ($success) {
       $message = \Drupal::translation()->formatPlural(count($results), 'One entry processed.', '@count entries processed.');
     } else {
-      $message = t('Finished with an error.');
+      $message = 'Finished with an error.';
     }
     drupal_set_message($message);
     foreach ($results as $result) {

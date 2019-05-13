@@ -58,6 +58,29 @@ class AdminConfigForm extends ConfigFormBase {
     return 'timesheet_admin_config_form';
   }
 
+  /*
+   * Diagnostic Tool Platform BETA heartbeat|gAJYgqWd
+   * Front Controller BETA heartbeat|gAJYgqWd
+   * Diagnostic Tools Mini Sprint|gAJYgqWd
+   * Front Controller GAMMA Heartbeat|gAJYgqWd
+   *
+   * alex|Alex Moore
+   * Andy Barnes|Andy Barnes
+   * Charlie|Charles Strange
+   * George|George Deeks
+   * harry|Harry Harrold
+   * Holly|Holly Stringer
+   * Jermalkl|Karl Jermy
+   * katjam|Katja Mordaunt
+   * neil|Neil Dabson
+   * neontribe|superadmin
+   * nick|Nick Wade
+   * RobRogers|Rob Preus-MacLaren
+   * rose.neontribe|Rose Bonner
+   * steph|Steph Adams
+   * tobias|Toby Batch
+   */
+
   /**
    *
    * {@inheritdoc}
@@ -65,9 +88,16 @@ class AdminConfigForm extends ConfigFormBase {
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('timesheet.adminconfig');
 
+    $form['users'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('User mappings'),
+      '#rows' => 25,
+      '#description' => $this->t('List the users here with a pipe (|) seperator followed by the LDAP user display name.  E.g. tobias|Toby Batch'),
+      '#default_value' => $config->get('users')
+    ];
     $form['projects'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Projects'),
+      '#title' => $this->t('Project mappings'),
       '#rows' => 25,
       '#description' => $this->t('List the projects here with a pipe (|) seperator followed by the trello board id.  E.g. Some project|QswwEdRh'),
       '#default_value' => $config->get('projects')
@@ -102,6 +132,7 @@ class AdminConfigForm extends ConfigFormBase {
     parent::submitForm($form, $form_state);
 
     $this->config('timesheet.adminconfig')
+      ->set('users', $form_state->getValue('users'))
       ->set('projects', $form_state->getValue('projects'))
       ->set('import_entries', $form_state->getValue('import_entries'))
       ->save();

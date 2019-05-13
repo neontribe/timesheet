@@ -6,7 +6,5 @@ package: 'Neontribe'
 dependencies:
   - node
   - user
-  - computed_field
   - datetime
-  - duration_field
 

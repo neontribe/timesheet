@@ -1,0 +1,40 @@
+<?php
+
+/**
+ "@file
+ "Contains timesheet.install.
+ */
+
+/**
+ * "Implements hook_install().
+ */
+function timesheet_install() {
+  $users = [
+    "alex|Alex Moore",
+    "Andy Barnes|Andy Barnes",
+    "Charlie|Charles Strange",
+    "George|George Deeks",
+    "harry|Harry Harrold",
+    "Holly|Holly Stringer",
+    "Jermalkl|Karl Jermy",
+    "katjam|Katja Mordaunt",
+    "neil|Neil Dabson",
+    "neontribe|superadmin",
+    "nick|Nick Wade",
+    "RobRogers|Rob Preus-MacLaren",
+    "rose.neontribe|Rose Bonner",
+    "steph|Steph Adams",
+    "tobias|Toby Batch"
+  ];
+  $projects = [
+    "Diagnostic Tool Platform BETA heartbeat|gAJYgqWd",
+    "Front Controller BETA heartbeat|gAJYgqWd",
+    "Diagnostic Tools Mini Sprint|gAJYgqWd",
+    "Front Controller GAMMA Heartbeat|gAJYgqWd"
+  ];
+
+  $this->config('timesheet.adminconfig')
+    ->set('users', implode("\n", $users))
+    ->set('projects', implode("\n", $projects))
+    ->save();
+}

@@ -26,7 +26,7 @@ chrome.extension.sendMessage({}, function(response) {
 
 function cardChanged(fullcard, fullboard) {
   console.log(fullcard, fullboard);
-  var site = 'https://tobias.batch.org.uk/timeshite/web/timesheet/';
+  var site = 'http://localhost/workspace/timeshite/web/timesheet/';
   var platform = 'trello';
 
   var card = fullcard.substring(3, fullcard.indexOf("/", 3));

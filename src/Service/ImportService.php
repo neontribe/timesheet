@@ -52,7 +52,6 @@ class ImportService {
       $project = $this->findProject($cols[1], $customer);
 
       $date = \date('Y-m-d', strtotime($cols[3]));
-      $duration = $this->formatTime($cols[4]);
       $minutes = $cols[4];
       $title = $cols[5];
       $user = $this->findUser($cols[6]);
@@ -64,8 +63,7 @@ class ImportService {
 
       $node->set('field_activity_type', $activity);
       $node->set('field_date', $date);
-      $node->set('field_duration', $duration);
-      $node->set('field_duration_minutes_', $minutes);
+      $node->set('field_duration', $minutes);
       $node->set('field_project', $project);
       $node->set('field_user', $user);
 
@@ -82,19 +80,31 @@ class ImportService {
   }
 
   public function findUser($user) {
-    $users = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties([
+    $filter = [
       'name' => $user
-    ]);
+    ];
+
+    $config = \Drupal::configFactory()->get('timesheet.adminconfig');
+    $user_rows = explode("\n", $config->get('users'));
+    foreach ($user_rows as $row) {
+      if (strpos($row, $user)) {
+        list ($key, $val) = explode("|", $row);
+        if ($val) {
+          $filter = [
+            'name' => $val
+          ];
+          break;
+        }
+      }
+    }
+
+    $users = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties($filter);
     if (\count($users)) {
       $user = array_pop($users);
       return $user;
     } else {
       return False;
     }
-  }
-
-  public function formatTime($minutes) {
-    return gmdate('\P\TH\Hi\M', $minutes);
   }
 
   /**

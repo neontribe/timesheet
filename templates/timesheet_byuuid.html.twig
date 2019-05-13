@@ -7,7 +7,7 @@ to do the iteration #}
 	<div id="timesheet_entry_{{ id }} }}" class="timesheet_entry"
 		title="{{ entry.getTitle }} by {{ entry.field_user.entity.getDisplayName }}">
 		<a href="{{ path('timesheet.web_controller_edit', {'board': board, 'uuid': uuid, 'nid': id})}}"> {{ entry.field_activity_type.entity.name.value }}<br />
-			{{ entry.field_date.value }}, {{ entry.field_duration_minutes_.value }}
+			{{ entry.field_date.value }}, {{ entry.field_duration.value }}
 			mins
 		</a>
 	</div>

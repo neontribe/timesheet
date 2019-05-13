@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-  var SITEBASE="https://tobias.batch.org.uk/timeshite/web";
-
   // Check username, password
   function checkUsernamePassword() {
     var username = $("#username").val();
@@ -19,7 +17,7 @@ $( document ).ready(function() {
 
   // Fetch Token
   function fetchToken(username, password) {
-    var url = SITEBASE + "/session/token";
+    var url = $("#host").val() + "/session/token";
     $.ajax({
       url: url,
       contentType: "application/json; charset=utf-8",
@@ -36,7 +34,7 @@ $( document ).ready(function() {
     userpass = checkUsernamePassword();
     token = $('#token').text();
 
-    var url = SITEBASE + "/node/" + timesheet_id + "?_format=json"
+    var url = $("#host").val() + "/node/" + timesheet_id + "?_format=json"
 
     $.ajax({
       url: url,
@@ -59,10 +57,10 @@ $( document ).ready(function() {
     token = $('#token').text();
 
     if (method == 'POST') {
-      var url = SITEBASE + "/node?_format=json"
+      var url = $("#host").val() + "/node?_format=json"
     }
     else {
-      var url = SITEBASE + "/node/" + node["nid"][0]["value"] + "?_format=json"
+      var url = $("#host").val() + "/node/" + node["nid"][0]["value"] + "?_format=json"
     }
 
     $.ajax({
@@ -86,7 +84,7 @@ $( document ).ready(function() {
     userpass = checkUsernamePassword();
     token = $('#token').text();
 
-    var url = SITEBASE + "/timesheet/byuuid/" + uuid + "?_format=json"
+    var url = $("#host").val() + "/timesheet/byuuid/" + uuid + "?_format=json"
 
     $.ajax({
       url: url,
@@ -209,7 +207,7 @@ $( document ).ready(function() {
   userpass = checkUsernamePassword();
   // Populate users
   var users = $.ajax({
-    url: SITEBASE + "/timesheet/listUsers",
+    url: $("#host").val() + "/timesheet/listUsers",
     contentType: "application/json; charset=utf-8",
     headers: {
       'Content-Type': 'application/hal+json',
@@ -228,7 +226,7 @@ $( document ).ready(function() {
 
   // Populate projects
   var projects = $.ajax({
-    url: SITEBASE + "/timesheet/listProjects",
+    url: $("#host").val() + "/timesheet/listProjects",
     contentType: "application/json; charset=utf-8",
     headers: {
       'Content-Type': 'application/hal+json',
@@ -247,7 +245,7 @@ $( document ).ready(function() {
 
   // Populate activities
   var activities = $.ajax({
-    url: SITEBASE + "/timesheet/listActivities",
+    url: $("#host").val() + "/timesheet/listActivities",
     contentType: "application/json; charset=utf-8",
     headers: {
       'Content-Type': 'application/hal+json',

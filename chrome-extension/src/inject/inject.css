@@ -1,3 +1,6 @@
 /**
  * Place your custom CSS styles here.
  **/
+iframe {
+  border: 0px;
+}
