@@ -1,31 +1,51 @@
+timesheet.json_controller_node:
+  path: '/timesheet/node/{id}'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\JsonController::byid'
+    _title: 'Get sheet by ID'
+  requirements:
+    _role: 'authenticated'
 timesheet.json_controller_byuuid:
   path: '/timesheet/byuuid/{uuid}'
   defaults:
     _controller: '\Drupal\timesheet\Controller\JsonController::byuuid'
     _title: 'Get sheets by UUID'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
 timesheet.json_controller_listUsers:
   path: '/timesheet/listUsers'
   defaults:
     _controller: '\Drupal\timesheet\Controller\JsonController::listUsers'
     _title: 'List Users'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
 timesheet.json_controller_listProjects:
   path: '/timesheet/listProjects'
   defaults:
     _controller: '\Drupal\timesheet\Controller\JsonController::listProjects'
     _title: 'List projects'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
 timesheet.json_controller_listActivities:
   path: '/timesheet/listActivities'
   defaults:
     _controller: '\Drupal\timesheet\Controller\JsonController::listActivities'
     _title: 'List activities'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
+timesheet.json_controller_new:
+  path: '/timesheet/new'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\JsonController::new'
+  requirements:
+    _role: 'authenticated'
+timesheet.json_controller_update:
+  path: '/timesheet/update/{id}'
+  defaults:
+    _controller: '\Drupal\timesheet\Controller\JsonController::update'
+  requirements:
+    _role: 'authenticated'
+    
 
 timesheet.web_controller_list:
   path: '/timesheet/list/{board}/{uuid}'
@@ -33,21 +53,21 @@ timesheet.web_controller_list:
     _controller: '\Drupal\timesheet\Controller\WebController::list'
     _title: 'Timesheets'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
 timesheet.web_controller_edit:
   path: '/timesheet/edit/{board}/{uuid}/{nid}'
   defaults:
     _controller: '\Drupal\timesheet\Controller\WebController::edit'
     _title: 'Edit Timesheet'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
 timesheet.web_controller_new:
   path: '/timesheet/new/{board}/{uuid}'
   defaults:
     _controller: '\Drupal\timesheet\Controller\WebController::new'
     _title: 'New Timesheet'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
     
 timesheet.admin_form:
   path: '/admin/config/timesheet/adminsettings'
@@ -55,7 +75,7 @@ timesheet.admin_form:
     _form: '\Drupal\timesheet\Form\AdminForm'
     _title: 'AdminForm'
   requirements:
-    _access: 'TRUE'
+    _role: 'authenticated'
   
 
 timesheet.timesheet_admin_config_form:

@@ -2,9 +2,11 @@
 namespace Drupal\timesheet\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\node\Entity\Node;
 use Drupal\timesheet\Service\DefaultService;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
 
 /**
@@ -54,6 +56,57 @@ class JsonController extends ControllerBase {
       ]));
     }
     return new JsonResponse($data);
+  }
+
+  /**
+   * By id.
+   */
+  public function byid($id) {
+    $node = Node::load($id);
+    $data = [];
+    $data[$id] = json_decode($this->serializer->serialize($node, 'json', [
+      'plugin_id' => 'entity'
+    ]));
+    return new JsonResponse($data);
+  }
+
+  public function new(Request $request) {
+    $node = Node::create([
+      'type' => 'time_sheet_entry'
+    ]);
+    return $this->processNode($node, $request);
+  }
+
+  public function update(Request $request, $id) {
+    $node = Node::load($id);
+    return $this->processNode($node, $request);
+  }
+
+  function processNode($node, $request) {
+    $title = trim($request->request->get('title'));
+    $field_activity_type = trim($request->request->get('field_activity_type'));
+    $field_date = trim($request->request->get('field_date'));
+    $field_duration = trim($request->request->get('field_duration'));
+    $field_issue_uuid = trim($request->request->get('field_issue_uuid'));
+    $field_project = trim($request->request->get('field_project'));
+    $field_user = trim($request->request->get('field_user'));
+
+    $node->setTitle($title);
+
+    $node->set('field_activity_type', $field_activity_type);
+    $node->set('field_date', $field_date);
+    $node->set('field_duration', $field_duration);
+    $node->set('field_project', $field_project);
+    $node->set('field_user', $field_user);
+    $node->set('field_duration', $field_duration);
+    $node->set('field_issue_uuid', $field_issue_uuid);
+
+    $sucess = $node->save();
+    $data = json_decode($this->serializer->serialize($node, 'json', [
+      'plugin_id' => 'entity'
+    ]));
+
+    return new JsonResponse($data, ($sucess ? 200 : 500));
   }
 
   /**

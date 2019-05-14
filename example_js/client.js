@@ -34,7 +34,7 @@ $( document ).ready(function() {
     userpass = checkUsernamePassword();
     token = $('#token').text();
 
-    var url = $("#host").val() + "/node/" + timesheet_id + "?_format=json"
+    var url = $("#host").val() + "/timesheet/node/" + timesheet_id;
 
     $.ajax({
       url: url,
@@ -46,35 +46,7 @@ $( document ).ready(function() {
       username: userpass.username,
       password: userpass.password,
       success: function(data) {
-        $('#timesheet').text("<pre>" + JSON.stringify(data, null, 2) + "</pre>");
-      }
-    });
-  }
-
-  // Create or update timesheet entry
-  function updateTimesheet(node, method) {
-    userpass = checkUsernamePassword();
-    token = $('#token').text();
-
-    if (method == 'POST') {
-      var url = $("#host").val() + "/node?_format=json"
-    }
-    else {
-      var url = $("#host").val() + "/node/" + node["nid"][0]["value"] + "?_format=json"
-    }
-
-    $.ajax({
-      url: url,
-      method: method,
-      contentType: "application/json; charset=utf-8",
-      headers: {
-        'X-CSRF-Token': token
-      },
-      data: JSON.stringify(node),
-      username: userpass.username,
-      password: userpass.password,
-      success: function(data) {
-        $('#timesheet').text("<pre>" + JSON.stringify(data, null, 2) + "</pre>");
+        $('#timesheet').text(JSON.stringify(data, null, 2));
       }
     });
   }
@@ -96,7 +68,10 @@ $( document ).ready(function() {
       username: userpass.username,
       password: userpass.password,
       success: function(data) {
-        $('#timesheets').text("<pre>" + JSON.stringify(data, null, 2) + "</pre>");
+	      var jsonBeauty = JSON.stringify(data).trim();
+//		  jsonBeauty = jsonBeauty.split('},{').join('},' + "\n" + '{');
+		  $('#timesheets').text(jsonBeauty);
+//		  Prism.highlightElement(document.getElementById('timesheets'));
       }
     });
   }
@@ -130,6 +105,38 @@ $( document ).ready(function() {
     fetchTimesheetsByUuid(issue_uuid);
   });
 
+  // Create or update timesheet entry
+  function updateTimesheet(node, method) {
+    userpass = checkUsernamePassword();
+    token = $('#token').text();
+
+    if (node["nid"] == undefined) {
+      var url = $("#host").val() + "/timesheet/new";
+    }
+    else {
+      var url = $("#host").val() + "/timesheet/update/" + node["nid"];
+    }
+
+    console.log(url);
+    console.log(node);
+    console.log(method);
+    $.ajax({
+      url: url,
+      method: method,
+      // contentType: "application/json; charset=utf-8",
+      headers: {
+        'X-CSRF-Token': token
+      },
+      data: node,
+      username: userpass.username,
+      password: userpass.password,
+      success: function(data) {
+    	  console.log(data);
+        $('#timesheet').text(JSON.stringify(data, null, 2));
+      }
+    });
+  }
+  
   // Attach to create/update button
   $('#update_button').on('click', function () {
     var id = $("#id").val();
@@ -142,64 +149,17 @@ $( document ).ready(function() {
     var uuid = $("#uuid").val();
 
     var node = {
-      "field_activity_type": [
-        {
-          "target_id": parseInt(activity),
-          "target_type": "taxonomy_term",
-          "url": "/taxonomy/term/" + activity
-        }
-      ],
-      "field_date": [
-        {
-          "value": date
-        }
-      ],
-      "field_duration": [{
-        "value": "PT" + Math.floor(duration/60) + "H" + (duration % 60) + "M"
-      }],
-      "field_duration_minutes_": [
-        {
-          "value": duration
-        }
-      ],
-      "field_issue_uuid": [
-        {
-          "value": uuid
-        }
-      ],
-      "field_project": [
-        {
-          "target_id": parseInt(project),
-          "target_type": "node",
-          "url": "/node/" + project
-        }
-      ],
-      "field_user": [
-        {
-          "target_id": parseInt(user),
-          "target_type": "user",
-          "url": "/user/" + user
-        }
-      ],
-      "title": [
-        {
-          "value": detail
-        }
-      ],
-      "type": [
-        {
-          "target_id": "time_sheet_entry",
-          "target_type": "node_type",
-        }
-      ]
-    };
-    console.log(node);
-    var method = "POST";
-    if (id) {
-      method = "PATCH";
-      node['nid'] = [
-        { "value": id }
-      ];
+      field_activity_type: parseInt(activity),
+      field_date: date,
+      field_duration: duration,
+      field_issue_uuid: uuid,
+      field_project: parseInt(project),
+      field_user: parseInt(user),
+      title:  detail
+    }
+    var method = "post";
+    if (id != "") {
+      node['nid'] =  id;
     }
     updateTimesheet(node, method);
   });
