@@ -1,9 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+ 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Neontribe Timesheet Bridge</title>
 </head>
 <body>
+
+
+<div class="container">
+	<form id="loginForm" class="form-signin">
+		<div class="text-center mb-4">
+			<h1 class="h3 mb-3 font-weight-normal">Neontribe Timesheet Options</h1>
+			<p>Provide your API credentials in the form below</p>
+		</div>
+		<div class="form-label-group">
+			<input type="url" id="inputDomain" class="form-control" placeholder="https://www.example.com/" required
+				   autofocus value="http://localhost/workspace/kimai/kimai2-app/public">
+			<label for="inputDomain">Kimai base URL (domain + port)</label>
+		</div>
+		<div class="form-label-group">
+			<input type="text" id="inputEmail" class="form-control" placeholder="Username" required value="admin">
+			<label for="inputEmail">Email address</label>
+		</div>
+		<div class="form-label-group">
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required
+				   value="admin">
+			<label for="inputPassword">Password</label>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block" id="loginButton" type="submit">Sign in</button>
+	</form>
+</div>
 
 </body>
 </html>

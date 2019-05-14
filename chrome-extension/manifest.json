@@ -1,24 +1,18 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Neontribe timesheet bridge",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Allows timesheets to be logged directly from trello.",
+  "homepage_url": "http://time.neontribe.org",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
   "default_locale": "en",
-  "options_page": "src/options/index.html",
-  "page_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "page action demo",
-    "default_popup": "src/page_action/page_action.html"
-  },
   "permissions": [
     "tabs",
-    "http://*/,https://*/,http://127.0.0.1:8888/,https://time.neontribe.org"
+    "http://*/,https://*/,https://time.neontribe.org"
   ],
   "content_scripts": [
     {
