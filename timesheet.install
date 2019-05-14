@@ -33,7 +33,7 @@ function timesheet_install() {
     "Front Controller GAMMA Heartbeat|gAJYgqWd"
   ];
 
-  $this->config('timesheet.adminconfig')
+  \Drupal::service('config.factory')->getEditable('timesheet.adminconfig')
     ->set('users', implode("\n", $users))
     ->set('projects', implode("\n", $projects))
     ->save();
