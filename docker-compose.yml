@@ -1,0 +1,46 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.6
+    environment:
+      MYSQL_USER: lamp
+      MYSQL_PASSWORD: lamp
+      MYSQL_DATABASE: lamp
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+    volumes:
+      - ./mysql-datadir:/var/lib/mysql
+      # - ./sql:/docker-entrypoint-initdb.d
+    # restart: always
+    #healthcheck:
+    #    test: ["mysql", "-u", "lamp", "-plamp", "lamp", "-e", "'select count(*)'", "from", "users"]
+    #    interval: 20s
+    #    retries: 10
+
+  php:
+    image: tobybatch/drupal
+    links: [ db ]
+    # restart: always
+    ports:
+      - "${DR_PORT:-0}:${DR_PORT:-8888}"
+    env_file:
+      .env
+    environment:
+      DBUSER: lamp
+      DBPASS: lamp
+      DBNAME: lamp
+      DBHOST: db
+      ACCOUNT_NAME: ${ACCOUNT_NAME:-superadmin}
+      ACCOUNT_PASS: ${ACCOUNT_PASS:-changeme}
+      ACCOUNT_MAIL: ${ACCOUNT_MAIL:-timesheet@neontribe.co.uk}
+      DR_PORT: ${DR_PORT:-8888}
+    depends_on:
+      - db
+    volumes:
+      - ./.docker/startup.sh:/startup.sh
+    entrypoint: /startup.sh
+    #healthcheck:
+    #  test: ["CMD", "nc" ,"-z", "localhost", "${DR_PORT:-8888}"]
+    #  interval: 20s
+    #  retries: 10
+
+# CMD sudo chown -R drupal:drupal /opt/drupal/web/sites/default && drush rs 0.0.0.0:8888
