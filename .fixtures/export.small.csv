@@ -1,31 +1,0 @@
-401	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-18 10:00:00	18000	Planning and additional components\nhttps://github.com/superadmin/ncvo-tools/pull/22	Nick Wade
-405	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-19 10:00:00	1800	Calls and planning	Nick Wade
-408	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-02-20 11:00:00	3600	Browser test issue review and planning	Nick Wade
-425	NCVO	Diagnostic Tool Platform BETA heartbeat	Planning	2019-01-29 10:00:00	23400	Sprint dev - tracking and forms	Nick Wade
-317	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-05 13:00:00	14400	Code review, results merge conflicts and bugfixes	Nick Wade
-319	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-04 10:30:00	23400	Backend code review, infobox improvements and components	Nick Wade
-422	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-01 08:45:00	25200	Sprint dev - spider diagram, glossary\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/6	Nick Wade
-423	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-02-14 08:00:00	28800	Sprint dev - final work to glossary and other testing fixes\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/27\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/26\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/24	Nick Wade
-424	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-28 10:00:00	14400	Sprint dev	Nick Wade
-426	NCVO	Diagnostic Tool Platform BETA heartbeat	Sprint development	2019-01-30 09:00:00	25200	Sprint dev\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/5\nhttps://github.com/NCVO-Digital/NCVO-diagnostic-tools/pull/3	Nick Wade
-316	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-01-28 12:11:00	25200	Jenkins file	Toby Batch
-328	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-04 14:46:00	158400	Last bits of Sprint development & deployment	Alex Moore
-359	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-12 12:47:00	7200	Functional testing	Karl Jermy
-380	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-19 16:03:00	3600	Further exploritory tests following on from Useability testing	Karl Jermy
-474	NCVO	Diagnostic Tool Platform BETA heartbeat	Test & Deploy	2019-02-20 10:00:00	54000	Deployment via scripts/ansible	Toby Batch
-303	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-29 13:35:00	14400	Pair programming with Ed on the schema issue	Toby Batch
-304	NCVO	Front Controller BETA heartbeat	Sprint development	2019-01-30 13:38:00	18000	138 the front controller has gated access to backend systems	Toby Batch
-519	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-05 15:26:00	18000	Delpoynenbt	Toby Batch
-520	NCVO	Front Controller BETA heartbeat	Sprint development	2019-03-05 15:26:00	3600	170-show-the-difference-between-404	Toby Batch
-347	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-08 09:58:00	10800	Fixing Zappa deploy	Toby Batch
-348	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 09:59:00	14400	CReating new deployment env	Toby Batch
-545	NCVO	Front Controller BETA heartbeat	Test & Deploy	2019-02-11 09:33:00	10800	NULL	Rob Preus-MacLaren
-318	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-05 10:00:00	7200	Handover and project calls	Nick Wade
-320	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 10:00:00	1800	Calls, handover and travel organisation	Nick Wade
-331	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-04 15:53:00	21600	catch ups etc.	Harry Harrold
-403	NCVO	Diagnostic Tool Platform BETA heartbeat	Project Management & meetings	2019-02-18 10:00:00	5400	Calls, testing writeup and notes	Nick Wade
-370	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-04 10:24:00	57600	Finishing deploys and writing documentation + meetings. Spread over 5 days	Rob Preus-MacLaren
-377	NCVO	Front Controller BETA heartbeat	Project Management & meetings	2019-02-18 16:30:00	3600	Trello wrangling	Karl Jermy
-282	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-01-15 16:11:00	900	Collate NCVO questionnaire types and create Google survey	rose.superadmin
-323	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-07 13:22:00	332700	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy
-324	NCVO	Diagnostic Tool Platform BETA heartbeat	User research	2019-02-08 13:23:00	3600	Contacting charities and setting up meetings for useability testing on 14th Feb	Karl Jermy

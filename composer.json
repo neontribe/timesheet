@@ -10,5 +10,21 @@
     "issues": "https://www.drupal.org/project/issues/timesheet",
     "source": "http://cgit.drupalcode.org/timesheet"
   },
-  "require": { }
+  "repositories": [
+    {
+      "type":"package",
+      "package": {
+        "name": "neontribe/timesheet_iframe",
+        "version":"master",
+        "source": {
+          "url": "git@github.com:neontribe/timesheet_iframe.git",
+          "type": "git",
+          "reference":"master"
+        }
+      }
+    }
+  ],
+  "require": {
+    "neontribe/timesheet_iframe": "master"
+  }
 }

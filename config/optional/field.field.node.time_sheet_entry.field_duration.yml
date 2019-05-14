@@ -4,8 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_duration
     - node.type.time_sheet_entry
-  module:
-    - duration_field
 id: node.time_sheet_entry.field_duration
 field_name: field_duration
 entity_type: node
@@ -16,14 +14,11 @@ required: false
 translatable: false
 default_value:
   -
-    value: PT15M
+    value: 15
 default_value_callback: ''
 settings:
-  granularity:
-    hour: true
-    minute: true
-    year: false
-    month: false
-    day: false
-    second: false
-field_type: duration
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
