@@ -1,5 +1,5 @@
 {
-  "name": "drupal/timesheet",
+  "name": "tobybatch/timesheet",
   "type": "drupal-module",
   "description": "Neontribe time sheeting",
   "keywords": ["Drupal"],
